@@ -1,0 +1,13 @@
+---
+layout: default
+title: saasan.github.io
+date: 2013-07-21 19:33:21
+---
+    <h2>recent entries</h2>
+    <ul>
+    {% sorted_for page in site.html_pages reversed sort_by:date limit: 10 %}
+    {%   if page.url != '/index.html' %}
+      <li>{{ page.date | date: "%Y-%m-%d %H:%M" }} <a href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a></li>
+    {%   endif %}
+    {% endsorted_for %}
+    </ul>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+{% include head.html %}
+  </head>
+  <body>
+{% include header.html %}
+
+    <article>
+{{ content }}
+    </article>
+
+    <div class="side-contents">
+{% include nav.html %}
+
+      <aside class="social-buttons">
+{% include social-buttons.html %}
+      </aside>
+
+      <aside class="ad ad320x50">
+{% include ad320x50.html %}
+      </aside>
+
+      <aside class="ad ad300x250">
+{% include ad300x250.html %}
+      </aside>
+
+      <aside class="ad">
+        <script language="JavaScript" type="text/javascript" src="http://ranklet.come.cc/outjs.php?BrowseNode=637394&SearchIndex=VideoGames&charset=UTF-8&listnum=5&title=true&image=true&imagesize=small&creator=true&price=true&rank=true&used=false&AssociateTag=saasan-22"></script>
+      </aside>
+    </div>
+
+{% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+source: source
+pygments: false
+markdown: rdiscount
+permalink: /:categories/:title.html
+
+url: http://saasan.github.io
+name: saasan.github.io
+author: saasan
+
+category_dir: .
+category_title_prefix: ''
