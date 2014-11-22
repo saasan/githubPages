@@ -1,6 +1,6 @@
       <nav>
-        <h2><a href="/">{{ site.name }}</a></h2>
         <ul>
+          <li><a href="/">{{ site.name }}</a></li>
           <li><a href="/mobamas-dojo/">モバマス道場リスト</a></li>
 {% sorted_for page in site.html_pages reversed sort_by:date %}
 {%   if page.url != '/index.html' %}
