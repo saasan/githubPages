@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-{% include head.html %}
-  </head>
+
+  {% include head.html %}
+
   <body>
-{% include header.html %}
 
-    <article>
-{{ content }}
-    </article>
+    {% include header.html %}
 
-    <div class="side-contents">
-{% include nav.html %}
+    {% include ad-responsive.html %}
 
-      <aside class="social-buttons">
-{% include social-buttons.html %}
-      </aside>
-
-      <aside class="ad ad320x50">
-{% include ad320x50.html %}
-      </aside>
-
-      <aside class="ad ad300x250">
-{% include ad300x250.html %}
-      </aside>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
 
-{% include footer.html %}
+    {% include ad-responsive.html %}
+
+    {% include footer.html %}
+
   </body>
+
 </html>

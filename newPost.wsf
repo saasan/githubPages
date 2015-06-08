@@ -28,7 +28,7 @@
 // レイアウト
 var LAYOUT = "default";
 // _postsのパス
-var POST_PATH = "source\\_posts";
+var POST_PATH = "_source\\_posts";
 // 拡張子
 var EXTENSION = ".md";
 // 新しいPostを開くエディターのパス

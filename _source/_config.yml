@@ -1,11 +1,6 @@
-source: source
-pygments: false
-markdown: rdiscount
-permalink: /:categories/:title.html
+title: saasan.github.io
+url: "http://localhost"
+twitter_username: saasan
+github_username:  saasan
 
-url: http://saasan.github.io
-name: saasan.github.io
-author: saasan
-
-category_dir: .
-category_title_prefix: ''
+highlighter: false

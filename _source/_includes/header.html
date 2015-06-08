@@ -1,3 +1,28 @@
-    <header>
-      <h1>{{ page.title }}</h1>
-    </header>
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 24 20">
+          <path fill="#424242" d="m 0,0 24,0 0,4 -24,0 z"/>
+          <path fill="#424242" d="m 0,8 24,0 0,4 -24,0 z"/>
+          <path fill="#424242" d="m 0,16 24,0 0,4 -24,0 z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" href="/mobamas-dojo/">モバマス道場リスト</a>
+        {% for page in site.pages %}
+          {% if page.title %}
+        <a class="page-link" href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+
+  </div>
+
+</header>
