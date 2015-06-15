@@ -3,14 +3,14 @@
 ---
 @charset "utf-8";
 
-
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     20px;
+$spacing-unit:        20px;
+$mobile-spacing-unit: 7px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -22,6 +22,20 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 $header-color: white;
 $header-background-color: #081c40;
+
+$success-color:     #fff;
+$success-bg:        #00d46b;
+$warning-color:     #fff;
+$warning-bg:        #ffc100;
+$error-color:       #fff;
+$error-bg:          #e70048;
+$info-color:        #555;
+$info-bg:           #fcf8e3;
+$info-border-color: darken($info-bg, 15%);
+$info-border-width: 1px;
+$well-bg:           #f5faff;
+$well-border-color: darken($well-bg, 15%);
+$well-border-width: 1px;
 
 // ページの最大幅
 $max-content-width: 960px;
@@ -49,12 +63,80 @@ $on-mobile: 768px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "base", "layout";
 
+%info-base {
+  color: $info-color;
+  background-color: $info-bg;
+  border: $info-border-width solid $info-border-color;
+}
+
+.info {
+  @extend %info-base;
+  padding: $spacing-unit;
+  line-height: 1.3em;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  @include media-query($on-mobile) {
+    padding: $mobile-spacing-unit;
+  }
+
+  &.error {
+    color: $error-color;
+    background-color: $error-bg;
+    border-color: $error-bg;
+    font-weight: bold;
+
+    .close {
+      color: $error-color;
+      opacity: 1;
+    }
+  }
+
+  h4 {
+    margin: $spacing-unit 0;
+    padding-bottom: 3px;
+    font-weight: normal;
+    border: {
+      color: $info-border-color;
+      style: solid;
+      width: 0 0 1px 0;
+    }
+  }
+
+  section {
+    margin: 0 0 0 1em;
+  }
+
+  ul {
+    margin: $mobile-spacing-unit 0;
+    padding-left: 2em;
+  }
+
+  p {
+    margin-top: $mobile-spacing-unit;
+    margin-bottom: 0;
+  }
+}
+
+.info-small {
+  @extend %info-base;
+  padding: 4px 12px;
+}
+
 .well {
   padding: $spacing-unit;
-  background-color: #F5F5F5;
-  border: 1px solid #E3E3E3;
-  border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+  background-color: $well-bg;
+  border: $well-border-width solid $well-border-color;
+
+  @include media-query($on-mobile) {
+    padding: $mobile-spacing-unit;
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
 }
 
 .center-block {
@@ -63,6 +145,41 @@ $on-mobile: 768px;
   margin-right: auto;
 }
 
+/*
+* モバマス振り分けpt計算機用スタイル
+*/
+div[ng-app="mobamasStatusPt"] {
+  input {
+    display: inline-block;
+    margin: 0;
+    font-size: 120%;
+    line-height: 30px;
+    width: 3em;
+    text-align: right;
+  }
+
+  button {
+    display: inline-block;
+    margin: 0;
+    font-size: 120%;
+    padding: 4px 12px;
+    line-height: 40px;
+  }
+
+  dt {
+    margin: $mobile-spacing-unit 0;
+    border-bottom: solid 1px $well-border-color;
+  }
+
+  dd {
+    margin-left: $mobile-spacing-unit;
+  }
+
+  p.em, em {
+    font-size: 150%;
+    font-style: normal;
+  }
+}
 
 /*
  * トップページ用スタイル
