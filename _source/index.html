@@ -10,7 +10,7 @@
         <h1>{{ site.title }}</h1>
       </div>
       <nav>
-        <a href="/mobamas-dojo/">モバマス道場リスト</a>{% for page in site.pages %}{% if page.title %}<a class="page-link" href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a>{% endif %}{% endfor %}
+        {% for page in site.pages %}{% if page.title and page.category == nil %}<a class="page-link" href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a>{% endif %}{% endfor %}
       </nav>
     </div>
 

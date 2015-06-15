@@ -1,15 +1,13 @@
 <footer class="site-footer">
   <div class="wrapper">
     <nav>
-      <a href="/mobamas-dojo/">モバマス道場リスト</a>
       {% for page in site.pages %}
-        {% if page.title %}
-          | <a class="page-link" href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a>
+        {% if page.title and page.category == nil %}
+          <a class="page-link" href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a> |
         {% endif %}
       {% endfor %}
 
       {% if site.twitter_username %}
-      |
       <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
         <span class="icon  icon--twitter">
           <svg viewBox="0 0 16 16">
