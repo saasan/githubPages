@@ -26,7 +26,7 @@
 // 定数
 //-------------------------------------------------------------------------------
 // レイアウト
-var LAYOUT = "default";
+var LAYOUT = "post";
 // _postsのパス
 var POST_PATH = "_source\\_posts";
 // 拡張子
@@ -89,7 +89,7 @@ function createYAMLFrontMatter(d, title) {
     "layout: " + LAYOUT + "\n" +
     "title: " + title + "\n" +
     "date: " + createDateString(d) + " " + createTimeString(d) + "\n" +
-    "categories: \n" +
+    "categories: update\n" +
     "---\n"
   );
 }
