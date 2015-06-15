@@ -67,6 +67,12 @@ a {
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
   @extend %clearfix;
+
+  @include media-query($on-mobile) {
+    max-width: $max-content-width - ($mobile-spacing-unit * 2);
+    padding-right: $mobile-spacing-unit;
+    padding-left: $mobile-spacing-unit;
+  }
 }
 
 %clearfix {
