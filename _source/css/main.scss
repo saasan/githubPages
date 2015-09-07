@@ -125,7 +125,8 @@ $on-mobile: 768px;
   padding: 4px 12px;
 }
 
-.well {
+.well,
+blockquote {
   padding: $spacing-unit;
   background-color: $well-bg;
   border: $well-border-width solid $well-border-color;
@@ -136,6 +137,10 @@ $on-mobile: 768px;
 
   :first-child {
     margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
   }
 }
 
