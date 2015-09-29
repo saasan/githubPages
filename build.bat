@@ -6,7 +6,7 @@ PUSHD %~dp0
 
 CALL jekyll build --source _source --trace
 
-robocopy _site ..\saasan.github.com * /MIR /XD mobamas-dojo .git .sass-cache /XF .gitattributes .gitignore /XA:SH
+robocopy _site ..\saasan.github.io * /MIR /XD mobamas-dojo .git .sass-cache /XF .gitattributes .gitignore /XA:SH
 
 POPD
 PAUSE
