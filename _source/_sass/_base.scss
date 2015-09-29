@@ -60,6 +60,34 @@ a {
   }
 }
 
+table.border {
+  border-collapse: collapse;
+
+  th, td {
+    border: 1px solid $grey-color;
+    padding: 5px;
+  }
+}
+
+/* trainer-ticket-time */
+.ttt {
+  th, td {
+    text-align: center;
+  }
+  .group-a {
+    background-color: #fce4ec;
+  }
+  .group-b {
+    background-color: #e3f2fd;
+  }
+  .group-c {
+    background-color: #fffde7;
+  }
+  .group-d {
+    background-color: #e8f5e9;
+  }
+}
+
 .wrapper {
   max-width: $max-content-width - ($spacing-unit * 2);
   margin-right: auto;

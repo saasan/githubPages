@@ -1,0 +1,120 @@
+---
+layout: page
+title: 今日のトレチケタイム
+date: 2015-09-29 05:15:03
+category: imas
+permalink: /imas/trainer-ticket-time/
+---
+<noscript>
+  <p>JavaScriptを有効にして下さい。</p>
+</noscript>
+
+<section>
+  <p>
+    <a href="http://cinderella.idolmaster.jp/sl-stage/" target="_blank">アイドルマスター シンデレラガールズ スターライトステージ</a>
+    (デレステ)の、今日のトレチケタイム時間割を表示します。
+  </p>
+  <p>
+    トレチケタイムはグループごとに時間が決まっています。自分がどのグループか調べるには、[メニュー]-[プロフィール]を開いてください。
+  </p>
+  <p>
+    Twitterにて
+    <a href="https://twitter.com/TrainerTicket" target="_blank">トレチケタイムお知らせbot (@TrainerTicket)</a>
+    も稼働中です。
+  </p>
+</section>
+
+<section id="pattern-a" class="ttt" style="display: none;">
+  <h3>パターンA</h3>
+  <table class="border">
+    <tr><th>時</th><th>グループ</th></tr>
+    <tr><td>8</td><td class="group-a">A、E</td></tr>
+    <tr><td>9</td><td class="group-b">B、F</td></tr>
+    <tr><td>10</td><td class="group-c">C、G</td></tr>
+    <tr><td>11</td><td class="group-d">D、H</td></tr>
+    <tr><td>12</td><td class="group-a">A、E</td></tr>
+    <tr><td>13</td><td class="group-b">B、F</td></tr>
+    <tr><td>14</td><td class="group-c">C、G</td></tr>
+    <tr><td>15</td><td class="group-d">D、H</td></tr>
+    <tr><td>19</td><td class="group-a">A、E</td></tr>
+    <tr><td>20</td><td class="group-b">B、F</td></tr>
+    <tr><td>21</td><td class="group-c">C、G</td></tr>
+    <tr><td>22</td><td class="group-d">D、H</td></tr>
+  </table>
+</section>
+
+<section id="pattern-b" class="ttt" style="display: none;">
+  <h3>パターンB</h3>
+  <table class="border">
+    <tr><th>時間</th><th>グループ</th></tr>
+    <tr><td>8</td><td class="group-d">D、H</td></tr>
+    <tr><td>9</td><td class="group-a">A、E</td></tr>
+    <tr><td>10</td><td class="group-b">B、F</td></tr>
+    <tr><td>11</td><td class="group-c">C、G</td></tr>
+    <tr><td>12</td><td class="group-d">D、H</td></tr>
+    <tr><td>13</td><td class="group-a">A、E</td></tr>
+    <tr><td>14</td><td class="group-b">B、F</td></tr>
+    <tr><td>15</td><td class="group-c">C、G</td></tr>
+    <tr><td>19</td><td class="group-d">D、H</td></tr>
+    <tr><td>20</td><td class="group-a">A、E</td></tr>
+    <tr><td>21</td><td class="group-b">B、F</td></tr>
+    <tr><td>22</td><td class="group-c">C、G</td></tr>
+  </table>
+</section>
+
+<section id="pattern-c" class="ttt" style="display: none;">
+  <h3>パターンC</h3>
+  <table class="border">
+    <tr><th>時間</th><th>グループ</th></tr>
+    <tr><td>8</td><td class="group-c">C、G</td></tr>
+    <tr><td>9</td><td class="group-d">D、H</td></tr>
+    <tr><td>10</td><td class="group-a">A、E</td></tr>
+    <tr><td>11</td><td class="group-b">B、F</td></tr>
+    <tr><td>12</td><td class="group-c">C、G</td></tr>
+    <tr><td>13</td><td class="group-d">D、H</td></tr>
+    <tr><td>14</td><td class="group-a">A、E</td></tr>
+    <tr><td>15</td><td class="group-b">B、F</td></tr>
+    <tr><td>19</td><td class="group-c">C、G</td></tr>
+    <tr><td>20</td><td class="group-d">D、H</td></tr>
+    <tr><td>21</td><td class="group-a">A、E</td></tr>
+    <tr><td>22</td><td class="group-b">B、F</td></tr>
+  </table>
+</section>
+
+<section id="pattern-d" class="ttt" style="display: none;">
+  <h3>パターンD</h3>
+  <table class="border">
+    <tr><th>時間</th><th>グループ</th></tr>
+    <tr><td>8</td><td class="group-b">B、F</td></tr>
+    <tr><td>9</td><td class="group-c">C、G</td></tr>
+    <tr><td>10</td><td class="group-d">D、H</td></tr>
+    <tr><td>11</td><td class="group-a">A、E</td></tr>
+    <tr><td>12</td><td class="group-b">B、F</td></tr>
+    <tr><td>13</td><td class="group-c">C、G</td></tr>
+    <tr><td>14</td><td class="group-d">D、H</td></tr>
+    <tr><td>15</td><td class="group-a">A、E</td></tr>
+    <tr><td>19</td><td class="group-b">B、F</td></tr>
+    <tr><td>20</td><td class="group-c">C、G</td></tr>
+    <tr><td>21</td><td class="group-d">D、H</td></tr>
+    <tr><td>22</td><td class="group-a">A、E</td></tr>
+  </table>
+</section>
+
+<script>
+  var SEPTEMBER = 8,
+      MS_SEPTEMBER7 = (new Date(2015, SEPTEMBER, 7)).getTime(),
+      MS_ONE_DAY = 24 * 60 * 60 * 1000,
+      ID = ['pattern-a', 'pattern-b', 'pattern-c', 'pattern-d'];
+
+  function getPattern(date) {
+    var msDate = date.getTime();
+    var daysElapsed = Math.floor((msDate - MS_SEPTEMBER7) / MS_ONE_DAY);
+    var pattern = (daysElapsed + 1) % 4;
+
+    return pattern;
+  }
+
+  var pattern = getPattern(new Date());
+  var section = document.getElementById(ID[pattern]);
+  section.style.display = '';
+</script>
