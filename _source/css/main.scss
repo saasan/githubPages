@@ -187,6 +187,78 @@ div[ng-app="mobamasStatusPt"] {
 }
 
 /*
+* デレステ楽曲検索用スタイル
+*/
+div[ng-app="slStageSongsSearch"] {
+  label {
+    margin-right: 10px;
+    /* ラベルとフォーム要素の途中で改行しない */
+    white-space: nowrap;
+  }
+
+  /* 偶数行の背景に色を付ける */
+  tr:nth-child(even) {
+    background-color: aliceblue;
+  }
+
+  table {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid $grey-color-light;
+    padding: 0;
+    margin: 0;
+
+    tr {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 7px;
+      text-align: center;
+    }
+  }
+
+  @include media-query($on-mobile) {
+    table {
+      border: 0;
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: $mobile-spacing-unit * 2;
+        padding: 5px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+      }
+
+      /* 偶数行の背景色を消す */
+      tr:nth-child(even) {
+        background-color: inherit;
+      }
+
+      td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px dotted $grey-color-light;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        &:before {
+          content: attr(data-label);
+          float: left;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+/*
  * トップページ用スタイル
  */
 $top-page-width: 700px;
