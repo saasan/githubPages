@@ -1,5 +1,3 @@
-/* global angular: true */
-
 var slStageSongsSearch = angular.module('slStageSongsSearch', ['ngStorage']);
 
 slStageSongsSearch.config(['$localStorageProvider', function($localStorageProvider) {
