@@ -204,7 +204,9 @@ var slStageSongsSearch;
   ]);
 
   slStageSongsSearch.controller('MainController', ['$scope', '$localStorage', 'defaultSettings', 'songLv', 'songDifficulty', 'songType', 'songs', function($scope, $localStorage, defaultSettings, songLv, songDifficulty, songType, songs) {
-    // 絞り込み用のリストを作成
+    /**
+     * 絞り込み用のリストを作成
+     */
     function createFilterList() {
       // 重複を削除するfilter
       function removeDuplicateValues(element, index, self) {
@@ -219,23 +221,27 @@ var slStageSongsSearch;
       var songDifficultyList = [], songTypeList = [], songLvList = [],
           songStaminaList = [], songExpList = [], songAffectionList = [];
 
+      // 難易度
       Object.keys(songDifficulty).forEach(function(element) {
         if (isNaN(element)) {
           songDifficultyList.push({ label: element, value: songDifficulty[element] });
         }
       });
 
+      // タイプ
       Object.keys(songType).forEach(function(element) {
         if (isNaN(element)) {
           songTypeList.push({ label: element, value: songType[element] });
         }
       });
 
+      // 楽曲Lv
       Object.keys(songLv).forEach(function(key) {
         // 数値化して入れておかないとfilterが機能しない
         songLvList.push(parseInt(key, 10));
       });
 
+      // スタミナ、経験値、親愛度
       songLvList.forEach(function(element) {
         songStaminaList.push(songLv[element].stamina);
         songExpList.push(songLv[element].exp);
@@ -271,9 +277,14 @@ var slStageSongsSearch;
     $scope.songType = songType;
     $scope.songs = songs;
 
+    /**
+     * 楽曲フィルター
+     * @returns {boolean} 表示するならtrue、表示しないならfalse
+     */
     $scope.songFilter = function(song) {
       var result = true, i, name;
 
+      // 難易度、タイプ、楽曲Lv
       name = [
         ['songFilterDifficulty', 'difficulty'],
         ['songFilterType',       'type'],
@@ -286,6 +297,7 @@ var slStageSongsSearch;
         }
       }
 
+      // スタミナ、経験値、親愛度
       name = [
         ['songFilterStamina'  , 'stamina'],
         ['songFilterExp'      , 'exp'],
