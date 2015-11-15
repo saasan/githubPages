@@ -46,26 +46,26 @@ slStageSongsSearch.constant('songLv', {
 
 // 難易度
 slStageSongsSearch.constant('songDifficulty', {
-  'DEBUT':   '0',
-  'REGULAR': '1',
-  'PRO':     '2',
-  'MASTER':  '3',
-  '0': 'DEBUT',
-  '1': 'REGULAR',
-  '2': 'PRO',
-  '3': 'MASTER'
+  DEBUT:   0,
+  REGULAR: 1,
+  PRO:     2,
+  MASTER:  3,
+  0: 'DEBUT',
+  1: 'REGULAR',
+  2: 'PRO',
+  3: 'MASTER'
 });
 
 // タイプ
 slStageSongsSearch.constant('songType', {
-  '全タイプ':   '0',
-  'キュート':   '1',
-  'クール':     '2',
-  'パッション': '3',
-  '0': '全タイプ',
-  '1': 'キュート',
-  '2': 'クール',
-  '3': 'パッション'
+  全タイプ:   0,
+  キュート:   1,
+  クール:     2,
+  パッション: 3,
+  0: '全タイプ',
+  1: 'キュート',
+  2: 'クール',
+  3: 'パッション'
 });
 
 // 楽曲
@@ -215,7 +215,7 @@ slStageSongsSearch.controller('MainController', ['$scope', '$localStorage', 'def
       return a - b;
     }
 
-    var songDifficultyList = [], songTypeList = [], songLvList,
+    var songDifficultyList = [], songTypeList = [], songLvList = [],
         songStaminaList = [], songExpList = [], songAffectionList = [];
 
     Object.keys(songDifficulty).forEach(function(element) {
@@ -230,7 +230,10 @@ slStageSongsSearch.controller('MainController', ['$scope', '$localStorage', 'def
       }
     });
 
-    songLvList = Object.keys(songLv);
+    Object.keys(songLv).forEach(function(key) {
+      // 数値化して入れておかないとfilterが機能しない
+      songLvList.push(parseInt(key, 10));
+    });
 
     songLvList.forEach(function(element) {
       songStaminaList.push(songLv[element].stamina);
@@ -278,7 +281,7 @@ slStageSongsSearch.controller('MainController', ['$scope', '$localStorage', 'def
 
     for (i = 0; i <name.length; i++) {
       if ($scope.$storage[name[i][0]] != null) {
-        result = result && (song[name[i][1]] == $scope.$storage[name[i][0]]);
+        result = result && (song[name[i][1]] === $scope.$storage[name[i][0]]);
       }
     }
 
@@ -290,7 +293,7 @@ slStageSongsSearch.controller('MainController', ['$scope', '$localStorage', 'def
 
     for (i = 0; i <name.length; i++) {
       if ($scope.$storage[name[i][0]] > 0) {
-        result = result && ($scope.songLv[song.lv][name[i][1]] == $scope.$storage[name[i][0]]);
+        result = result && ($scope.songLv[song.lv][name[i][1]] === $scope.$storage[name[i][0]]);
       }
     }
 
