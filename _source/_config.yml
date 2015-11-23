@@ -4,3 +4,7 @@ twitter_username: saasan
 github_username:  saasan
 
 highlighter: false
+
+sass:
+  style: compressed
+  sass_dir: css
