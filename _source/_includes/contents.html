@@ -1,0 +1,7 @@
+<ul>
+  {% for page in site.pages %}
+    {% if page.title and page.category == nil %}
+      <li><a class="page-link" href="{{ page.url | replace:'/index.html',"/" }}">{{ page.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
