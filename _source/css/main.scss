@@ -1,28 +1,41 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+@charset "UTF-8";
+@import "normalize";
 
-$spacing-unit:        20px;
-$mobile-spacing-unit: 7px;
+.twitter-username:before {
+  content: '';
+  display: inline-block;
+  margin-right: 3px;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23828282%22%20d%3D%22M15.969%2C3.058c-0.586%2C0.26-1.217%2C0.436-1.878%2C0.515c0.675-0.405%2C1.194-1.045%2C1.438-1.809%20c-0.632%2C0.375-1.332%2C0.647-2.076%2C0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806%2C0-3.27%2C1.464-3.27%2C3.27%20c0%2C0.256%2C0.029%2C0.506%2C0.085%2C0.745C5.163%2C5.404%2C2.753%2C4.102%2C1.14%2C2.124C0.859%2C2.607%2C0.698%2C3.168%2C0.698%2C3.767%20c0%2C1.134%2C0.577%2C2.135%2C1.455%2C2.722C1.616%2C6.472%2C1.112%2C6.325%2C0.671%2C6.08c0%2C0.014%2C0%2C0.027%2C0%2C0.041c0%2C1.584%2C1.127%2C2.906%2C2.623%2C3.206%20C3.02%2C9.402%2C2.731%2C9.442%2C2.433%2C9.442c-0.211%2C0-0.416-0.021-0.615-0.059c0.416%2C1.299%2C1.624%2C2.245%2C3.055%2C2.271%20c-1.119%2C0.877-2.529%2C1.4-4.061%2C1.4c-0.264%2C0-0.524-0.015-0.78-0.046c1.447%2C0.928%2C3.166%2C1.469%2C5.013%2C1.469%20c6.015%2C0%2C9.304-4.983%2C9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976%2C4.29%2C15.531%2C3.714%2C15.969%2C3.058z%22%2F%3E%3C%2Fsvg%3E');
+  vertical-align: middle;
+}
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$link-color:       #2a7ae2;
+.trigger:before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2020%22%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22m%200%2C0%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22m%200%2C8%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22m%200%2C16%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3C%2Fsvg%3E');
+  cursor: pointer;
+}
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$default-margin: 7px;
 
-$header-color: white;
-$header-background-color: #081c40;
+$body-bg:     #fff;
+$text-color:  #333;
+$link-color:  #08c;
 
+$default-color:       #333;
+$button-bg:           #f5f5f5;
+$button-border-color: darken($button-bg, 15%);
+$button-border-width: 1px;
+
+$primary-color:     #fff;
+$primary-bg:        #0078e7;
 $success-color:     #fff;
 $success-bg:        #00d46b;
 $warning-color:     #fff;
@@ -37,31 +50,97 @@ $well-bg:           #f5faff;
 $well-border-color: darken($well-bg, 15%);
 $well-border-width: 1px;
 
-// ページの最大幅
-$max-content-width: 960px;
-
-// Using media queries with like this:
-// @include media-query($on-mobile) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
   }
-}
-@mixin media-query-min($device) {
-  @media screen and (min-width: $device) {
-    @content;
+  &:after {
+    clear: both;
   }
 }
 
-$on-mobile: 768px;
+body {
+  padding-top: $default-margin;
+}
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "layout";
+h2 {
+  margin-top: 20px;
+  padding-bottom: $default-margin;
+  font-size: 21px;
+  color: $text-color;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: $default-margin * 2;
+  font-size: medium;
+  font-weight: bold;
+}
+
+section {
+  margin: $default-margin;
+  margin-top: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  line-height: 30px;
+  color: $default-color;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: $button-bg;
+  border: 1px solid #ccc;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+
+  &.block {
+    display: block;
+    width: 100%;
+    margin-top: $default-margin;
+    padding-right: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+
+  &.primary {
+    color: $primary-color;
+    background-color: $primary-bg;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .2;
+}
 
 %info-base {
   color: $info-color;
@@ -71,16 +150,8 @@ $on-mobile: 768px;
 
 .info {
   @extend %info-base;
-  padding: $spacing-unit;
+  padding: $default-margin * 2;
   line-height: 1.3em;
-
-  :first-child {
-    margin-top: 0;
-  }
-
-  @include media-query($on-mobile) {
-    padding: $mobile-spacing-unit;
-  }
 
   &.error {
     color: $error-color;
@@ -95,7 +166,7 @@ $on-mobile: 768px;
   }
 
   h4 {
-    margin: $spacing-unit 0;
+    margin: $default-margin * 2 0;
     padding-bottom: 3px;
     font-weight: normal;
     border: {
@@ -110,13 +181,21 @@ $on-mobile: 768px;
   }
 
   ul {
-    margin: $mobile-spacing-unit 0;
+    margin: $default-margin 0;
     padding-left: 2em;
   }
 
   p {
-    margin-top: $mobile-spacing-unit;
-    margin-bottom: 0;
+    margin-top: $default-margin;
+  }
+
+  div {
+    cursor: pointer;
+  }
+
+  div.undo {
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
@@ -125,279 +204,258 @@ $on-mobile: 768px;
   padding: 4px 12px;
 }
 
-.well,
-blockquote {
-  padding: $spacing-unit;
+.well {
+  padding: $default-margin * 2;
   background-color: $well-bg;
   border: $well-border-width solid $well-border-color;
-
-  @include media-query($on-mobile) {
-    padding: $mobile-spacing-unit;
-  }
 
   :first-child {
     margin-top: 0;
   }
-
-  :last-child {
-    margin-bottom: 0;
-  }
 }
 
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#toast {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: $default-margin;
+  z-index: 100;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  /* フェードイン/アウト用。AngularJS実行前に一瞬表示されるのを防ぐ。 */
+  display: none;
 }
 
-/*
-* モバマス振り分けpt計算機用スタイル
-*/
-div[ng-app="mobamasStatusPt"] {
-  input {
-    display: inline-block;
-    margin: 0;
-    font-size: 120%;
-    line-height: 30px;
-    width: 3em;
-    text-align: right;
-  }
+/* #toastのフェードイン/アウト用。AngularJS実行後のみ以下が適用される。 */
+.ng-scope {
+  #toast {
+    display: block !important;
 
-  button {
-    display: inline-block;
-    margin: 0;
-    font-size: 120%;
-    padding: 4px 12px;
-    line-height: 40px;
-  }
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
 
-  dt {
-    margin: $mobile-spacing-unit 0;
-    border-bottom: solid 1px $well-border-color;
-  }
-
-  dd {
-    margin-left: $mobile-spacing-unit;
-  }
-
-  p.em, em {
-    font-size: 150%;
-    font-style: normal;
-  }
-}
-
-/*
-* デレステ楽曲検索用スタイル
-*/
-div[ng-app="slStageSongsSearch"] {
-  label {
-    margin-right: 10px;
-    /* ラベルとフォーム要素の途中で改行しない */
-    white-space: nowrap;
-  }
-
-  /* 偶数行の背景に色を付ける */
-  tr:nth-child(even) {
-    background-color: aliceblue;
-  }
-
-  table {
-    box-sizing: border-box;
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid $grey-color-light;
-    padding: 0;
-    margin: 0;
-
-    tr {
-      border: 1px solid #ddd;
-    }
-
-    th, td {
-      padding: 7px;
-      text-align: center;
-    }
-  }
-
-  @include media-query($on-mobile) {
-    table {
-      border: 0;
-
-      thead {
-        display: none;
-      }
-
-      tr {
-        margin-bottom: $mobile-spacing-unit * 2;
-        padding: 5px;
-        display: block;
-        border-bottom: 2px solid #ddd;
-      }
-
-      /* 偶数行の背景色を消す */
-      tr:nth-child(even) {
-        background-color: inherit;
-      }
-
-      td {
-        display: block;
-        text-align: right;
-        border-bottom: 1px dotted $grey-color-light;
-
-        &:last-child {
-          border-bottom: 0;
-        }
-
-        &:before {
-          content: attr(data-label);
-          float: left;
-          font-weight: bold;
-        }
-      }
+    &.ng-hide {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 1s ease;
     }
   }
 }
 
-/*
- * トップページ用スタイル
- */
-$top-page-width: 700px;
-$top-page-height: 500px;
-$top-page-spacing: 30px;
-$top-page-mobile-width: 320px;
-$top-page-mobile-height: 320px;
-$top-page-mobile-spacing: 10px;
-$top-page-horizontal-link-spacing: 10px;
-$top-page-transparent-color: rgba(0, 16, 32, 0.5);
-
-.top-page, .top-page body {
-  width: 100%;
-  height:100%;
-}
-
-.top-page body {
-  color: $header-color;
-  background-color: $header-background-color;
-  background-image: url(../img/l_091_256.png);
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  .top-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -$top-page-mobile-height / 2;
-    margin-left: -$top-page-mobile-width / 2;
-    width: $top-page-mobile-width - ($top-page-mobile-spacing * 2);
-    height: $top-page-mobile-height - ($top-page-mobile-spacing * 2);
-    padding: $top-page-mobile-spacing;
-  }
-
-  h1 {
-    color: $header-color;
-    border-bottom: 1px #FFF solid;
-    padding: $top-page-mobile-spacing;
-    font-size: 18px;
-    letter-spacing: 5px;
-    font-family: 'Orbitron', sans-serif;
-    text-shadow: 0px 0px 10px #6DF, 0px 0px 5px #6DF;
-  }
+#mobamasMenu {
+  text-align: center;
+  margin-bottom: 0;
 
   a {
-    color: $header-color;
-    text-shadow: 0px 0px 10px #024, 0px 0px 5px #024;
-  }
-
-  a:hover {
-    text-decoration: none;
-    text-shadow: 0px 0px 15px #6DF, 0px 0px 10px #6DF, 0px 0px 5px #FFF;
-  }
-
-  nav a {
-    display: block;
-    margin: 0 auto;
-    padding: $top-page-mobile-spacing;
-    text-align: right;
+    border-radius: $default-margin;
+    margin-bottom: $default-margin;
+    min-width: 15%;
 
     &:not(:first-child) {
-      /* PC用にも引き継がれるので全方向設定 */
-      border-style: solid;
-      border-color: #FFF;
-      border-width: 1px 0 0 0;
-    }
-  }
-
-  path {
-    fill: $header-color;
-  }
-
-  footer {
-    position: absolute;
-    right: $top-page-mobile-spacing;
-    bottom: $top-page-mobile-spacing;
-
-    a {
-      display: inline-block;
-      padding: 0 $top-page-horizontal-link-spacing;
-
-      &:not(:first-child) {
-        border-left: 1px #FFF solid;
-        padding: 0 ($top-page-horizontal-link-spacing + 1px);
-      }
+      margin-left: $default-margin;
     }
   }
 }
 
-/*
- * PC用
- */
-  @include media-query-min($top-page-width + ($top-page-spacing * 2)) {
-  .top-page body {
-    .top-wrapper {
-      margin-top: -$top-page-height / 2;
-      margin-left: -$top-page-width / 2;
-      width: $top-page-width - ($top-page-spacing * 2);
-      height: $top-page-height - ($top-page-spacing * 2);
-      padding: $top-page-spacing;
+#viewSettings {
+  border: $button-border-width solid $button-border-color;
+
+  h3 {
+    cursor: pointer;
+    color: $default-color;
+    background-color: $button-bg;
+    margin: 0;
+    padding: 4px 12px;
+    line-height: 30px;
+    vertical-align: middle;
+  }
+
+  & > section {
+    margin: $default-margin * 2;
+  }
+}
+
+.form {
+  section {
+    margin-bottom: $default-margin * 2;
+  }
+
+  small {
+    display: block;
+    margin-top: 0.5em;
+    margin-left: 1em;
+  }
+
+  label {
+    display: block;
+    margin-top: $default-margin;
+    height: 1.5em;
+    line-height: 1.5em;
+  }
+
+  label,
+  select,
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"],
+  input[type="radio"],
+  input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+
+  select {
+    font-size: 1.2em;
+  }
+
+  .settings-mobamas-menu {
+    @include clearfix;
+
+    label {
+      width: 33%;
+      float: left;
+      overflow: hidden;
     }
+  }
+}
 
-    .top-wrapper-h1 {
-      position: relative;
-      height: $top-page-height / 2;
-    }
+#dojos {
+  .dojo {
+    position: relative;
+    margin-top: $default-margin;
+    padding: 0;
+    width: 100%;
+    min-height: 40px;
+    text-align: left;
+    font-weight: bold;
+    color: $primary-color;
+    background-color: $primary-bg;
+    text-shadow: none;
 
-    h1 {
-      position: absolute;
-      bottom: 0;
-      width: $top-page-width - ($top-page-spacing * 2);
-      margin: 0;
-      padding: 0 0 5px 0;
-      font-size: 32px;
-      text-align: center;
-      text-shadow: 0px 0px 15px #6DF, 0px 0px 10px #6DF, 0px 0px 5px #FFF;
-    }
+    .dojo-link {
+      display: block;
+      padding: 4px 12px;
+      overflow: hidden;
+      color: inherit;
 
-    nav {
-      padding-top: 10px;
-      text-align: center;
+      .detail {
+        position: relative;
+        z-index: 1;
+      }
 
-      a {
+      span.defense {
         display: inline-block;
-        padding: 0 $top-page-horizontal-link-spacing;
+        position: absolute;
+        bottom: -4px;
+        right: 40px;
+        font-size: 200%;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.3);
+        text-shadow: none;
+      }
 
-        &:not(:first-child) {
-          border-width: 0 0 0 1px;
-          padding: 0 ($top-page-horizontal-link-spacing + 1px);
-        }
+      .extraInfo div {
+        font-size: 80%;
+        line-height: 1.5em;
+      }
+
+      em {
+        font-style: normal;
       }
     }
 
-    footer {
-      right: $top-page-spacing;
-      bottom: $top-page-spacing;
+    .hide-dojo {
+      display: block;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      height: 38px;
+      width: 38px;
+      border-width: 0;
+      color: inherit;
+      background-color: transparent;
+      z-index: 2;
     }
 
+    .extraInfo {
+      display: none;
+    }
+
+    &.success {
+      color: $success-color;
+      background-color: $success-bg;
+    }
+
+    &.warning {
+      color: $warning-color;
+      background-color: $warning-bg;
+    }
+
+    &.error {
+      color: $error-color;
+      background-color: $error-bg;
+    }
   }
+}
+
+/* リーダー等を表示する */
+.extendedView {
+  .extraInfo {
+    display: block !important;
+  }
+
+  span.defense {
+    right: 5px !important;
+    color: #FFF !important;
+  }
+}
+
+/* 作業中や発揮値っぽい物を強調する */
+.emphasizedView {
+  em {
+    display: inline-block;
+    margin: 0 3px;
+    padding: 3px 0.5em;
+
+    line-height: normal;
+    border-radius: 3px;
+
+    /* 作業中 */
+    &.paused {
+      color: white;
+      background-color: red;
+    }
+
+    /* 発揮値 */
+    &.defenseValue {
+      color: white;
+      background-color: darkorange;
+    }
+  }
+}
+
+#about {
+  line-height: 1.5em;
+
+  small {
+    display: block;
+    margin-left: 1em;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+ins.adsbygoogle {
+  background-color: azure;
 }
