@@ -1,6 +1,7 @@
 title: saasan.github.io
 url: "http://saasan.github.io"
-twitter_username: saasan
+twitter:
+  username: saasan
 github_username:  saasan
 
 highlighter: false
