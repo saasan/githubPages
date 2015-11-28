@@ -4,30 +4,14 @@
 @charset "UTF-8";
 @import "normalize";
 
-.twitter-username:before {
-  content: '';
-  display: inline-block;
-  margin-right: 3px;
-  width: 16px;
-  height: 16px;
-  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23828282%22%20d%3D%22M15.969%2C3.058c-0.586%2C0.26-1.217%2C0.436-1.878%2C0.515c0.675-0.405%2C1.194-1.045%2C1.438-1.809%20c-0.632%2C0.375-1.332%2C0.647-2.076%2C0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806%2C0-3.27%2C1.464-3.27%2C3.27%20c0%2C0.256%2C0.029%2C0.506%2C0.085%2C0.745C5.163%2C5.404%2C2.753%2C4.102%2C1.14%2C2.124C0.859%2C2.607%2C0.698%2C3.168%2C0.698%2C3.767%20c0%2C1.134%2C0.577%2C2.135%2C1.455%2C2.722C1.616%2C6.472%2C1.112%2C6.325%2C0.671%2C6.08c0%2C0.014%2C0%2C0.027%2C0%2C0.041c0%2C1.584%2C1.127%2C2.906%2C2.623%2C3.206%20C3.02%2C9.402%2C2.731%2C9.442%2C2.433%2C9.442c-0.211%2C0-0.416-0.021-0.615-0.059c0.416%2C1.299%2C1.624%2C2.245%2C3.055%2C2.271%20c-1.119%2C0.877-2.529%2C1.4-4.061%2C1.4c-0.264%2C0-0.524-0.015-0.78-0.046c1.447%2C0.928%2C3.166%2C1.469%2C5.013%2C1.469%20c6.015%2C0%2C9.304-4.983%2C9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976%2C4.29%2C15.531%2C3.714%2C15.969%2C3.058z%22%2F%3E%3C%2Fsvg%3E');
-  vertical-align: middle;
-}
-
-.site-nav-contents:before {
-  content: '';
-  display: inline-block;
-  width: 24px;
-  height: 20px;
-  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2020%22%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22m%200%2C0%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22m%200%2C8%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3Cpath%20fill%3D%22%23424242%22%20d%3D%22m%200%2C16%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3C%2Fsvg%3E');
-  cursor: pointer;
-}
-
 $default-margin: 7px;
 
 $body-bg:     #fff;
 $text-color:  #333;
 $link-color:  #08c;
+
+$header-color: white;
+$header-background-color: #081c40;
 
 $default-color:       #333;
 $button-bg:           #f5f5f5;
@@ -50,6 +34,25 @@ $well-bg:           #f5faff;
 $well-border-color: darken($well-bg, 15%);
 $well-border-width: 1px;
 
+// スマホ用表示にする最大幅
+$max-mobile-width: 768px;
+
+/*
+ * PC用Media Queries
+ * 使い方
+ * @include if-pc {
+ *   .wrapper {
+ *     padding-right: $default-margin * 2;
+ *     padding-left: $default-margin * 2;
+ *   }
+ * }
+ */
+@mixin if-pc($width: $max-mobile-width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
 @mixin clearfix {
   &:before,
   &:after {
@@ -63,6 +66,7 @@ $well-border-width: 1px;
 
 body {
   padding-top: $default-margin;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 h2 {
@@ -459,3 +463,41 @@ img {
 ins.adsbygoogle {
   background-color: azure;
 }
+
+@import "top-page";
+
+.twitter-username, .rss {
+  display: inline-block;
+  padding: 0 10px;
+  margin-left: $default-margin;
+  border-radius: 3px;
+  color: white;
+  line-height: 150%;
+}
+
+.twitter-username {
+  background-color: #1B95E0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M15.969%2C3.058c-0.586%2C0.26-1.217%2C0.436-1.878%2C0.515c0.675-0.405%2C1.194-1.045%2C1.438-1.809%20c-0.632%2C0.375-1.332%2C0.647-2.076%2C0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806%2C0-3.27%2C1.464-3.27%2C3.27%20c0%2C0.256%2C0.029%2C0.506%2C0.085%2C0.745C5.163%2C5.404%2C2.753%2C4.102%2C1.14%2C2.124C0.859%2C2.607%2C0.698%2C3.168%2C0.698%2C3.767%20c0%2C1.134%2C0.577%2C2.135%2C1.455%2C2.722C1.616%2C6.472%2C1.112%2C6.325%2C0.671%2C6.08c0%2C0.014%2C0%2C0.027%2C0%2C0.041c0%2C1.584%2C1.127%2C2.906%2C2.623%2C3.206%20C3.02%2C9.402%2C2.731%2C9.442%2C2.433%2C9.442c-0.211%2C0-0.416-0.021-0.615-0.059c0.416%2C1.299%2C1.624%2C2.245%2C3.055%2C2.271%20c-1.119%2C0.877-2.529%2C1.4-4.061%2C1.4c-0.264%2C0-0.524-0.015-0.78-0.046c1.447%2C0.928%2C3.166%2C1.469%2C5.013%2C1.469%20c6.015%2C0%2C9.304-4.983%2C9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976%2C4.29%2C15.531%2C3.714%2C15.969%2C3.058z%22%2F%3E%3C%2Fsvg%3E');
+    vertical-align: middle;
+  }
+}
+
+.rss {
+  background-color: #F60;
+}
+
+.site-nav-contents:before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 20px;
+  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2020%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m%200%2C0%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m%200%2C8%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m%200%2C16%2024%2C0%200%2C4%20-24%2C0%20z%22%2F%3E%3C%2Fsvg%3E');
+  cursor: pointer;
+}
+
