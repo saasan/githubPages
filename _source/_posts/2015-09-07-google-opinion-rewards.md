@@ -2,7 +2,7 @@
 layout: post
 title: デレステ、PSO2プレイヤーにおすすめ。無料でGoogle Playのクレジットがもらえる「Google アンケート モニター」
 date: 2015-09-07 05:57:48
-categories: update
+categories: news
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.paidtasks&amp;hl=ja" target="_blank">Google アンケート モニター - Google Play の Android アプリ</a>
