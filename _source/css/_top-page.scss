@@ -97,6 +97,12 @@ $top-page-transparent-color: rgba(0, 16, 32, 0.5);
     position: absolute;
     right: $top-page-mobile-spacing;
     bottom: $top-page-mobile-spacing;
+
+
+    .twitter-username, .rss {
+      border: 1px solid #FFF;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
