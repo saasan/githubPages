@@ -1,8 +1,5 @@
 ---
-layout: page
+layout: category-archive
 title: アイマス関連
 category-archive: imas
 ---
-<ul>
-  {% for p in site.pages %}{% if p.title and p.category == page.category-archive %}<li><a href="{{ p.url | replace:'/index.html',"/" }}">{{ p.title }}</a></li>{% endif %}{% endfor %}
-</ul>
