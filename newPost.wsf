@@ -62,9 +62,9 @@ catch (e) {
 // 日付文字列を作成
 //-------------------------------------------------------------------------------
 function createDateString(d) {
-  var year    = d.getUTCFullYear();
-  var month   = zeroFill(d.getUTCMonth() + 1, 2);
-  var date    = zeroFill(d.getUTCDate(), 2);
+  var year    = d.getFullYear();
+  var month   = zeroFill(d.getMonth() + 1, 2);
+  var date    = zeroFill(d.getDate(), 2);
 
   return year + "-" + month + "-" + date;
 }
@@ -73,9 +73,9 @@ function createDateString(d) {
 // 時刻文字列を作成
 //-------------------------------------------------------------------------------
 function createTimeString(d) {
-  var hours   = zeroFill(d.getUTCHours(), 2);
-  var minutes = zeroFill(d.getUTCMinutes(), 2);
-  var seconds = zeroFill(d.getUTCSeconds(), 2);
+  var hours   = zeroFill(d.getHours(), 2);
+  var minutes = zeroFill(d.getMinutes(), 2);
+  var seconds = zeroFill(d.getSeconds(), 2);
 
   return hours + ":" + minutes + ":" + seconds;
 }
@@ -88,7 +88,7 @@ function createYAMLFrontMatter(d, title) {
     "---\n" +
     "layout: " + LAYOUT + "\n" +
     "title: " + title + "\n" +
-    "date: " + createDateString(d) + " " + createTimeString(d) + "\n" +
+    "date: " + createDateString(d) + " " + createTimeString(d) + " +0900\n" +
     "categories: update\n" +
     "---\n"
   );
