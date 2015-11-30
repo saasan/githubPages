@@ -67,21 +67,11 @@ table.border {
   }
 }
 
-// liを中央揃え
-// https://hail2u.net/blog/webdesign/centering-floated-list.html
-.centered {
+.vertical-center
+{
   position: relative;
-  overflow: hidden;
-}
-.centered ul {
-  position: relative;
-  left: 50%;
-  float: left;
-}
-.centered ul li {
-  position: relative;
-  left: -50%;
-  float: left;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .twitter-username, .rss {
