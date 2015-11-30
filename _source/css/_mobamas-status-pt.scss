@@ -22,12 +22,12 @@ div[ng-app="mobamasStatusPt"] {
   }
 
   dt {
-    margin: $default-margin 0;
+    margin: $mobile-margin 0;
     border-bottom: solid 1px $well-border-color;
   }
 
   dd {
-    margin-left: $default-margin;
+    margin-left: $mobile-margin;
   }
 
   p.em, em {

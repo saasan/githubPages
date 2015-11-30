@@ -26,8 +26,8 @@ $max-mobile-width: 768px;
  * 使い方
  * @include if-pc {
  *   .wrapper {
- *     padding-right: $default-margin * 2;
- *     padding-left: $default-margin * 2;
+ *     padding-right: $mobile-margin * 2;
+ *     padding-left: $mobile-margin * 2;
  *   }
  * }
  */
@@ -49,12 +49,12 @@ body {
 }
 
 header h1 {
-  margin: 0 $default-margin $default-margin;
+  margin: 0 $mobile-margin $mobile-margin;
 }
 
 @include if-pc {
   section {
-    margin: 0 ($default-margin * 3) ($default-margin * 3);
+    margin: 0 $pc-margin $pc-margin;
   }
 }
 
@@ -67,10 +67,26 @@ table.border {
   }
 }
 
+// liを中央揃え
+.centered {
+  position: relative;
+  overflow: hidden;
+}
+.centered ul {
+  position: relative;
+  left: 50%;
+  float: left;
+}
+.centered ul li {
+  position: relative;
+  left: -50%;
+  float: left;
+}
+
 .twitter-username, .rss {
   display: inline-block;
   padding: 0 10px;
-  margin-left: $default-margin;
+  margin-left: $mobile-margin;
   border-radius: 5px;
   color: #FFF;
   line-height: 150%;

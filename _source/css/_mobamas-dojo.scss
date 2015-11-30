@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import "normalize";
 
-$default-margin: 7px;
+$mobile-margin: 7px;
+$pc-margin: $mobile-margin * 3;
 
 $body-bg:     #fff;
 $text-color:  #333;
@@ -37,12 +38,12 @@ $well-border-width: 1px;
 }
 
 body.mobamas-dojo {
-  padding-top: $default-margin;
+  padding-top: $mobile-margin;
 }
 
 h2 {
   margin-top: 20px;
-  padding-bottom: $default-margin;
+  padding-bottom: $mobile-margin;
   font-size: 21px;
   color: $text-color;
   border-bottom: 1px solid #e5e5e5;
@@ -50,13 +51,13 @@ h2 {
 
 h3 {
   margin: 0;
-  margin-bottom: $default-margin * 2;
+  margin-bottom: $mobile-margin * 2;
   font-size: medium;
   font-weight: bold;
 }
 
 section {
-  margin: 0 $default-margin $default-margin;
+  margin: 0 $mobile-margin $mobile-margin;
 }
 
 p {
@@ -89,7 +90,7 @@ img {
   &.block {
     display: block;
     width: 100%;
-    margin-top: $default-margin;
+    margin-top: $mobile-margin;
     padding-right: 0;
     padding-left: 0;
     box-sizing: border-box;
@@ -124,7 +125,7 @@ img {
 
 .info {
   @extend %info-base;
-  padding: $default-margin * 2;
+  padding: $mobile-margin * 2;
   line-height: 1.3em;
 
   &.error {
@@ -140,7 +141,7 @@ img {
   }
 
   h4 {
-    margin: $default-margin * 2 0;
+    margin: $mobile-margin * 2 0;
     padding-bottom: 3px;
     font-weight: normal;
     border: {
@@ -155,12 +156,12 @@ img {
   }
 
   ul {
-    margin: $default-margin 0;
+    margin: $mobile-margin 0;
     padding-left: 2em;
   }
 
   p {
-    margin-top: $default-margin;
+    margin-top: $mobile-margin;
   }
 
   div {
@@ -179,7 +180,7 @@ img {
 }
 
 .well {
-  padding: $default-margin * 2;
+  padding: $mobile-margin * 2;
   background-color: $well-bg;
   border: $well-border-width solid $well-border-color;
 
@@ -193,7 +194,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: $default-margin;
+  margin: $mobile-margin;
   z-index: 100;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 
@@ -223,12 +224,12 @@ img {
   margin-bottom: 0;
 
   a {
-    border-radius: $default-margin;
-    margin-bottom: $default-margin;
+    border-radius: $mobile-margin;
+    margin-bottom: $mobile-margin;
     min-width: 15%;
 
     &:not(:first-child) {
-      margin-left: $default-margin;
+      margin-left: $mobile-margin;
     }
   }
 }
@@ -247,13 +248,13 @@ img {
   }
 
   & > section {
-    margin: $default-margin * 2;
+    margin: $mobile-margin * 2;
   }
 }
 
 .form {
   section {
-    margin-bottom: $default-margin * 2;
+    margin-bottom: $mobile-margin * 2;
   }
 
   small {
@@ -264,7 +265,7 @@ img {
 
   label {
     display: block;
-    margin-top: $default-margin;
+    margin-top: $mobile-margin;
     height: 1.5em;
     line-height: 1.5em;
   }
@@ -305,7 +306,7 @@ img {
 #dojos {
   .dojo {
     position: relative;
-    margin-top: $default-margin;
+    margin-top: $mobile-margin;
     padding: 0;
     width: 100%;
     min-height: 40px;

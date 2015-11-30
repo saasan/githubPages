@@ -1,15 +1,15 @@
 .wrapper {
-  max-width: $max-content-width - ($default-margin * 3 * 2);
+  max-width: $max-content-width - ($pc-margin * 2);
   margin-right: auto;
   margin-left: auto;
-  padding-right: $default-margin * 3;
-  padding-left: $default-margin * 3;
+  padding-right: $pc-margin;
+  padding-left: $pc-margin;
   @extend %clearfix;
 
   @include if-mobile {
-    max-width: $max-content-width - ($default-margin * 3);
-    padding-right: $default-margin;
-    padding-left: $default-margin;
+    max-width: $max-content-width - $pc-margin;
+    padding-right: $mobile-margin;
+    padding-left: $mobile-margin;
   }
 }
 
@@ -131,12 +131,12 @@
 
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: ($default-margin * 3) 0;
+  padding: $pc-margin 0;
   text-align: center;
 }
 
 .page-content {
-  padding: ($default-margin * 3) 0;
+  padding: $pc-margin 0;
 }
 
 .page-heading {
@@ -148,7 +148,7 @@
   list-style: none;
 
   > li {
-    margin-bottom: $default-margin * 3;
+    margin-bottom: $pc-margin;
   }
 }
 
@@ -168,7 +168,7 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $default-margin * 3;
+  margin-bottom: $pc-margin;
 }
 
 .post-title {
@@ -182,7 +182,7 @@
 }
 
 .post-content {
-  margin-bottom: $default-margin * 3;
+  margin-bottom: $pc-margin;
 
   h2 {
     font-size: 32px;
