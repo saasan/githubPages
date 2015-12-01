@@ -3,28 +3,26 @@ layout: page
 title: Blog
 date: 2015-12-01 22:00:00 +0900
 ---
-<ul class="post-list">
-  {% for post in paginator.posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+{% for post in paginator.posts %}
+  <section>
+    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <section>
+      {{ post.content }}
+    </section>
+  </section>
+{% endfor %}
 
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-    </li>
-  {% endfor %}
-</ul>
-
-<div class="pagination">
+<section class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">前のページ</a>
   {% else %}
     <span class="previous">前のページ</span>
   {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next">次のページ</a>
   {% else %}
     <span class="next ">次のページ</span>
   {% endif %}
-</div>
+</section>
