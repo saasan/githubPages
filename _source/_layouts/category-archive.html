@@ -2,5 +2,10 @@
 layout: page
 ---
 <ul>
-  {% for p in site.pages %}{% if p.title and p.category == page.category-archive %}<li><a href="{{ p.url | replace:'/index.html',"/" }}">{{ p.title }}</a></li>{% endif %}{% endfor %}
+  {% assign sorted_pages = (site.pages | sort: 'date') %}
+  {% for p in sorted_pages reversed %}
+    {% if p.title and p.category == page.category-archive %}
+      <li><a href="{{ p.url | replace:'/index.html',"/" }}">{{ p.title }}</a></li>
+    {% endif %}
+  {% endfor %}
 </ul>
