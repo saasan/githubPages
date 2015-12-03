@@ -105,6 +105,28 @@ table.border {
   background-color: #F60;
 }
 
+.pagination {
+  text-align: center;
+  
+  span, a, em {
+    display: inline-block;
+    border: 1px $grey-color-light solid;
+    padding: 5px 10px;
+    line-height: 150%;
+  }
+  
+  span {
+    color: $grey-color-light;
+  }
+  
+  em {
+    font-style: normal;
+    font-weight: bold;
+    color: white;
+    background-color: $link-color;
+  }
+}
+
 @import "top-page";
 @import "mobamas-status-pt";
 @import "trainer-ticket-time";
