@@ -1,15 +1,14 @@
 .wrapper {
-  max-width: $max-content-width - ($pc-margin * 2);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $pc-margin;
-  padding-left: $pc-margin;
+  padding-right: $mobile-margin;
+  padding-left: $mobile-margin;
   @extend %clearfix;
 
-  @include if-mobile {
-    max-width: $max-content-width - $pc-margin;
-    padding-right: $mobile-margin;
-    padding-left: $mobile-margin;
+  @include if-pc {
+    max-width: $max-content-width - ($pc-margin * 2);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $pc-margin;
+    padding-left: $pc-margin;
   }
 }
 
