@@ -36,6 +36,11 @@ $max-mobile-width: 768px;
     @content;
   }
 }
+@mixin larger-than($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
 @mixin if-mobile($width: $max-mobile-width) {
   @media screen and (max-width: $width) {
     @content;

@@ -3,8 +3,6 @@
 /*
  * トップページ用スタイル
  */
-$top-page-width: 700px;
-$top-page-mobile-width: 320px;
 
 html.top-page {
   // htmlの幅と高さを設定しないとAndroidのブラウザで高さが消失する
@@ -36,14 +34,17 @@ html.top-page {
   }
 
   h1 {
+    margin-left: auto;
+    margin-right: auto;
     padding: $mobile-margin;
+    max-width: $max-content-width;
     color: $header-color;
     font-size: 24px;
     font-weight: normal;
     letter-spacing: 5px;
     font-family: 'Orbitron', sans-serif;
     text-shadow: 0px 0px 10px #6DF, 0px 0px 5px #6DF;
-    background-image: radial-gradient($top-page-mobile-width * 0.6 2px at 50% 100%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background-image: radial-gradient(50% 2px at 50% 100%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
 
   h2 {
@@ -97,16 +98,23 @@ html.top-page {
 /*
  * PC用
  */
-@include if-pc {
+$top-resolution: 600px;
+@include larger-than($top-resolution) {
   html.top-page {
     h1 {
-      font-size: 32px;
-      background-image: radial-gradient($top-page-width * 0.6 2px at 50% 100%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+      font-size: $top-resolution * 0.05;
     }
 
     footer {
       right: $pc-margin;
       bottom: $pc-margin;
     }
+  }
+}
+
+$top-resolution: 800px;
+@include larger-than($top-resolution) {
+  html.top-page h1 {
+    font-size: $top-resolution * 0.05;
   }
 }
