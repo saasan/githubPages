@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: 今日のトレチケタイム更新
 date: 2015-11-04 15:24:02
 category: blog

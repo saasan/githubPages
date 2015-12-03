@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: 「デレステ楽曲検索」更新
 date: 2015-11-16 11:47:38
 category: blog
