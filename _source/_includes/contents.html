@@ -1,9 +1,6 @@
 <ul>
-  {% assign sorted_pages = (site.pages | sort: 'date') %}
-  {% for page in sorted_pages reversed %}
-    {% assign depth = page.url | split: '/' | size %}
-    {% if page.title and page.category == nil and depth < 3 %}
-      <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/imas/">アイマス関連</a></li>
+  <li><a href="/script/pixiv-tags.html">pixiv Tags</a></li>
+  <li><a href="/software/pso2utility.html">PSO2Utility</a></li>
 </ul>
