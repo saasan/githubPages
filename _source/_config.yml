@@ -15,4 +15,3 @@ paginate_path: "/blog/page:num/"
 
 gems:
   - jekyll-paginate
-  - jekyll-redirect-from
