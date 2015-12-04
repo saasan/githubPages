@@ -10,5 +10,7 @@ SET JEKYLL_ENV=production
 CALL jekyll build --source _source --trace
 ENDLOCAL
 
+robocopy _site ..\saasan.github.io * /MIR /XD mobamas-dojo .git .sass-cache /XF .gitattributes .gitignore /XA:SH
+
 POPD
 PAUSE
