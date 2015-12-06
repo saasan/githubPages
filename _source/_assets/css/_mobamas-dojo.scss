@@ -42,7 +42,8 @@ body.mobamas-dojo {
 }
 
 h2 {
-  margin-top: 20px;
+  margin-top: $mobile-margin * 3;
+  margin-bottom: $mobile-margin * 2;
   padding-bottom: $mobile-margin;
   font-size: 21px;
   color: $text-color;

@@ -5,7 +5,7 @@ title: Blog
 {% for post in paginator.posts %}
   <section>
     <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-    <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
     <section>
       {{ post.content }}
     </section>
