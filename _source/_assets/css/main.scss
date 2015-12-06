@@ -55,8 +55,8 @@ body {
   font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
-header h1 {
-  margin: 0 $mobile-margin $mobile-margin;
+h1 {
+  margin-bottom: $mobile-margin;
 }
 
 @include if-pc {
