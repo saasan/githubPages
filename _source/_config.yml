@@ -1,8 +1,9 @@
 title: saasan.github.io
 url: "http://saasan.github.io"
-twitter:
-  username: saasan
+author_name: saasan
+twitter_username: saasan
 github_username:  saasan
+default_image: "/img/s2works_favicon.png"
 
 highlighter: false
 
