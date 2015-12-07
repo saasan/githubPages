@@ -5,8 +5,7 @@
 
   @include if-pc {
     max-width: $max-content-width - ($pc-margin * 2);
-    margin-right: auto;
-    margin-left: auto;
+    @include center-box;
     padding-right: $pc-margin;
     padding-left: $pc-margin;
   }

@@ -49,6 +49,11 @@ $max-mobile-width: 768px;
   }
 }
 
+@mixin center-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @import "layout";
 
 body {
