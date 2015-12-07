@@ -91,7 +91,17 @@ table.border {
 }
 
 .category-archive {
-  font-size: 150%;
+  font-size: 130%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: $mobile-margin 0;
+  }
 }
 
 .twitter-username, .rss {
