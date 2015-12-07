@@ -73,11 +73,11 @@ footer nav {
     margin: 0 0 $mobile-margin;
     padding: 0;
     list-style: none;
-    
+
     @include smaller-than($footer-width) {
       flex-direction: column;
     }
-  
+
     li {
       // flex item間のマージンは相殺しない仕様
       margin: 0 0.25em;
@@ -97,6 +97,11 @@ footer nav {
   }
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 table.border {
   border-collapse: collapse;
 
@@ -106,8 +111,7 @@ table.border {
   }
 }
 
-.vertical-center
-{
+.vertical-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -141,18 +145,18 @@ table.border {
 
 .pagination {
   text-align: center;
-  
+
   span, a, em {
     display: inline-block;
     border: 1px $grey-color-light solid;
     padding: 5px 10px;
     line-height: 150%;
   }
-  
+
   span {
     color: $grey-color-light;
   }
-  
+
   em {
     font-style: normal;
     font-weight: bold;
