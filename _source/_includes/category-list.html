@@ -1,0 +1,20 @@
+{% if include.category %}
+  {% assign category = include.category %}
+{% else %}
+  {% if page.category-archive %}
+    {% assign category = page.category-archive %}
+  {% else %}
+    {% assign category = page.category %}
+  {% endif %}
+{% endif %}
+
+{% if category %}
+  <ul class="category-list">
+    {% assign sorted_pages = (site.pages | sort: 'date') %}
+    {% for p in sorted_pages reversed %}
+      {% if p.title and p.category == category %}
+        <li><a href="{{ p.url | replace:'/index.html',"/" }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,11 +1,6 @@
 ---
 layout: page
 ---
-<ul>
-  {% assign sorted_pages = (site.pages | sort: 'date') %}
-  {% for p in sorted_pages reversed %}
-    {% if p.title and p.category == page.category-archive %}
-      <li><a href="{{ p.url | replace:'/index.html',"/" }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endfor %}
-</ul>
+<div class="category-archive">
+  {% include category-list.html category=page.category-archive %}
+</div>
