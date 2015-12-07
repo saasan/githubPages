@@ -89,7 +89,7 @@ function createYAMLFrontMatter(d, title) {
     "layout: " + LAYOUT + "\n" +
     "title: " + title + "\n" +
     "date: " + createDateString(d) + " " + createTimeString(d) + " +0900\n" +
-    "categories: update\n" +
+    "category: blog\n" +
     "---\n"
   );
 }
