@@ -70,38 +70,6 @@ h1 {
   }
 }
 
-$footer-width: 500px;
-footer nav {
-  ul {
-    display: flex;
-    justify-content: center;
-    margin: 0 0 $mobile-margin;
-    padding: 0;
-    list-style: none;
-
-    @include smaller-than($footer-width) {
-      flex-direction: column;
-    }
-
-    li {
-      // flex item間のマージンは相殺しない仕様
-      margin: 0 0.25em;
-      padding: 0;
-    }
-
-    a {
-      display: inline-block;
-      margin: 0 auto;
-      padding: $mobile-margin;
-      line-height: 150%;
-
-      @include smaller-than($footer-width) {
-        min-width: 200px;
-      }
-    }
-  }
-}
-
 img {
   max-width: 100%;
   vertical-align: middle;
