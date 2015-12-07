@@ -68,6 +68,14 @@ p {
 a {
   color: $link-color;
   text-decoration: none;
+
+  &:visited {
+    color: darken($link-color, 15%);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 img {
