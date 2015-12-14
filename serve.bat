@@ -6,7 +6,7 @@ PUSHD %~dp0
 
 SETLOCAL
 SET RUBYOPT=-EUTF-8
-CALL jekyll serve --source _source --trace --drafts
+CALL jekyll serve --source _source --trace --drafts --port 80
 ENDLOCAL
 
 POPD
