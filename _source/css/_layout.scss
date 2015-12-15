@@ -95,6 +95,11 @@
 
 .page-content {
   padding: $pc-margin 0;
+
+  p {
+    margin-top: $mobile-margin;
+    margin-bottom: $mobile-margin;
+  }
 }
 
 .post-meta {

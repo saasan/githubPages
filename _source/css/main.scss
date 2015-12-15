@@ -2,6 +2,7 @@
 ---
 @charset "UTF-8";
 @import "mobamas-dojo";
+@import "syntax-highlighting";
 
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -75,6 +76,25 @@ h1 {
 img {
   max-width: 100%;
   vertical-align: middle;
+}
+
+figure, pre {
+  margin: 0;
+  padding: 0;
+}
+
+pre {
+  padding: $mobile-margin;
+}
+
+code {
+  padding: 3px 0.5em;
+}
+
+pre code {
+  padding: 0;
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 table.border {
