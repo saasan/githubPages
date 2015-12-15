@@ -27,8 +27,8 @@
 //-------------------------------------------------------------------------------
 // レイアウト
 var LAYOUT = "page";
-// _postsのパス
-var POST_PATH = "_source\\_posts";
+// _draftsのパス
+var DRAFT_PATH = "_source\\_drafts";
 // 拡張子
 var EXTENSION = ".md";
 // 新しいPostを開くエディターのパス
@@ -45,7 +45,7 @@ try {
   var fm = createYAMLFrontMatter(d, title);
 
   var post = FSO.GetParentFolderName(WScript.ScriptFullName);
-  post = FSO.BuildPath(post, POST_PATH);
+  post = FSO.BuildPath(post, DRAFT_PATH);
   post = FSO.BuildPath(post, createDateString(d) + "-" + fileName + EXTENSION);
 
   var stream = FSO.CreateTextFile(post);
