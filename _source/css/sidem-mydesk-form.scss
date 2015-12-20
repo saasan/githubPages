@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/*
+ * SideM風会話ジェネレータ用スタイル
+ */
+.sidem-mydesk-form {
+  label.block {
+    display: block;
+    margin-bottom: $mobile-margin;
+    line-height: 1.5em;
+  }
+
+  .flex {
+    display: flex;
+
+    label {
+      margin: 0 $mobile-margin;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    input.name {
+      width: 8em;
+    }
+
+    input.line {
+      flex: 1;
+    }
+  }
+}
+
