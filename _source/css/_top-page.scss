@@ -34,7 +34,7 @@ html.top-page {
   }
 
   h1 {
-    @include center-box;
+    @include center-block;
     padding: $mobile-margin;
     max-width: $max-content-width;
     color: $header-color;
