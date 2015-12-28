@@ -16,3 +16,4 @@ gems:
   - jekyll-gist
   - octopress-autoprefixer
   - htmlbeautifier
+  - jekyll-sitemap
