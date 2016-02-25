@@ -38,7 +38,12 @@ Google AdSenseでの収入が年間20万円を超えると、サラリーマン�
 4. あとは控除など必要がある場合は入力
 5. 最後にPDFファイルがダウンロードできるので、これをプリンターかネットプリントなどで印刷
 6. 印刷した申告書に捺印と署名を行い、添付書類を貼り付ける
-7. 印刷した紙に書かれている提出先税務署へ **簡易書留** で送る
+7. 印刷した紙に書かれている提出先税務署へ郵送する  
+   (普通郵便でもいいが送った記録が残らないので、万全を期すなら
+   <a href="https://www.post.japanpost.jp/service/fuka_service/tokutei_kiroku/" target="_blank">特定記録</a>
+   や
+   <a href="https://www.post.japanpost.jp/service/fuka_service/kakitome/" target="_blank">書留</a>
+   で)
 
 ###その他
 
