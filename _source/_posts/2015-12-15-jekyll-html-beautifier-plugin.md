@@ -1,6 +1,6 @@
 ---
 layout: page
-title: '[Jekyll] TMLを読みやすいように整形するプラグイン'
+title: '[Jekyll] HTMLを読みやすいように整形するプラグイン'
 date: 2015-12-15 18:59:07 +0900
 category: blog
 tags: Jekyll
