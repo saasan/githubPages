@@ -6,6 +6,10 @@
   overflow: auto;
 }
 
+.highlighter-rouge .highlight {
+  border-width: 0;
+}
+
 .highlight {
   .c     { color: #998; font-style: italic } // Comment
   .err   { color: #a61717; background-color: #e3d2d2 } // Error
