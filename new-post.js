@@ -49,6 +49,7 @@ layout: ${LAYOUT}
 title: ${title}
 date: ${dateTimeString} +0900
 category: blog
+tags:
 ---
 
 `
