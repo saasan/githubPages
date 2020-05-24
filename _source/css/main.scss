@@ -187,6 +187,10 @@ table.border {
   }
 }
 
+.gist-data {
+  max-height: 500px! important;
+}
+
 @import "top-page";
 @import "sidem-mydesk";
 @import "mobamas-status-pt";
