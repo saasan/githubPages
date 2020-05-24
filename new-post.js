@@ -65,6 +65,32 @@ function zeroFill(num, digit) {
 }
 
 //-----------------------------------------------------------------------------
+// ファイル名を作成
+//-----------------------------------------------------------------------------
+function createFileName(date, title) {
+    let fileName = title;
+
+    fileName = fileName.replace(INVALID_FILENAME_CHAR, '-').toLowerCase();
+    fileName = createDateString(date) + '-' + fileName + EXTENSION;
+
+    return fileName;
+}
+
+//-----------------------------------------------------------------------------
+// 新しいPostを作成
+//-----------------------------------------------------------------------------
+function createNewPost(title) {
+    let today = new Date();
+    let frontMatter = createYAMLFrontMatter(today, title);
+    let fileName = createFileName(today, title);
+    let filePath = path.join(__dirname, DRAFT_PATH, fileName);
+
+    fs.writeFileSync(filePath, frontMatter);
+
+    return filePath;
+}
+
+//-----------------------------------------------------------------------------
 // メイン
 //-----------------------------------------------------------------------------
 function main() {
@@ -79,13 +105,7 @@ function main() {
     readline.question('タイトルを入力して下さい: ', title => {
         readline.close();
 
-        let today = new Date();
-        let frontMatter = createYAMLFrontMatter(today, title);
-        let fileName = title.replace(INVALID_FILENAME_CHAR, '-').toLowerCase();
-        fileName = createDateString(today) + '-' + fileName + EXTENSION;
-        let filePath = path.join(__dirname, DRAFT_PATH, fileName)
-
-        fs.writeFileSync(filePath, frontMatter);
+        let filePath = createNewPost(title);
         execSync(`${EDITOR} ${filePath}`);
     });
 }
