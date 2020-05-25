@@ -15,7 +15,7 @@ HTML の構造が分からなくなるときがあります。
 そこで、HTML を整形して出力するプラグインを作ってみました。
 いわゆるbeautifierとかpretty printとかいわれる機能ですね。
 
-{% gist 7c92d15e7ebb4870f581 %}
+{% gist saasan/7c92d15e7ebb4870f581 %}
 
 ```gem install htmlbeautifier``` などで htmlbeautifier をインストールしたあと、
 このファイルを _plugins フォルダに入れれば
