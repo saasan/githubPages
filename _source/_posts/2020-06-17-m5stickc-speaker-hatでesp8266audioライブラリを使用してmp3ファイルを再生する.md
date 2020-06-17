@@ -38,7 +38,18 @@ AudioFileSourcePROGMEM クラスを使用した方がよいかと思います。
 
 {% gist saasan/b6d9cb8fc8786d9c0407560f6206af22 %}
 
+## 自力での WAV ファイル再生との比較
+
+前回行った自力での WAV ファイル再生では 8bit, 8000Hz 限定だったこともあり、
+比較すると音質はかなり改善しましたが、
+再生の前後にプチプチとノイズが入るようになりました。
+また、コンパイルにかかる時間もかなり長くなっています。
+
+コンパイル時間はどうしようもないと思いますが、
+再生前後のプチプチは下記参考サイトのクリックノイズ対策を行えば消せるかもしれません。
+
 ## 参考サイト
 
 - [earlephilhower/ESP8266Audio: Arduino library to play MOD, WAV, FLAC, MIDI, RTTTL, MP3, and AAC files on I2S DACs or with a software emulated delta-sigma DAC on the ESP8266 and ESP32](https://github.com/earlephilhower/ESP8266Audio)
 - [ESP32でGoogle Play Musicを再生する - Qiita](https://qiita.com/odetarou/items/0f37ed2eeeb9bd051c0c)
+- [ESP32でサウンド出力時のクリックノイズ対策（I2S+内蔵DAC） | N.Yamazaki's blog](http://blog-yama.a-quest.com/?eid=970190)
