@@ -52,4 +52,4 @@ AudioFileSourcePROGMEM クラスを使用した方がよいかと思います。
 
 - [earlephilhower/ESP8266Audio: Arduino library to play MOD, WAV, FLAC, MIDI, RTTTL, MP3, and AAC files on I2S DACs or with a software emulated delta-sigma DAC on the ESP8266 and ESP32](https://github.com/earlephilhower/ESP8266Audio)
 - [ESP32でGoogle Play Musicを再生する - Qiita](https://qiita.com/odetarou/items/0f37ed2eeeb9bd051c0c)
-- [ESP32でサウンド出力時のクリックノイズ対策（I2S+内蔵DAC） | N.Yamazaki's blog](http://blog-yama.a-quest.com/?eid=970190)
+- [ESP32でサウンド出力時のクリックノイズ対策（I2S+内蔵DAC） \| N.Yamazaki's blog](http://blog-yama.a-quest.com/?eid=970190)
