@@ -98,7 +98,7 @@ SHELL-GND SHORT(A&B)</pre>
 eMarker が内蔵されていないため 3A までの電流しか流せません。
 connection のランプは USB 3.2 が一部点灯しています。
 
-[USB 3.0, 3,1 では TX1/RX1 と TX2/RX2 のどちらかが繋がっていれば良い](https://ascii.jp/elem/000/001/848/1848727/index-2.html)
+[USB 3.0, 3.1 では TX1/RX1 と TX2/RX2 のどちらかが繋がっていれば良い](https://ascii.jp/elem/000/001/848/1848727/index-2.html)
 ようです。
 USB 3.2 では TX1/RX1 と TX2/RX2 の2レーンを使用して高速な通信を行う USB 3.2 Gen 2x2 というモードがありますが、このケーブルでは利用できません。
 
