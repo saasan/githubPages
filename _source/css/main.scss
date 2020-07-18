@@ -78,12 +78,12 @@ img {
   vertical-align: middle;
 }
 
-figure, pre {
+figure, pre, blockquote {
   margin: 0;
   padding: 0;
 }
 
-pre, code {
+pre, code, blockquote {
   border: solid 1px #DDD;
   border-radius: 3px;
   overflow: auto;
@@ -92,6 +92,11 @@ pre, code {
 pre {
   padding: $mobile-margin;
   margin-bottom: $mobile-margin;
+}
+
+blockquote {
+    padding: 0 $mobile-margin;
+    margin: $mobile-margin 2em;
 }
 
 code {
