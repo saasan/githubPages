@@ -1,7 +1,7 @@
 ---
 layout: page
 title: USB CABLE CHECKER 2 で USB Type-C ケーブルの性能を確認する
-date: 2020-07-19 08:30:00 +0900
+date: 2020-07-19 09:00:00 +0900
 category: blog
 tags:
 description: 90W USB PD 充電器を買ったので、現在持っている USB Type-C ケーブルの性能を確認してみた。
@@ -79,8 +79,7 @@ CC:DOWN1K/E-MARKED
 SHELL-GND SHORT(A&B)</pre>
 
 eMarker が内蔵されているため 3A を超える電流が流せます。
-connection のランプは USB 2.0 の部分と
-[CC (Configuration Channel)](https://lab.fujiele.co.jp/articles/8968/) が点灯しています。
+connection のランプは USB 2.0 の部分と CC (Configuration Channel) が点灯しています。
 USB 2.0 対応の PD ケーブルとして使えるようです。
 
 電源ケーブルとして使うならこれで十分ですね。
@@ -98,11 +97,13 @@ SHELL-GND SHORT(A&B)</pre>
 eMarker が内蔵されていないため 3A までの電流しか流せません。
 connection のランプは USB 3.2 が一部点灯しています。
 
-[USB 3.0, 3.1 では TX1/RX1 と TX2/RX2 のどちらかが繋がっていれば良い](https://ascii.jp/elem/000/001/848/1848727/index-2.html)
-ようです。
-USB 3.2 では TX1/RX1 と TX2/RX2 の2レーンを使用して高速な通信を行う USB 3.2 Gen 2x2 というモードがありますが、このケーブルでは利用できません。
+USB 3.0, 3.1 では TX1/RX1 と TX2/RX2 のどちらかが繋がっていれば良いようです。
+USB 3.2 Gen 2x2 では TX1, TX2, RX1, RX2 のすべてを使用してより高速な通信を行うため、このケーブルは利用できません。
 
-USB 3.1 対応の PD ケーブルとして使えそう。
+SBU (Sideband Use) は USB では使用されず、
+DisplayPort 出力や Thunderbolt などの Alternate Mode に使われる信号線のようです。
+
+USB 3.1 対応の PD ケーブルとしては使えそう。
 
 ##  One-Netbook OneMix3S 付属ケーブル
 
@@ -135,3 +136,10 @@ RP-PC128 は MacBook 付属の 61W USB-C 充電器と比べて
 手持ちの OneMix3S 付属ケーブルが規格違反だったのは意外でした。
 USB Power Delivery では高電圧、大電流が流れるため、
 ケーブル購入の際は信頼できるメーカーのものを選んだほうがよさそうです。
+
+## 参考サイト
+
+- [USBCableChecker2/README.md at master · bit-trade-one/USBCableChecker2](https://github.com/bit-trade-one/USBCableChecker2/blob/master/README.md)
+- [ASCII.jp：USB 4の発表で、USB 3.2はどうなった？ (1/5)](https://ascii.jp/elem/000/001/848/1848727/)
+- [USB 3.2とUSB4は従来のUSB規格から何が変わるのか？ 混乱しがちなUSBの最新事情を説明しよう - 4Gamer.net](https://www.4gamer.net/games/999/G999902/20190403022/)
+- [USB Type-Cに置き換える方法 第1話 Type-Cの原理を知る \| 組込み技術ラボ](https://lab.fujiele.co.jp/articles/8968/)
