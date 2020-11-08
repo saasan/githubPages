@@ -60,9 +60,7 @@ tags:
 // ゼロ埋め
 //-----------------------------------------------------------------------------
 function zeroFill(num, digit) {
-    let str = (new Number(num)).toString();
-    while (str.length < digit) str = '0' + str;
-    return str;
+    return num.toString().padStart(digit, '0');
 }
 
 //-----------------------------------------------------------------------------
