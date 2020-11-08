@@ -6,8 +6,8 @@ const execSync = require('child_process').execSync;
 
 // レイアウト
 const LAYOUT = 'page';
-// _draftsのパス
-const DRAFT_PATH = '_source\\_drafts';
+// 新しいポストを作成するパス
+const OUTPUT_PATH = ['_source', '_posts'];
 // 拡張子
 const EXTENSION = '.md';
 // 新しいPostを開くエディターのパス
@@ -82,7 +82,7 @@ function createNewPost(title) {
     let today = new Date();
     let frontMatter = createYAMLFrontMatter(today, title);
     let fileName = createFileName(today, title);
-    let filePath = path.join(__dirname, DRAFT_PATH, fileName);
+    let filePath = path.join(__dirname, ...OUTPUT_PATH, fileName);
 
     fs.writeFileSync(filePath, frontMatter);
 
