@@ -1,4 +1,5 @@
-_site/
-.sass-cache/
 .jekyll-cache/
-_source/_includes/*.md
+.sass-cache/
+/_site/
+/_source/_drafts/
+/_source/_includes/*.md
