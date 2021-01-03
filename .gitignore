@@ -3,3 +3,4 @@
 /_site/
 /_source/_drafts/
 /_source/_includes/*.md
+/_source/_plugins/jekyll-gist-it-tag.rb
