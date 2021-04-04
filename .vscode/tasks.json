@@ -28,9 +28,18 @@
             "command": "jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml",
             "problemMatcher": [],
             "group": {
-              "kind": "build",
-              "isDefault": true
+                "kind": "build",
+                "isDefault": true
             }
+        },
+        {
+            "label": "sync",
+            "type": "shell",
+            "command": "robocopy _site ..\\saasan.github.io * /MIR /XD mobamas-dojo .git .sass-cache /XF .gitattributes .gitignore /XA:SH",
+            "problemMatcher": [],
+            "dependsOn": [
+                "build"
+            ]
         }
     ]
 }
