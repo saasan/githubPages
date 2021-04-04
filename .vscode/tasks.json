@@ -6,12 +6,14 @@
         {
             "label": "new-post",
             "type": "shell",
-            "command": "node new-post.js"
+            "command": "node new-post.js",
+            "problemMatcher": []
         },
         {
             "label": "serve",
             "type": "shell",
-            "command": "jekyll serve --source _source --drafts --port 80"
+            "command": "jekyll serve --source _source --drafts --port 80",
+            "problemMatcher": []
         },
         {
             "label": "build",
@@ -23,7 +25,12 @@
                     "JEKYLL_ENV": "production"
                 }
             },
-            "command": "jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml"
+            "command": "jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml",
+            "problemMatcher": [],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
         }
     ]
 }
