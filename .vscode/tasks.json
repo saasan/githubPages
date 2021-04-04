@@ -1,0 +1,29 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "new-post",
+            "type": "shell",
+            "command": "node new-post.js"
+        },
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": "jekyll serve --source _source --drafts --port 80"
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "options": {
+                "env": {
+                    "LANG": "ja_JP.UTF-8",
+                    "RUBYOPT": "-EUTF-8",
+                    "JEKYLL_ENV": "production"
+                }
+            },
+            "command": "jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml"
+        }
+    ]
+}
