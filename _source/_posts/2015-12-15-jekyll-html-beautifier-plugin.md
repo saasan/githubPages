@@ -3,7 +3,7 @@ layout: page
 title: '[Jekyll] HTMLを読みやすいように整形するプラグイン'
 date: 2015-12-15 18:59:07 +0900
 category: blog
-tags: Jekyll
+tags: [ Jekyll ]
 description: beautifierとかpretty printとかいわれる機能をJekyllでのビルド時に実行します。
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: M5StickC + Speaker Hat で ESP8266Audio ライブラリを使用して MP3 ファイルを再生する
 date: 2020-06-17 19:59:34 +0900
 category: blog
-tags: M5StickC, M5Stack, ESP32, ESP8266Audio
+tags: [ M5StickC, M5Stack, ESP32, ESP8266Audio ]
 ---
 
 前回の

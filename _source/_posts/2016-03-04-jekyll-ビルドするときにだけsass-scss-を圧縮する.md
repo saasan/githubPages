@@ -3,7 +3,7 @@ layout: page
 title: '[Jekyll] ビルドするときにだけSass(SCSS)を圧縮する'
 date: 2016-03-04 19:19:37 +0900
 category: blog
-tags: Jekyll
+tags: [ Jekyll ]
 ---
 
 _config.yml に Sass(SCSS) を圧縮する設定を書くと、常時圧縮がかかってしまう。

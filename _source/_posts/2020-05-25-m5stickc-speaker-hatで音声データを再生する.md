@@ -3,7 +3,7 @@ layout: page
 title: M5StickC + Speaker Hat で音声データを再生する
 date: 2020-05-25 10:59:30 +0900
 category: blog
-tags: M5StickC, M5Stack, ESP32
+tags: [ M5StickC, M5Stack, ESP32 ]
 ---
 
 M5StickC + Speaker Hat で音声や音楽を再生しようと思ったら

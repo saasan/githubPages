@@ -3,6 +3,7 @@ layout: page
 title: コマンドライン(CLI)でFortiGateを設定する
 date: 2017-05-03 00:18:36 +0900
 category: blog
+tags: [ インフラ, FortiGate ]
 ---
 
 ## 概要

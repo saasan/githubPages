@@ -3,7 +3,7 @@ layout: page
 title: '[Jekyll] Liquidのタグをエスケープする方法'
 date: 2015-12-15 19:13:07 +0900
 category: blog
-tags: Jekyll
+tags: [ Jekyll ]
 ---
 
 ```{{ "{% raw " }}%}``` と ```{{ "{% endraw " }}%}``` で囲むと

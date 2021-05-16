@@ -3,6 +3,7 @@ layout: page
 title: Visual Studio Code で Markdown のプレビューを保存する
 date: 2017-01-14 22:15:58 +0900
 category: blog
+tags: [ VSCode, Markdown ]
 ---
 
 ## 概要

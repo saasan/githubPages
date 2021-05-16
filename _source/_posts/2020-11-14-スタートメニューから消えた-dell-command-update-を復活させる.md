@@ -3,7 +3,7 @@ layout: page
 title: スタートメニューから消えた Dell Command | Update を復活させる
 date: 2020-11-14 00:46:11 +0900
 category: blog
-tags: PC
+tags: [ PC ]
 ---
 
 Dell Command \| Update を実行したあとにスタートメニューから Dell Command \| Update が消えることがある。
