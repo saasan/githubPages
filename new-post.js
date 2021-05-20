@@ -11,7 +11,7 @@ const OUTPUT_PATH = ['_source', '_posts'];
 // 拡張子
 const EXTENSION = '.md';
 // 新しいPostを開くエディターのパス
-const EDITOR = '"C:\\Program Files\\EmEditor\\EmEditor.exe" /cps 65001';
+const EDITOR = 'code';
 // ファイル名に使用できない文字 '!"#$%&()*,/:;?@[]^`{|}\+<=>
 const INVALID_FILENAME_CHAR = /[ '!"#\$%&\(\)\*,\/:;\?@\[\]\^`\{\|\}\\\+<=>]/g;
 
