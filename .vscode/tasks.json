@@ -26,11 +26,7 @@
                 }
             },
             "command": "jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "problemMatcher": []
         },
         {
             "label": "sync",
@@ -39,7 +35,11 @@
             "problemMatcher": [],
             "dependsOn": [
                 "build"
-            ]
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
