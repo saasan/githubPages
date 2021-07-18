@@ -2,5 +2,5 @@
 .sass-cache/
 /_site/
 /_source/_drafts/
-/_source/_includes/*.md
+/_source/software/*/*.md
 /_source/_plugins/jekyll-gist-it-tag.rb
