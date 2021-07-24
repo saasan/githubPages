@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/saasan/jekyll-gist-it-tag
+  revision: fedc1f20d350713bd20d76adad2764520f4a3420
+  specs:
+    jekyll-gistit (0.1.0)
+      jekyll (>= 3.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -102,6 +109,7 @@ DEPENDENCIES
   jekyll
   jekyll-autoprefixer
   jekyll-gist
+  jekyll-gistit!
   jekyll-paginate
   jekyll-sitemap
 

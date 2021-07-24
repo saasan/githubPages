@@ -1,5 +1,5 @@
-# 環境構築
+# ビルド方法
 
-1. [RubyInstaller for Windows](http://rubyinstaller.org/) 入れる
-1. gem install jekyll
-1. _source/_config.yml の gems に書いてあるものを gem install
+1. [Docker Desktop](https://www.docker.com/products/docker-desktop) を入れる
+1. [Visual Studio Code](https://code.visualstudio.com/) を入れる
+1. VSCodeのタスクでビルド (`Ctrl + Shift + B`)

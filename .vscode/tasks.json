@@ -12,26 +12,19 @@
         {
             "label": "serve",
             "type": "shell",
-            "command": "jekyll serve --source _source --drafts --port 80",
+            "command": "bash task-serve.sh",
             "problemMatcher": []
         },
         {
             "label": "build",
             "type": "shell",
-            "options": {
-                "env": {
-                    "LANG": "ja_JP.UTF-8",
-                    "RUBYOPT": "-EUTF-8",
-                    "JEKYLL_ENV": "production"
-                }
-            },
-            "command": "jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml",
+            "command": "bash task-build.sh",
             "problemMatcher": []
         },
         {
             "label": "sync",
             "type": "shell",
-            "command": "robocopy _site ..\\saasan.github.io * /MIR /XD mobamas-dojo .git .sass-cache /XF .gitattributes .gitignore /XA:SH",
+            "command": "bash task-sync.sh",
             "problemMatcher": [],
             "dependsOn": [
                 "build"
