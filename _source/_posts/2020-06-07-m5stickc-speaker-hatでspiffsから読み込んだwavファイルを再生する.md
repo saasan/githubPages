@@ -3,7 +3,7 @@ layout: page
 title: M5StickC + Speaker Hat で SPIFFS から読み込んだ WAV ファイルを再生する
 date: 2020-06-07 20:24:56 +0900
 category: blog
-tags: [ M5StickC, M5Stack, ESP32 ]
+tags: [ M5Stack, M5StickC, ESP32 ]
 ---
 
 前回の
