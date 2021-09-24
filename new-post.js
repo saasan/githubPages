@@ -20,8 +20,8 @@ const INVALID_FILENAME_CHAR = /[ '!"#\$%&\(\)\*,\/:;\?@\[\]\^`\{\|\}\\\+<=>]/g;
 //------------------------------------------------------------------------------
 function createDateString(date) {
     let YYYY = date.getFullYear();
-    let MM = zeroFill(date.getMonth() + 1, 2);
-    let DD = zeroFill(date.getDate(), 2);
+    let MM = (date.getMonth() + 1).toString().padStart(2, '0');
+    let DD = date.getDate().toString().padStart(2, '0');
 
     return `${YYYY}-${MM}-${DD}`;
 }
@@ -30,9 +30,9 @@ function createDateString(date) {
 // 時刻文字列を作成
 //------------------------------------------------------------------------------
 function createTimeString(date) {
-    let hh = zeroFill(date.getHours(), 2);
-    let mm = zeroFill(date.getMinutes(), 2);
-    let ss = zeroFill(date.getSeconds(), 2);
+    let hh = date.getHours().toString().padStart(2, '0');
+    let mm = date.getMinutes().toString().padStart(2, '0');
+    let ss = date.getSeconds().toString().padStart(2, '0');
 
     return `${hh}:${mm}:${ss}`;
 }
@@ -54,13 +54,6 @@ tags:
 
 `
     );
-}
-
-//-----------------------------------------------------------------------------
-// ゼロ埋め
-//-----------------------------------------------------------------------------
-function zeroFill(num, digit) {
-    return num.toString().padStart(digit, '0');
 }
 
 //-----------------------------------------------------------------------------
