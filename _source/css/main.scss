@@ -21,6 +21,9 @@ $max-content-width: 960px;
 // スマホ用表示にする最大幅
 $max-mobile-width: 768px;
 
+// コードブロックのmax-height
+$code-block-max-height: 500px;
+
 /*
  * Media Queries
  * 使い方
@@ -193,7 +196,12 @@ table.border {
 }
 
 .gist-data {
-  max-height: 500px! important;
+  max-height: $code-block-max-height !important;
+}
+
+figure.highlight {
+  max-height: $code-block-max-height !important;
+  overflow: auto;
 }
 
 @import "top-page";

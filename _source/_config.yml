@@ -18,7 +18,5 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-gist
-  - jekyll-autoprefixer
   - htmlbeautifier
   - jekyll-sitemap
-  - jekyll-gistit
