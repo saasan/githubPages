@@ -19,9 +19,9 @@ const INVALID_FILENAME_CHAR = /[ '!"#\$%&\(\)\*,\/:;\?@\[\]\^`\{\|\}\\\+<=>]/g;
 // 日付文字列を作成
 //------------------------------------------------------------------------------
 function createDateString(date) {
-    let YYYY = date.getFullYear();
-    let MM = (date.getMonth() + 1).toString().padStart(2, '0');
-    let DD = date.getDate().toString().padStart(2, '0');
+    const YYYY = date.getFullYear();
+    const MM = (date.getMonth() + 1).toString().padStart(2, '0');
+    const DD = date.getDate().toString().padStart(2, '0');
 
     return `${YYYY}-${MM}-${DD}`;
 }
@@ -30,9 +30,9 @@ function createDateString(date) {
 // 時刻文字列を作成
 //------------------------------------------------------------------------------
 function createTimeString(date) {
-    let hh = date.getHours().toString().padStart(2, '0');
-    let mm = date.getMinutes().toString().padStart(2, '0');
-    let ss = date.getSeconds().toString().padStart(2, '0');
+    const hh = date.getHours().toString().padStart(2, '0');
+    const mm = date.getMinutes().toString().padStart(2, '0');
+    const ss = date.getSeconds().toString().padStart(2, '0');
 
     return `${hh}:${mm}:${ss}`;
 }
@@ -41,7 +41,7 @@ function createTimeString(date) {
 // YAML front matterを作成
 //------------------------------------------------------------------------------
 function createYAMLFrontMatter(date, title) {
-    let dateTimeString = createDateString(date) + ' ' + createTimeString(date);
+    const dateTimeString = createDateString(date) + ' ' + createTimeString(date);
 
     return (
 `---
@@ -49,7 +49,8 @@ layout: ${LAYOUT}
 title: ${title}
 date: ${dateTimeString} +0900
 category: blog
-tags:
+tags: []
+description:
 ---
 
 `
@@ -60,22 +61,19 @@ tags:
 // ファイル名を作成
 //-----------------------------------------------------------------------------
 function createFileName(date, title) {
-    let fileName = title;
-
-    fileName = fileName.replace(INVALID_FILENAME_CHAR, '-').toLowerCase();
-    fileName = createDateString(date) + '-' + fileName + EXTENSION;
-
-    return fileName;
+    const dateString = createDateString(date);
+    const fileName = title.replace(INVALID_FILENAME_CHAR, '-').toLowerCase();
+    return `${dateString}-${fileName}${EXTENSION}`;
 }
 
 //-----------------------------------------------------------------------------
 // 新しいPostを作成
 //-----------------------------------------------------------------------------
 function createNewPost(title) {
-    let today = new Date();
-    let frontMatter = createYAMLFrontMatter(today, title);
-    let fileName = createFileName(today, title);
-    let filePath = path.join(__dirname, ...OUTPUT_PATH, fileName);
+    const today = new Date();
+    const frontMatter = createYAMLFrontMatter(today, title);
+    const fileName = createFileName(today, title);
+    const filePath = path.join(__dirname, ...OUTPUT_PATH, fileName);
 
     fs.writeFileSync(filePath, frontMatter);
 
@@ -97,7 +95,7 @@ function main() {
     readline.question('タイトルを入力して下さい: ', title => {
         readline.close();
 
-        let filePath = createNewPost(title);
+        const filePath = createNewPost(title);
         execSync(`${EDITOR} ${filePath}`);
     });
 }
