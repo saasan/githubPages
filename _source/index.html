@@ -3,22 +3,24 @@ description: saasanが作ったソフトウェア、スクリプトを公開す�
 ---
 <!DOCTYPE html>
 <html lang="ja" class="top-page">
-  {% include head.html %}
-  <body>
-    <div class="top-wrapper">
-      <div class="top-wrapper-h1">
-        <h1>{{ site.title }}</h1>
-      </div>
+{% include head.html %}
 
-      <h2>contents</h2>
-      <nav>
-        {% include contents.html %}
-      </nav>
+<body>
+    <div class="top-wrapper">
+        <div class="top-wrapper-h1">
+            <h1>{{ site.title }}</h1>
+        </div>
+
+        <h2>contents</h2>
+        <nav>
+            {% include contents.html %}
+        </nav>
     </div>
 
     <footer>
-      {% include twitter.html %}
-      {% include rss.html %}
+        {% include twitter.html %}
+        {% include rss.html %}
     </footer>
-  </body>
+</body>
+
 </html>

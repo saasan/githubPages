@@ -1,23 +1,23 @@
 {% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
 
 {% if page.title %}
-  {% assign title = page.title %}
+    {% assign title = page.title %}
 {% else %}
-  {% assign title = site.title %}
+    {% assign title = site.title %}
 {% endif %}
 
 {% if page.description %}
-  {% assign description = page.description %}
+    {% assign description = page.description %}
 {% else %}
-  {% assign d = content | split: '</p>' %}
-  {% assign d = d.first | split: '<p>' %}
-  {% assign description = d.last | strip_html | xml_escape | remove_extra_whitespace | strip | truncate: 200 %}
+    {% assign d = content | split: '</p>' %}
+    {% assign d = d.first | split: '<p>' %}
+    {% assign description = d.last | strip_html | xml_escape | remove_extra_whitespace | strip | truncate: 200 %}
 {% endif %}
 
 {% if page.image %}
-  {% assign image = page.image | prepend: site.baseurl | prepend: site.url %}
+    {% assign image = page.image | prepend: site.baseurl | prepend: site.url %}
 {% else %}
-  {% assign image = site.default_image | prepend: site.baseurl | prepend: site.url %}
+    {% assign image = site.default_image | prepend: site.baseurl | prepend: site.url %}
 {% endif %}
 
 <meta name="twitter:card" content="summary">
@@ -28,28 +28,28 @@
 <meta property="og:image" content="{{ image }}">
 
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org/",
-    "@type": "Person",
-    "name": "{{ site.author_name }}",
-    "sameAs": [
-      "https://twitter.com/{{ site.twitter_username }}",
-      "https://github.com/{{ site.github_username }}"
-    ]
-  }
+    {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "{{ site.author_name }}",
+        "sameAs": [
+            "https://twitter.com/{{ site.twitter_username }}",
+            "https://github.com/{{ site.github_username }}"
+        ]
+    }
 </script>
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "name": "{{ title }}",
-    {% if page.date %}"datePublished": "{{ page.date | date_to_xmlschema }}",{% endif %}
-    "headline": "{{ description }}",
-    "image": "{{ image }}",
-    "url": "{{ url }}",
-    "publisher" : {
-      "@type": "Person",
-      "name": "{{ site.author_name }}"
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "name": "{{ title }}",
+        {% if page.date %}"datePublished": "{{ page.date | date_to_xmlschema }}",{% endif %}
+        "headline": "{{ description }}",
+        "image": "{{ image }}",
+        "url": "{{ url }}",
+        "publisher" : {
+            "@type": "Person",
+            "name": "{{ site.author_name }}"
+        }
     }
-  }
 </script>

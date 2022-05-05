@@ -4,37 +4,37 @@ title: ブログ
 description: 雑記、覚え書き、更新情報など
 ---
 {% for post in paginator.posts %}
-  <section>
-    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-    <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
     <section>
-      {{ post.content }}
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
+        <section>
+            {{ post.content }}
+        </section>
     </section>
-  </section>
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 前のページ</a>
-    {% else %}
-      <span>&laquo; 前のページ</span>
-    {% endif %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; 前のページ</a>
+        {% else %}
+            <span>&laquo; 前のページ</span>
+        {% endif %}
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <em>{{ page }}</em>
-      {% elsif page == 1 %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <em>{{ page }}</em>
+            {% elsif page == 1 %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            {% else %}
+                <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
 
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">次のページ &raquo;</a>
-    {% else %}
-      <span>次のページ &raquo;</span>
-    {% endif %}
-  </div>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">次のページ &raquo;</a>
+        {% else %}
+            <span>次のページ &raquo;</span>
+        {% endif %}
+    </div>
 {% endif %}

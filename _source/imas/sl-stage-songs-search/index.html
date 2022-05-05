@@ -5,129 +5,129 @@ date: 2016-05-28 21:55:55 +0900
 category: imas
 ---
 <div ng-app="slStageSongsSearch" ng-controller="MainController">
-  <section class="info">
-    <p>
-      <a href="http://cinderella.idolmaster.jp/sl-stage/" target="_blank">アイドルマスター シンデレラガールズ スターライトステージ</a>
-      (デレステ) の楽曲一覧から、消費スタミナ、獲得経験値、親愛度などで曲を探せます。
-    </p>
-    <p>
-      「レベルアップに必要なスタミナが知りたい」「親愛度MAXに必要なスタミナが知りたい」「残っているスタミナを使い切れる曲を探したい」
-      といった用途にどうぞ。
-    </p>
+    <section class="info">
+        <p>
+            <a href="http://cinderella.idolmaster.jp/sl-stage/" target="_blank">アイドルマスター シンデレラガールズ スターライトステージ</a>
+            (デレステ) の楽曲一覧から、消費スタミナ、獲得経験値、親愛度などで曲を探せます。
+        </p>
+        <p>
+            「レベルアップに必要なスタミナが知りたい」「親愛度MAXに必要なスタミナが知りたい」「残っているスタミナを使い切れる曲を探したい」
+            といった用途にどうぞ。
+        </p>
 
-    <h4>{{ page.date | date: "%Y/%m/%d" }} 更新</h4>
-    <ul>
-      <li>「つぼみ」ほか追加</li>
-    </ul>
+        <h4>{{ page.date | date: "%Y/%m/%d" }} 更新</h4>
+        <ul>
+            <li>「つぼみ」ほか追加</li>
+        </ul>
 
-    <noscript>
-      <p>JavaScriptを有効にして下さい。</p>
-    </noscript>
-  </section>
+        <noscript>
+            <p>JavaScriptを有効にして下さい。</p>
+        </noscript>
+    </section>
 
-  <section class="error" ng-show="errorMessage">
-    <p ng-bind="errorMessage"></p>
-  </section>
+    <section class="error" ng-show="errorMessage">
+        <p ng-bind="errorMessage"></p>
+    </section>
 
-  <section>
-    <fieldset>
-      <legend>検索</legend>
+    <section>
+        <fieldset>
+            <legend>検索</legend>
 
-      <label>
-        難易度：
-        <select ng-model="$storage.songFilterDifficulty" ng-options="hash.value as hash.label for hash in songDifficultyList">
-          <option value="">-</option>
-        </select>
-      </label>
+            <label>
+                難易度：
+                <select ng-model="$storage.songFilterDifficulty" ng-options="hash.value as hash.label for hash in songDifficultyList">
+                    <option value="">-</option>
+                </select>
+            </label>
 
-      <label>
-        タイプ：
-        <select ng-model="$storage.songFilterType" ng-options="hash.value as hash.label for hash in songTypeList">
-          <option value="">-</option>
-        </select>
-      </label>
+            <label>
+                タイプ：
+                <select ng-model="$storage.songFilterType" ng-options="hash.value as hash.label for hash in songTypeList">
+                    <option value="">-</option>
+                </select>
+            </label>
 
-      <label>
-        楽曲Lv：
-        <select ng-model="$storage.songFilterLevel" ng-options="value for value in songLvList">
-          <option value="">-</option>
-        </select>
-      </label>
+            <label>
+                楽曲Lv：
+                <select ng-model="$storage.songFilterLevel" ng-options="value for value in songLvList">
+                    <option value="">-</option>
+                </select>
+            </label>
 
-      <label>
-        スタミナ：
-        <select ng-model="$storage.songFilterStamina" ng-options="value for value in songStaminaList">
-          <option value="">-</option>
-        </select>
-      </label>
+            <label>
+                スタミナ：
+                <select ng-model="$storage.songFilterStamina" ng-options="value for value in songStaminaList">
+                    <option value="">-</option>
+                </select>
+            </label>
 
-      <label>
-        経験値：
-        <select ng-model="$storage.songFilterExp" ng-options="value for value in songExpList">
-          <option value="">-</option>
-        </select>
-      </label>
+            <label>
+                経験値：
+                <select ng-model="$storage.songFilterExp" ng-options="value for value in songExpList">
+                    <option value="">-</option>
+                </select>
+            </label>
 
-      <label>
-        親愛度：
-        <select ng-model="$storage.songFilterAffection" ng-options="value for value in songAffectionList">
-          <option value="">-</option>
-        </select>
-      </label>
-    </fieldset>
+            <label>
+                親愛度：
+                <select ng-model="$storage.songFilterAffection" ng-options="value for value in songAffectionList">
+                    <option value="">-</option>
+                </select>
+            </label>
+        </fieldset>
 
-    <fieldset>
-      <legend>表示</legend>
+        <fieldset>
+            <legend>表示</legend>
 
-      <label>
-        <input type="checkbox" ng-model="$storage.showSongDifficulty"> 難易度
-      </label>
-      <label>
-        <input type="checkbox" ng-model="$storage.showSongType"> タイプ
-      </label>
-      <label>
-        <input type="checkbox" ng-model="$storage.showSongLevel"> 楽曲Lv
-      </label>
-      <label>
-        <input type="checkbox" ng-model="$storage.showSongStamina"> スタミナ
-      </label>
-      <label>
-        <input type="checkbox" ng-model="$storage.showSongExp"> 経験値
-      </label>
-      <label>
-        <input type="checkbox" ng-model="$storage.showSongAffection"> 親愛度
-      </label>
-    </fieldset>
-  </section>
+            <label>
+                <input type="checkbox" ng-model="$storage.showSongDifficulty"> 難易度
+            </label>
+            <label>
+                <input type="checkbox" ng-model="$storage.showSongType"> タイプ
+            </label>
+            <label>
+                <input type="checkbox" ng-model="$storage.showSongLevel"> 楽曲Lv
+            </label>
+            <label>
+                <input type="checkbox" ng-model="$storage.showSongStamina"> スタミナ
+            </label>
+            <label>
+                <input type="checkbox" ng-model="$storage.showSongExp"> 経験値
+            </label>
+            <label>
+                <input type="checkbox" ng-model="$storage.showSongAffection"> 親愛度
+            </label>
+        </fieldset>
+    </section>
 
-  <section>
-    <table>
-      <thead>
-        <tr>
-          <th>タイトル</th>
-          <th ng-show="$storage.showSongDifficulty">難易度</th>
-          <th ng-show="$storage.showSongType">タイプ</th>
-          <th ng-show="$storage.showSongLevel">楽曲Lv</th>
-          <th ng-show="$storage.showSongStamina">スタミナ</th>
-          <th ng-show="$storage.showSongExp">経験値</th>
-          <th ng-show="$storage.showSongAffection">親愛度</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="song in songs | filter: songFilter">
-          <td data-label="タイトル" ng-bind="song.title"></td>
-          <td data-label="難易度" ng-show="$storage.showSongDifficulty" ng-bind="songDifficulty[song.difficulty]"></td>
-          <td data-label="タイプ" ng-show="$storage.showSongType" ng-bind="songType[song.type]"></td>
-          <td data-label="楽曲Lv" ng-show="$storage.showSongLevel" ng-bind="song.lv"></td>
-          <td data-label="スタミナ" ng-show="$storage.showSongStamina" ng-bind="songLv[song.lv].stamina"></td>
-          <td data-label="経験値" ng-show="$storage.showSongExp" ng-bind="songLv[song.lv].exp"></td>
-          <td data-label="親愛度" ng-show="$storage.showSongAffection" ng-bind="songLv[song.lv].affection"></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>タイトル</th>
+                    <th ng-show="$storage.showSongDifficulty">難易度</th>
+                    <th ng-show="$storage.showSongType">タイプ</th>
+                    <th ng-show="$storage.showSongLevel">楽曲Lv</th>
+                    <th ng-show="$storage.showSongStamina">スタミナ</th>
+                    <th ng-show="$storage.showSongExp">経験値</th>
+                    <th ng-show="$storage.showSongAffection">親愛度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="song in songs | filter: songFilter">
+                    <td data-label="タイトル" ng-bind="song.title"></td>
+                    <td data-label="難易度" ng-show="$storage.showSongDifficulty" ng-bind="songDifficulty[song.difficulty]"></td>
+                    <td data-label="タイプ" ng-show="$storage.showSongType" ng-bind="songType[song.type]"></td>
+                    <td data-label="楽曲Lv" ng-show="$storage.showSongLevel" ng-bind="song.lv"></td>
+                    <td data-label="スタミナ" ng-show="$storage.showSongStamina" ng-bind="songLv[song.lv].stamina"></td>
+                    <td data-label="経験値" ng-show="$storage.showSongExp" ng-bind="songLv[song.lv].exp"></td>
+                    <td data-label="親愛度" ng-show="$storage.showSongAffection" ng-bind="songLv[song.lv].affection"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-  <script src="/js/ngStorage.min.js"></script>
-  <script src="./sl-stage-songs-search.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="/js/ngStorage.min.js"></script>
+    <script src="./sl-stage-songs-search.js"></script>
 </div>

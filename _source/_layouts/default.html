@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
-  {% include head.html %}
-  <body itemscope itemtype="http://schema.org/WebPage">
+{% include head.html %}
+
+<body itemscope itemtype="http://schema.org/WebPage">
     {% include header.html %}
 
     <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </div>
 
     {% include footer.html %}
-  </body>
+</body>
+
 </html>

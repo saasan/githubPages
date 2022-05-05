@@ -5,10 +5,10 @@ curl https://raw.githubusercontent.com/saasan/PSO2Utility/master/CHANGELOG.md -o
 curl https://raw.githubusercontent.com/saasan/prisc/master/README.md -o _source/software/prisc/README.md
 
 docker run \
-  --rm \
-  --env TZ=Asia/Tokyo \
-  --volume=$PWD:/srv/jekyll \
-  -it \
-  -p 4000:4000 \
-  jekyll/jekyll \
-  jekyll serve --source _source --drafts
+    --rm \
+    --env TZ=Asia/Tokyo \
+    --volume=$PWD:/srv/jekyll \
+    -it \
+    -p 4000:4000 \
+    jekyll/jekyll \
+    jekyll serve --source _source --drafts
