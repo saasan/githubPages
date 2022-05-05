@@ -3,7 +3,7 @@ layout: page
 title: USB CABLE CHECKER 2 で USB Type-C ケーブルの性能を確認する
 date: 2020-07-19 09:00:00 +0900
 category: blog
-tags:
+tags: [ ガジェット ]
 description: 90W USB PD 充電器を買ったので、現在持っている USB Type-C ケーブルの性能を確認してみた。
 ---
 

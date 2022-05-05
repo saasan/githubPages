@@ -3,7 +3,7 @@ layout: page
 title: Kindle Paperwhite (第11世代) を買って1ヶ月で売り払った話
 date: 2022-03-13 07:05:19 +0900
 category: blog
-tags:
+tags: [ ガジェット ]
 ---
 
 Kindle Paperwhite を買ってから1ヶ月で売り払ってしまったので
