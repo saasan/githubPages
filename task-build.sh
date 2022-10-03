@@ -8,8 +8,8 @@ docker run \
     --rm \
     --env TZ=Asia/Tokyo \
     --env JEKYLL_ENV=production \
-    --volume=$PWD:/srv/jekyll \
+    --volume=$PWD:/srv/jekyll:Z \
+    --volume=$PWD/vendor/bundle:/usr/local/bundle:Z \
     -it \
-    -p 80:4000 \
     jekyll/jekyll \
     jekyll build --source _source --config _source/_config.yml,_source/_config-production.yml

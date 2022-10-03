@@ -3,3 +3,4 @@
 /_site/
 /_source/_drafts/
 /_source/software/*/*.md
+/vendor/bundle/

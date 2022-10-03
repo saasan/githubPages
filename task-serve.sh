@@ -7,7 +7,8 @@ curl https://raw.githubusercontent.com/saasan/prisc/master/README.md -o _source/
 docker run \
     --rm \
     --env TZ=Asia/Tokyo \
-    --volume=$PWD:/srv/jekyll \
+    --volume=$PWD:/srv/jekyll:Z \
+    --volume=$PWD/vendor/bundle:/usr/local/bundle:Z \
     -it \
     -p 4000:4000 \
     jekyll/jekyll \
