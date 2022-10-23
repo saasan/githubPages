@@ -21,7 +21,7 @@ PowerShell で削除したいファイルがあるディレクトリに移動後
 [Unblock-File](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/unblock-file)
 で削除できる。
 
-    Get-ChildItem -Recurse -File | Get-Item -Stream Zone.Identifier -ErrorAction SilentlyContinue | Unblock-File
+    Get-ChildItem -Recurse -File | Unblock-File
 
 [Remove-Item -Stream Zone.Identifier](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/remove-item#7)
 でもいい。
