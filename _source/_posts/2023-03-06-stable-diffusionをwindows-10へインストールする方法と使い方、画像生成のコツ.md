@@ -216,7 +216,7 @@ Tiling はタイルのように並べても継ぎ目のないシームレスな�
 #### Hires steps
 
 おそらく Sampling steps と似たようなものだと思われるが上げてもあまり違いがわからない。
-デフォルトの 0 でよさそう。
+デフォルトの 0 では Sampling steps と同じ値が使用される。
 
 #### Denoising strength
 
