@@ -357,6 +357,53 @@ Resize mode は元画像と生成画像の縦横比が違う場合の処理を�
 
 「Interrogate DeepBooru」は Danbooru のタグになる。
 
+## 設定 (Settings)
+
+「Settings」タブで設定が変更できる。
+全部説明するとキリがないため個人的に便利だと思う設定を紹介。
+
+### Saving images/grids \> Images filename pattern
+
+出力するファイル名のパターン。
+
+デフォルトの空欄状態だと同日内での連番と Seed 値になるため、
+他の日付のものと同じフォルダに入れたとき順番がバラバラになる。
+以下を設定し、直下にある「Add number to filename when saving」のチェックをはずすと、
+ファイル名が日付と時刻となるため便利。
+
+    [datetime<%Y-%m-%d %H%M%S><+0900>]-[seed]-[model_name]
+
+ファイル名に使用できるタグは「Images filename pattern」という文字にマウスカーソルを合わせると表示される。
+
+> [steps],
+> [cfg],
+> [prompt_hash],
+> [prompt],
+> [prompt_no_styles],
+> [prompt_spaces],
+> [width],
+> [height],
+> [styles],
+> [sampler],
+> [seed],
+> [model_hash],
+> [model_name],
+> [prompt_words],
+> [date],
+> [datetime],
+> [datetime\<Format\>],
+> [datetime\<Format\>\<Time Zone\>],
+> [job_timestamp]
+
+### Saving images/grids \> Always save all generated image grids と<br>User interface \> Show grid in results for web
+
+生成した画像を縦横に連結したグリッド画像を生成する設定。
+
+Batch で大量の画像を生成すると、完了後に
+Interrupt / Skip ボタンが Generate ボタンへ戻るのに時間がかかる。
+これはグリッド画像の作成が原因のため、
+待ちたくない場合は上記のチェックをはずすと良い。
+
 ## 起動時の引数設定
 
 「webui-user.bat」をテキストエディタで編集することで web UI 起動時の引数を設定できる。
