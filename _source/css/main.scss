@@ -116,6 +116,12 @@ pre code {
 
 table.border {
   border-collapse: collapse;
+  margin-bottom: $mobile-margin * 2;
+
+  /* 偶数行の背景に色を付ける */
+  tr:nth-child(even) {
+    background-color: aliceblue;
+  }
 
   th, td {
     border: 1px solid $grey-color;
