@@ -6,6 +6,7 @@ github_username: saasan
 default_image: "/img/s2works_favicon.png"
 include:
   - .nojekyll
+  - .well-known/
 exclude:
   - software/*/*.md
 
