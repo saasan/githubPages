@@ -17,8 +17,16 @@ Stable Diffusion を Windows 10 のローカル環境へインストールする
 - CPU: [AMD Ryzen 5 5600X](https://www.amazon.co.jp/dp/B08166SLDF/?tag=saasan-22)
 - メモリ: 32 GB
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08WPJ5P4R&linkId=a74f3cec7df215d727c5d4aae026eeb5"></iframe>
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08166SLDF&linkId=b75f07c2f52a0fa7123b5861e11649b6"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B08WPJ5P4R/?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/811sBakp3+L._AC_SX355_.jpg" alt="MSI GeForce RTX 3060 GAMING X 12G グラフィックスボード VD7552">
+        <span class="affiliate-product-name">MSI GeForce RTX 3060 GAMING X 12G グラフィックスボード VD7552</span>
+    </a>
+    <a href="https://www.amazon.co.jp/dp/B08166SLDF/?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/51ld6RR8IrL._AC_SY450_.jpg" alt="AMD Ryzen 5 5600X with Wraith Stealth cooler 3.7GHz 6コア / 12スレッド 35MB 65W【国内正規代理店品】 100-100000065BOX">
+        <span class="affiliate-product-name">AMD Ryzen 5 5600X with Wraith Stealth cooler 3.7GHz 6コア / 12スレッド 35MB 65W【国内正規代理店品】 100-100000065BOX</span>
+    </a>
+</div>
 
 ドライバー等は最新のものを使用。
 あくまでも私が実行した環境のためこのスペックを満たしている必要はない。

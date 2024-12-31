@@ -16,7 +16,12 @@ Kindle Paperwhite を買ってから1ヶ月で売り払ってしまったので
 購入した機種は昨年発売された
 第11世代の Kindle Paperwhite シグニチャー エディション。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08N2ZL7PS&linkId=4da80f0733fdb2460f18831f27810717"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B08N2ZL7PS?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/71Lp7niNMAL._AC_SX466_.jpg" alt="Kindle Paperwhite シグニチャー エディション (32GB) 6.8インチディスプレイ ワイヤレス充電対応 明るさ自動調節機能つき 広告なし ブラック">
+        <span class="affiliate-product-name">Kindle Paperwhite シグニチャー エディション (32GB) 6.8インチディスプレイ ワイヤレス充電対応 明るさ自動調節機能つき 広告なし ブラック</span>
+    </a>
+</div>
 
 一昨年までどの電子書籍サービスを使うか迷ってたんだけど、
 昨年 Kindle に一本化すると決めてから吹っ切れて

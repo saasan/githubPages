@@ -31,8 +31,16 @@ aptX LL 対応の機器が少なくいいものが見つからなかった。
 [Creative BT-W5](https://jp.creative.com/p/accessories/creative-bt-w5) と
 完全ワイヤレスイヤホン EarFun Air Pro 3 を購入した。
 
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0B1J2WTB2&linkId=9cc0a2d08025eb3043b98b76ba4dc416"></iframe>
-<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0BNQ611R2&linkId=9067d37eb0930db46206690499ce71eb"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B0B1J2WTB2?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/41V33CRpvGL._AC_SY355_.jpg" alt="Creative BT-W4 Bluetooth トランスミッター USB オーディオ/チャット用アナログマイク付 aptX Adaptiveモデル HP-BTW4">
+        <span class="affiliate-product-name">Creative BT-W4 Bluetooth トランスミッター USB オーディオ/チャット用アナログマイク付 aptX Adaptiveモデル HP-BTW4</span>
+    </a>
+    <a href="https://www.amazon.co.jp/dp/B0BNQ611R2?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/51mtle79kTL._AC_SX522_.jpg" alt="【VGP金賞】EarFun Air Pro 3 ANC搭載完全ワイヤレスイヤホン【Bluetooth 5.3 + 43dBまでノイズキャンセリング】QCC3071チップ搭載/aptX adaptive対応/超低遅延55ms/マルチポイント接続/専用アプリ/cVc8.0通話ノイズリダクション/最大45時間再生/ワイヤレス充電/IPX5防水(ブラック)">
+        <span class="affiliate-product-name">【VGP金賞】EarFun Air Pro 3 ANC搭載完全ワイヤレスイヤホン【Bluetooth 5.3 + 43dBまでノイズキャンセリング】QCC3071チップ搭載/aptX adaptive対応/超低遅延55ms/マルチポイント接続/専用アプリ/cVc8.0通話ノイズリダクション/最大45時間再生/ワイヤレス充電/IPX5防水(ブラック)</span>
+    </a>
+</div>
 
 BT-W5 は発売時の記事が印象に残っていたのと、
 Sound Blaster 等 PC 用サウンド系パーツの老舗メーカーという安心感から選択。

@@ -25,11 +25,19 @@ RAMPOW は [Web サイト](https://rampow.com/) を見ても本社所在地や�
 [Amazon出品者プロフィール](https://www.amazon.co.jp/sp?_encoding=UTF8&seller=A2RPIWYAIJTBUL)
 に住所と電話番号が書かれていました。中国深センの会社のようです。)
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=saasan-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B0872MGDR2&linkId=fac28b4b22c51e4280bc86287fd8dd0a&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr"></iframe>
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=saasan-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B0827NDHBQ&linkId=bc50d175b4811fb8739a0a5d77f6be35&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr"></iframe>
-
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=saasan-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B07Y8BPVV4&linkId=b4348a77ed22af3503ea6572a01d34e9&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B0872MGDR2?tag=saasan-22" class="affiliate-product">
+        <span class="affiliate-product-name">RAVPower 製 90W USB PD 充電器</span>
+    </a>
+    <a href="https://www.amazon.co.jp/dp/B0827NDHBQ?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/712PgRPfyEL._AC_SX522_.jpg" alt="RAMPOW USB-C &amp; USB-C ケーブル【100W PD対応/USB 3.2 Gen 2x2-20Gbpsデータ転送】PD3.0/QC3.0超高速充電 4K/60Hz 映像出力対応 超高耐久 type-cケーブル iPhone16/iPhone15シリーズ充電ケーブル MacBook Pro/iPad Pro/Google Pixel等タイプC対応 在宅勤務/出張支援 ネイビー 2M">
+        <span class="affiliate-product-name">RAMPOW USB-C &amp; USB-C ケーブル【100W PD対応/USB 3.2 Gen 2x2-20Gbpsデータ転送】PD3.0/QC3.0超高速充電 4K/60Hz 映像出力対応 超高耐久 type-cケーブル iPhone16/iPhone15シリーズ充電ケーブル MacBook Pro/iPad Pro/Google Pixel等タイプC対応 在宅勤務/出張支援 ネイビー 2M</span>
+    </a>
+    <a href="https://www.amazon.co.jp/dp/B07Y8BPVV4?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/81MTfycxcnL._AC_SX522_.jpg" alt="BitTradeOne ADUSBCIM USB CABLE CHECKER 2">
+        <span class="affiliate-product-name">BitTradeOne ADUSBCIM USB CABLE CHECKER 2</span>
+    </a>
+</div>
 
 ## RAMPOW 製ケーブル RAD03
 
@@ -130,7 +138,12 @@ RP-PC128 は MacBook 付属の 61W USB-C 充電器と比べて
 (61W 出力の PR-PC112 を使用したときは有線 LAN の通信がブツブツ切れていた)。
 ケーブル1本で電源、ディスプレイ、有線 LAN、キーボードが繋がるのは便利です。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=saasan-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B081ZZGWR7&linkId=9a6e62087527f859adc8ac8b19af537f&bc1=000000&lt1=_blank&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B081ZZGWR7?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/51cDDhpM8AL._AC_SY355_.jpg" alt="バッファロー BUFFALO USB Type-C接続 5-in-1 ドッキングステーション LUD-U3-CGD/N PowerDelivery 有線LAN HDMI VGA USB 3.2(Gen 1)対応ポート【Macbook/Surface メーカー動作確認済み】ラップトップパソコン対応">
+        <span class="affiliate-product-name">バッファロー BUFFALO USB Type-C接続 5-in-1 ドッキングステーション LUD-U3-CGD/N PowerDelivery 有線LAN HDMI VGA USB 3.2(Gen 1)対応ポート【Macbook/Surface メーカー動作確認済み】ラップトップパソコン対応</span>
+    </a>
+</div>
 
 今回購入した RAMPOW 製ケーブルは問題ありませんでしたが、
 手持ちの OneMix3S 付属ケーブルが規格違反だったのは意外でした。

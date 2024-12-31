@@ -53,7 +53,12 @@ PC を変えるか USB 接続でも安定する別のチューナーが必要で
 M.2 の A & E キーに対応した以下の
 M.2 → PCI-E x1 変換アダプタを見つけました。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B07L9RFVBZ&linkId=31ddd9c90c3fbc07e3d46e34298fdb14"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B07L9RFVBZ?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/51N8ZHiY7vL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="NGFF PCI 変換アダプタ M.2キーA / E → PCI-E Express X1 + USBライザカード 高速FPCケーブル2本付き">
+        <span class="affiliate-product-name">NGFF PCI 変換アダプタ M.2キーA / E → PCI-E Express X1 + USBライザカード 高速FPCケーブル2本付き</span>
+    </a>
+</div>
 
 [M.2](https://ja.wikipedia.org/wiki/M.2)
 は物理的な接続方法が異なるだけで
@@ -69,7 +74,12 @@ FDD 4ピンコネクタへ変換するケーブルが付属していますが、
 M600 Tiny にはどちらもありません。
 そこで以下の変換ケーブルを購入し SATA から電源を取ることにしました。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=saasan-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B0028WIES8&linkId=237de3b0f34f25bc2d854c0df081beac"></iframe>
+<div class="affiliate-product-list">
+    <a href="https://www.amazon.co.jp/dp/B0028WIES8?tag=saasan-22" class="affiliate-product">
+        <img src="https://m.media-amazon.com/images/I/51yi6NatXRL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="オウルテック 電源変換ケーブル12cm OWL-CBPU005">
+        <span class="affiliate-product-name">オウルテック 電源変換ケーブル12cm OWL-CBPU005</span>
+    </a>
+</div>
 
 SATA が使えなくなるため、ストレージはもともと付属していた SATA 接続の HDD をはずして M.2 の SSD にします。
 (上記の Wi-Fi 用 M.2 とは別にもうひとつストレージ用の M.2 があります。)
