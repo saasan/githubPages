@@ -1,14 +1,28 @@
 ---
-layout: page
 description: saasanが作ったソフトウェア、スクリプトを公開するサイト
-noindex: true
 ---
-{% for post in site.posts limit:3 %}
-    <section>
-        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
-        <section>
-            {{ post.content }}
-        </section>
-    </section>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="ja" class="top-page">
+{% include head.html %}
+
+<body>
+    <div class="top-wrapper">
+        <div class="top-wrapper-h1">
+            <h1>{{ site.title }}</h1>
+        </div>
+
+        <h2>contents</h2>
+        <nav>
+            {% include contents.html %}
+        </nav>
+    </div>
+
+    <footer>
+        <div class="footer-link">
+            {% include twitter.html %}
+            {% include rss.html %}
+        </div>
+    </footer>
+</body>
+
+</html>
