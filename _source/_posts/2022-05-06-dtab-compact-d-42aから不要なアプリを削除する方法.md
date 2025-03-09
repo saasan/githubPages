@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: dtab Compact d-42A から不要なアプリを削除する方法
 date: 2022-05-06 01:31:47 +0900
 category: blog

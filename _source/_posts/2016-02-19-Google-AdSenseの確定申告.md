@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 title: Google AdSenseの確定申告
 date: 2016-02-19 18:08:47 +0900
 category: blog
+tags: [ Google AdSense, 確定申告 ]
 ---
 
 Google AdSenseでの収入が年間20万円を超えると、サラリーマンやアルバイトなど本業で源泉徴収されている人でも確定申告しなきゃいけないらしい。

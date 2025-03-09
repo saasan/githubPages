@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Lenovo ThinkCentre M600 Tiny に PCI Express を無理やり増設する
 date: 2021-09-18 13:04:35 +0900
 category: blog
@@ -89,19 +89,19 @@ SATA が使えなくなるため、ストレージはもともと付属してい
 変換アダプタを購入して実際に接続してみました。
 内部は以下のようになっています。
 
-[![PC 内部](/img/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg)](/img/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg){:target="_blank"}
+[![PC 内部](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg){:target="_blank"}
 
 背面の VGA (D-Sub 15 ピン) 端子が増設できる場所の板をはずして
 ケーブルを外に出しています。
 
-[![ケーブルの外出し1](/img/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg)](/img/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg){:target="_blank"}
+[![ケーブルの外出し1](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg){:target="_blank"}
 
-[![ケーブルの外出し2](/img/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg)](/img/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg){:target="_blank"}
+[![ケーブルの外出し2](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg){:target="_blank"}
 
 最後に TV チューナーボードを取り付けて以下のようになりました。
 PC を起動して確認しましたが問題なく認識され使用できました！
 
-[![TV チューナーボードの取り付け](/img/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg)](/img/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg){:target="_blank"}
+[![TV チューナーボードの取り付け](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg){:target="_blank"}
 
 ## まとめ
 

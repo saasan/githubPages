@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: post
 title: Mozilla Firefox で Web サイトのダークモードを無効化する
 date: 2022-09-07 00:16:02 +0900
 category: blog
-tags: []
+tags: [ PC, Mozilla Firefox ]
 description:
 ---
 

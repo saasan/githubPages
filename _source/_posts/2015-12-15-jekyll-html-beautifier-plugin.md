@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: '[Jekyll] HTMLを読みやすいように整形するプラグイン'
 date: 2015-12-15 18:59:07 +0900
 category: blog
@@ -15,7 +15,20 @@ HTML の構造が分からなくなるときがあります。
 そこで、HTML を整形して出力するプラグインを作ってみました。
 いわゆるbeautifierとかpretty printとかいわれる機能ですね。
 
-{% gist saasan/7c92d15e7ebb4870f581 %}
+```ruby
+require 'rubygems'
+require 'htmlbeautifier'
+
+Jekyll::Hooks.register :documents, :post_render do |page|
+  next if page.output_ext != '.html'
+  page.output = HtmlBeautifier.beautify(page.output)
+end
+
+Jekyll::Hooks.register :pages, :post_render do |page|
+  next if page.ext != '.html'
+  page.output = HtmlBeautifier.beautify(page.output)
+end
+```
 
 ```gem install htmlbeautifier``` などで htmlbeautifier をインストールしたあと、
 このファイルを _plugins フォルダに入れれば

@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: post
 title: IFTTT の Twitter 連携が有料化したので Python と GitHub Actions で RSS をツイートする
 date: 2023-07-05 00:20:00 +0900
 category: blog
-tags: []
+tags: [ Twitter, Python, GitHub Actions ]
 description: Github Actions の cache をデータの永続化に使う
 ---
 
@@ -52,15 +52,17 @@ IFTTT を利用する前に調べた際は
 以下のように key に新しいキーを指定することで新しいキャッシュを作成、
 restore-keys に接頭辞のみ指定すると最新のものが取得できる。
 
-    - name: actions/cache用keyの生成
-      run: echo "CACHE_TIMESTAMP=$(date +%s)" >> "$GITHUB_ENV"
+```yaml
+- name: actions/cache用keyの生成
+  run: echo "CACHE_TIMESTAMP=$(date +%s)" >> "$GITHUB_ENV"
 
-    - uses: actions/cache@v3
-      id: tweeted
-      with:
-        path: ./tweeted
-        key: tweeted-${{ env.CACHE_TIMESTAMP }}
-        restore-keys: tweeted-
+- uses: actions/cache@v3
+  id: tweeted
+  with:
+    path: ./tweeted
+    key: tweeted-${{ env.CACHE_TIMESTAMP }}
+    restore-keys: tweeted-
+```
 
 ## 古いキャッシュの削除
 
@@ -72,23 +74,25 @@ GitHub CLI の
 extension ([gh-actions-cache](https://github.com/actions/gh-actions-cache))
 を使用している。
 
-    - name: Cleanup cache
-      run: |
-        gh extension install actions/gh-actions-cache
-    
-        # キャッシュがない場合にエラーとなって停止するのを防ぐ
-        set +e
-    
-        # 作成から1日以上経っているキャッシュを削除
-        for KEY in $(gh actions-cache list -R "${REPO}" -B "${BRANCH}" --key ${{ env.CACHE_KEY }} --order asc --sort created-at | grep -P 'days? ago' | cut -f 1)
-        do
-            echo "Deleting ${KEY}"
-            gh actions-cache delete "${KEY}" -R "${REPO}" -B "${BRANCH}" --confirm
-        done
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REPO: ${{ github.repository }}
-        BRANCH: ${{ github.ref }}
+```yaml
+- name: Cleanup cache
+  run: |
+    gh extension install actions/gh-actions-cache
+
+    # キャッシュがない場合にエラーとなって停止するのを防ぐ
+    set +e
+
+    # 作成から1日以上経っているキャッシュを削除
+    for KEY in $(gh actions-cache list -R "${REPO}" -B "${BRANCH}" --key ${{ env.CACHE_KEY }} --order asc --sort created-at | grep -P 'days? ago' | cut -f 1)
+    do
+        echo "Deleting ${KEY}"
+        gh actions-cache delete "${KEY}" -R "${REPO}" -B "${BRANCH}" --confirm
+    done
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    REPO: ${{ github.repository }}
+    BRANCH: ${{ github.ref }}
+```
 
 ## GitHub Actions での定期実行に関する注意点
 
@@ -96,9 +100,11 @@ extension ([gh-actions-cache](https://github.com/actions/gh-actions-cache))
 [公式のドキュメント](https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#schedule)
 にも書かれている通り、負荷が高い場合は遅延したりそもそも実行されない場合がある。
 
-    on:
-      schedule:
-        - cron: '3-59/10 * * * *'
+```yaml
+on:
+  schedule:
+    - cron: '3-59/10 * * * *'
+```
 
 実際半日で72回ほど動くはずが53回しか動いていなかった。
 確実に動かしたいものは避けたほうがよい。

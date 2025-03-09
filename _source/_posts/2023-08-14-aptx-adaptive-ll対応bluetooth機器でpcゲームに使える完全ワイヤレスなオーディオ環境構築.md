@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: aptX Adaptive LL 対応 Bluetooth 機器で PC ゲームに使える完全ワイヤレスなオーディオ環境構築
 date: 2023-08-14 23:07:00 +0900
 category: blog
@@ -63,94 +63,28 @@ Web サイト上で音に合わせてマウスをクリックするかスペー�
 
 ### アダプタ
 
-<table class="border">
-    <thead>
-        <tr>
-            <th>アダプタ</th>
-            <th>対応コーデック</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>サンワサプライ MM-BTUD43</td>
-            <td>SBC, aptX</td>
-        </tr>
-        <tr>
-            <td>Creative BT-W5</td>
-            <td>SBC, aptX, aptX HD, aptX Adaptive</td>
-        </tr>
-    </tbody>
-</table>
+| アダプタ | 対応コーデック |
+| --- | --- |
+| サンワサプライ MM-BTUD43 | SBC, aptX |
+| Creative BT-W5 | SBC, aptX, aptX HD, aptX Adaptive |
 
 ### ヘッドホン / イヤホン
 
-<table class="border">
-    <thead>
-        <tr>
-            <th>ヘッドホン / イヤホン</th>
-            <th>対応コーデック</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>EarFun Air Pro 3</td>
-            <td>SBC, AAC, aptX Adaptive</td>
-        </tr>
-        <tr>
-            <td>Sony MDR-ZX770BN</td>
-            <td>SBC, AAC, aptX</td>
-        </tr>
-        <tr>
-            <td>FOSTEX TM2C</td>
-            <td>SBC, AAC, aptX</td>
-        </tr>
-    </tbody>
-</table>
+| ヘッドホン / イヤホン | 対応コーデック |
+| --- | --- |
+| EarFun Air Pro 3 | SBC, AAC, aptX Adaptive |
+| Sony MDR-ZX770BN | SBC, AAC, aptX |
+| FOSTEX TM2C | SBC, AAC, aptX |
 
 ### 確認結果
 
-<table class="border">
-    <thead>
-        <tr>
-            <th>アダプタ</th>
-            <th>ヘッドホン / イヤホン</th>
-            <th>コーデック</th>
-            <th>遅延時間</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Creative BT-W5</td>
-            <td>EarFun Air Pro 3</td>
-            <td>aptX Adaptive LL</td>
-            <td>100 ms</td>
-        </tr>
-        <tr>
-            <td>サンワサプライ MM-BTUD43</td>
-            <td>Sony MDR-ZX770BN</td>
-            <td>aptX</td>
-            <td>160 ms</td>
-        </tr>
-        <tr>
-            <td>Creative BT-W5</td>
-            <td>Sony MDR-ZX770BN</td>
-            <td>SBC</td>
-            <td>200 ms</td>
-        </tr>
-        <tr>
-            <td>Creative BT-W5</td>
-            <td>FOSTEX TM2C</td>
-            <td>aptX</td>
-            <td>335 ms</td>
-        </tr>
-        <tr>
-            <td>Creative BT-W5</td>
-            <td>EarFun Air Pro 3</td>
-            <td>aptX Adaptive HQ</td>
-            <td>350 ms</td>
-        </tr>
-    </tbody>
-</table>
+| アダプタ | ヘッドホン / イヤホン | コーデック | 遅延時間 |
+| --- | --- | --- | --- |
+| Creative BT-W5 | EarFun Air Pro 3 | aptX Adaptive LL | 100 ms |
+| サンワサプライ MM-BTUD43 | Sony MDR-ZX770BN | aptX | 160 ms |
+| Creative BT-W5 | Sony MDR-ZX770BN | SBC | 200 ms |
+| Creative BT-W5 | FOSTEX TM2C | aptX | 335 ms |
+| Creative BT-W5 | EarFun Air Pro 3 | aptX Adaptive HQ | 350 ms |
 
 当然だが Creative BT-W5 と EarFun Air Pro 3
 の組み合わせが最も遅延が少ない結果となった。

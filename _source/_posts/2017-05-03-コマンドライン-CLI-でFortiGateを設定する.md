@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: コマンドライン(CLI)でFortiGateを設定する
 date: 2017-05-03 00:18:36 +0900
 category: blog
@@ -15,19 +15,23 @@ FortiGateはブラウザーでアクセスすることでWeb上からGUIで設�
 
 sshで接続することでコマンドラインから設定ができる。
 
-    $ ssh admin@192.168.0.1
+```shell
+$ ssh admin@192.168.0.1
+```
 
 ## ヘルプを表示する
 
 「?」を入力すると現在使えるコマンドが表示される。
 
-    # ? ←「?」を入力しても表示されない
-    config      config object
-    get         get dynamic and system information
-    show        show configuration
-    diagnose    diagnose facility
-    execute     execute static commands
-    exit        exit CLI
+```shell
+# ? ←「?」を入力しても表示されない
+config      config object
+get         get dynamic and system information
+show        show configuration
+diagnose    diagnose facility
+execute     execute static commands
+exit        exit CLI
+```
 
 コマンドの入力途中に「?」を入力するとコマンドが補完される。
 例えば、sh?と入力するとshowに補完される。
@@ -36,17 +40,23 @@ sshで接続することでコマンドラインから設定ができる。
 
 ## バージョンを確認する
 
-    # get system status
+```shell
+# get system status
+```
 
 ## 設定を確認する
 
-    # show
+```shell
+# show
+```
 
 ## デフォルト値を含むすべての設定を確認する
 
 数メガバイトある設定が出力される為、かなり時間がかかるので注意。
 
-    # show full-configuration
+```shell
+# show full-configuration
+```
 
 # moreを使用しない
 
@@ -55,15 +65,19 @@ sshで接続することでコマンドラインから設定ができる。
 
 - moreを使用しないように変更
 
-      # config system console
-      # set output standard
-      # end
+  ```shell
+  # config system console
+  # set output standard
+  # end
+  ```
 
 - moreを使用するように戻す
 
-      # config system console
-      # set output more
-      # end
+  ```shell
+  # config system console
+  # set output more
+  # end
+  ```
 
 ## 設定を変更する
 
@@ -86,4 +100,6 @@ Cisco製品のように「write memory」などで明示的に保存する必要
 
 ## 設定を終了し切断する
 
-    # exit
+```shell
+# exit
+```
