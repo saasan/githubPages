@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: ZoneID (Zone.Identifier) を一括で削除する
 date: 2022-10-03 18:30:00 +0900
 category: blog
@@ -16,12 +16,16 @@ description:
 PowerShell で削除したいファイルがあるディレクトリに移動後に
 以下のコマンドで Zone.Identifier があることを確認。
 
-    Get-ChildItem -Recurse -File | Get-Item -Stream Zone.Identifier -ErrorAction SilentlyContinue
+```powershell
+Get-ChildItem -Recurse -File | Get-Item -Stream Zone.Identifier -ErrorAction SilentlyContinue
+```
 
 [Unblock-File](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.utility/unblock-file)
 で削除できる。
 
-    Get-ChildItem -Recurse -File | Unblock-File
+```powershell
+Get-ChildItem -Recurse -File | Unblock-File
+```
 
 [Remove-Item -Stream Zone.Identifier](https://learn.microsoft.com/ja-jp/powershell/module/microsoft.powershell.management/remove-item#7)
 でもいい。

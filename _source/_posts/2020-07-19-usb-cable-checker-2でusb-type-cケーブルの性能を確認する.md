@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: USB CABLE CHECKER 2 で USB Type-C ケーブルの性能を確認する
 date: 2020-07-19 09:00:00 +0900
 category: blog
@@ -43,13 +43,13 @@ RAMPOW は [Web サイト](https://rampow.com/) を見ても本社所在地や�
 
 さっそく RAMPOW 製ケーブルを確認してみます。
 
-<a href="/img/blog/2020-07-19/rampow.jpg"><img src="/img/blog/2020-07-19/rampow.jpg"  alt="RAMPOW 製ケーブル RAD03"></a>
+<a href="/assets/images/blog/2020-07-19/rampow.jpg"><img src="/assets/images/blog/2020-07-19/rampow.jpg"  alt="RAMPOW 製ケーブル RAD03"></a>
 
 USB CABLE CHECKER 2 の表示は以下の通り。
 
-<pre>GND+VBUS=188mΩ
-CC:DOWN1K/E-MARKED
-SHELL-GND SHORT(A&B)</pre>
+    GND+VBUS=188mΩ
+    CC:DOWN1K/E-MARKED
+    SHELL-GND SHORT(A&B)
 
 表示の意味については
 [取扱説明書](https://github.com/bit-trade-one/USBCableChecker2/blob/master/README.md)
@@ -80,11 +80,11 @@ connection のランプも全点灯しており、PD 3.0 / USB 3.1 Gen2 対応�
 購入時に気付いてなかったのですが、
 RP-PC128 にも 1.5m の Type-C ケーブルが付属していたためこれも確認してみます。
 
-<a href="/img/blog/2020-07-19/ravpower.jpg"><img src="/img/blog/2020-07-19/ravpower.jpg"  alt="RAVPower 製 90W USB PD 充電器 RP-PC128 付属ケーブル"></a>
+<a href="/assets/images/blog/2020-07-19/ravpower.jpg"><img src="/assets/images/blog/2020-07-19/ravpower.jpg"  alt="RAVPower 製 90W USB PD 充電器 RP-PC128 付属ケーブル"></a>
 
-<pre>GND+VBUS=170mΩ
-CC:DOWN1K/E-MARKED
-SHELL-GND SHORT(A&B)</pre>
+    GND+VBUS=170mΩ
+    CC:DOWN1K/E-MARKED
+    SHELL-GND SHORT(A&B)
 
 eMarker が内蔵されているため 3A を超える電流が流せます。
 connection のランプは USB 2.0 の部分と CC (Configuration Channel) が点灯しています。
@@ -97,10 +97,10 @@ USB 2.0 対応の PD ケーブルとして使えるようです。
 
 手元にあったほかの USB Type-C ケーブルも確認してみます。
 
-<a href="/img/blog/2020-07-19/lenovo.jpg"><img src="/img/blog/2020-07-19/lenovo.jpg"  alt="Lenovo Yoga Book C930 付属ケーブル"></a>
+<a href="/assets/images/blog/2020-07-19/lenovo.jpg"><img src="/assets/images/blog/2020-07-19/lenovo.jpg"  alt="Lenovo Yoga Book C930 付属ケーブル"></a>
 
-<pre>GND+VBUS=212mΩ
-SHELL-GND SHORT(A&B)</pre>
+    GND+VBUS=212mΩ
+    SHELL-GND SHORT(A&B)
 
 eMarker が内蔵されていないため 3A までの電流しか流せません。
 connection のランプは USB 3.2 が一部点灯しています。
@@ -115,9 +115,9 @@ USB 3.1 対応の PD ケーブルとしては使えそう。
 
 ##  One-Netbook OneMix3S 付属ケーブル
 
-<a href="/img/blog/2020-07-19/onemix3s.jpg"><img src="/img/blog/2020-07-19/onemix3s.jpg"  alt="One-Netbook OneMix3S 付属ケーブル"></a>
+<a href="/assets/images/blog/2020-07-19/onemix3s.jpg"><img src="/assets/images/blog/2020-07-19/onemix3s.jpg"  alt="One-Netbook OneMix3S 付属ケーブル"></a>
 
-<pre>GND+VBUS=225mΩ</pre>
+    GND+VBUS=225mΩ
 
 <samp>SHELL-GND SHORT(A&B)</samp> の表示がない……。
 規格に従ってないケーブルのようです。

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: M5StickC + Speaker Hat で ESP8266Audio ライブラリを使用して MP3 ファイルを再生する
 date: 2020-06-17 19:59:34 +0900
 category: blog
@@ -17,7 +17,96 @@ tags: [ M5Stack, M5StickC, ESP32, ESP8266Audio ]
 
 以下は A ボタン(正面の「M5」ボタン)を押すと MP3 ファイルが再生されるスケッチです。
 
-{% gist saasan/ed2ee155ed1a16865015c1967cf875c3 %}
+```cpp
+#include <M5StickC.h>
+#include "FS.h"
+#include "SPIFFS.h"
+#include "AudioFileSourceSPIFFS.h"
+#include "AudioGeneratorMP3.h"
+#include "AudioOutputI2S.h"
+
+// オーディオファイル名
+const char AUDIO_FILE_NAME[] = "/hoge.mp3";
+
+const int I2S_NUM_0 = 0;
+// 電源ボタンが1秒未満押された
+const uint8_t AXP_WAS_PRESSED = 2;
+
+AudioGeneratorMP3 *generator = NULL;
+AudioFileSourceSPIFFS *source = NULL;
+AudioOutputI2S *output = NULL;
+
+// メッセージ出力
+void showMessage(const char *message) {
+    M5.Lcd.fillScreen(WHITE);
+    M5.Lcd.setCursor(5, 35);
+    M5.Lcd.setTextFont(2);
+    M5.Lcd.setTextColor(BLACK);
+    M5.Lcd.print(message);
+}
+
+void playAudio() {
+    Serial.println("playAudio");
+
+    stopAudio();
+    if (!source->isOpen()) {
+        source->open(AUDIO_FILE_NAME);
+    }
+    generator->begin(source, output);
+}
+
+void stopAudio() {
+    Serial.println("stopAudio");
+
+    if (generator->isRunning()) {
+        generator->stop();
+    }
+}
+
+void setup() {
+    M5.begin();
+    M5.Lcd.setRotation(1);
+    showMessage("ESP8266Audio");
+
+    // シリアルモニターの設定
+    Serial.begin(115200);
+    audioLogger = &Serial;
+
+    // SPIFFSの設定
+    if (!SPIFFS.begin()) {
+        Serial.println("SPIFFS Mount Failed");
+        return;
+    }
+
+    source = new AudioFileSourceSPIFFS(AUDIO_FILE_NAME);
+    output = new AudioOutputI2S(I2S_NUM_0, AudioOutputI2S::INTERNAL_DAC);
+    generator = new AudioGeneratorMP3();
+}
+
+void loop() {
+    delay(10);
+
+    if (generator->isRunning()) {
+        if (!generator->loop()) {
+            stopAudio();
+        }
+    }
+    else {
+        // ボタンの状態を更新
+        M5.update();
+
+        // Aボタンが押されたら音声データ再生
+        if (M5.BtnA.wasPressed()) {
+            playAudio();
+        }
+
+        // 電源ボタンが押されたらリセット
+        if (M5.Axp.GetBtnPress() == AXP_WAS_PRESSED) {
+            esp_restart();
+        }
+    }
+}
+```
 
 SPIFFS からファイルを読み込む AudioFileSourceSPIFFS クラス、
 MP3 を再生する AudioGeneratorMP3 クラス、
@@ -36,7 +125,112 @@ ESP32-PICO のメモリ (520KB) に収まるサイズのファイルを何度も
 以下のように setup() 内でファイルを読み込み
 AudioFileSourcePROGMEM クラスを使用した方がよいかと思います。
 
-{% gist saasan/b6d9cb8fc8786d9c0407560f6206af22 %}
+```cpp
+#include <M5StickC.h>
+#include "FS.h"
+#include "SPIFFS.h"
+#include "AudioFileSourcePROGMEM.h"
+#include "AudioGeneratorMP3.h"
+#include "AudioOutputI2S.h"
+
+// オーディオファイル名
+const char AUDIO_FILE_NAME[] = "/hoge.mp3";
+
+const int I2S_NUM_0 = 0;
+// 電源ボタンが1秒未満押された
+const uint8_t AXP_WAS_PRESSED = 2;
+
+AudioGeneratorMP3 *generator = NULL;
+AudioFileSourcePROGMEM *source = NULL;
+AudioOutputI2S *output = NULL;
+uint8_t *audioData = NULL;
+size_t audioDataSize = 0;
+
+// メッセージ出力
+void showMessage(const char *message) {
+    M5.Lcd.fillScreen(WHITE);
+    M5.Lcd.setCursor(5, 35);
+    M5.Lcd.setTextFont(2);
+    M5.Lcd.setTextColor(BLACK);
+    M5.Lcd.print(message);
+}
+
+void readAudioFile(fs::FS& fs, const char* path) {
+    File file = fs.open(path);
+    if (!file || file.isDirectory()) {
+        Serial.println("- failed to open file for reading");
+        return;
+    }
+
+    audioDataSize = file.size();
+    audioData = new uint8_t[audioDataSize];
+    file.read(audioData, audioDataSize);
+}
+
+void playAudio() {
+    Serial.println("playAudio");
+
+    stopAudio();
+    if (!source->isOpen()) {
+        source->open(audioData, audioDataSize);
+    }
+    generator->begin(source, output);
+}
+
+void stopAudio() {
+    Serial.println("stopAudio");
+
+    if (generator->isRunning()) {
+        generator->stop();
+    }
+}
+
+void setup() {
+    M5.begin();
+    M5.Lcd.setRotation(1);
+    showMessage("ESP8266Audio");
+
+    // シリアルモニターの設定
+    Serial.begin(115200);
+    audioLogger = &Serial;
+
+    // SPIFFSの設定
+    if (!SPIFFS.begin()) {
+        Serial.println("SPIFFS Mount Failed");
+        return;
+    }
+
+    readAudioFile(SPIFFS, AUDIO_FILE_NAME);
+
+    source = new AudioFileSourcePROGMEM(audioData, audioDataSize);
+    output = new AudioOutputI2S(I2S_NUM_0, AudioOutputI2S::INTERNAL_DAC);
+    generator = new AudioGeneratorMP3();
+}
+
+void loop() {
+    delay(10);
+
+    if (generator->isRunning()) {
+        if (!generator->loop()) {
+            stopAudio();
+        }
+    }
+    else {
+        // ボタンの状態を更新
+        M5.update();
+
+        // Aボタンが押されたら音声データ再生
+        if (M5.BtnA.wasPressed()) {
+            playAudio();
+        }
+
+        // 電源ボタンが押されたらリセット
+        if (M5.Axp.GetBtnPress() == AXP_WAS_PRESSED) {
+            esp_restart();
+        }
+    }
+}
+```
 
 ## 自力での WAV ファイル再生との比較
 

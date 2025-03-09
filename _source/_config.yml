@@ -1,23 +1,45 @@
 title: slx.jp
+author: saasan
+copyright: "(c) {currentYear} {author}"
 url: "https://slx.jp"
-author_name: saasan
+favicon: "/assets/images/favicon.png"
 twitter_username: saasan
 github_username: saasan
-default_image: "/img/s2works_favicon.png"
+default_image: "/assets/images/favicon.png"
 include:
   - .nojekyll
   - .well-known/
 exclude:
-  - software/*/*.md
+  - _posts/*-README.md
+  - _posts/*-CHANGELOG.md
+
+yat:
+  date_format: "%Y-%m-%d %H:%M"
+sitemap: true
+lang: "ja"
+translate_langs: []
+night_mode: "manual"
+code_badge:
+  enabled: "false"
+header_pages:
+  - index.html
+  - archives.html
+  - categories.html
+  - tags.html
 
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-sass:
-  sass_dir: css
+theme: jekyll-theme-yat
+
+# highlighter: rouge
+# markdown: kramdown
+# kramdown:
+#   input: GFM
 
 plugins:
-  - jekyll-paginate
-  - jekyll-gist
-  - htmlbeautifier
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship

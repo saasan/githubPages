@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: post
 title: Stable Diffusion を Windows 10 へインストールする方法と使い方、画像生成のコツ
 date: 2023-03-06 15:15:00 +0900
 category: blog
-tags: [Stable Diffusion]
+tags: [ Stable Diffusion ]
 description: Windows 10 へのインストール方法と使い方、画像生成のコツを紹介
 ---
 
@@ -88,13 +88,17 @@ Stable Diffusion web UI (以下 web UI と略す) を利用するのが楽なの
 
 web UI のバージョンによっては webui-user.bat を起動後に以下のエラーが表示される。
 
-    RuntimeError: Cannot add middleware after an application has started
+```cmd
+RuntimeError: Cannot add middleware after an application has started
+```
 
 この場合はコマンドプロンプトで以下を実行してから再度 webui-user.bat を起動する。
 
-    cd [web UIのインストール先パス]
-    venv\Scripts\activate.bat
-    pip install --upgrade fastapi==0.90.1
+```cmd
+cd [web UIのインストール先パス]
+venv\Scripts\activate.bat
+pip install --upgrade fastapi==0.90.1
+```
 
 ### loading stable diffusion model: OutOfMemoryError や torch.cuda.OutOfMemoryError: CUDA out of memory.
 
@@ -105,11 +109,15 @@ webui-user.bat を起動する前にタスクマネージャーを起動して�
 VRAM が不足している場合は `--lowvram` オプションを指定することで起動できる場合がある。  
 「webui-user.bat」をテキストエディタで開き
 
-    set COMMANDLINE_ARGS=
+```bat
+set COMMANDLINE_ARGS=
+```
 
 となっている部分を以下のように変更し保存する。
 
-    set COMMANDLINE_ARGS=--lowvram
+```bat
+set COMMANDLINE_ARGS=--lowvram
+```
 
 ## テキストからの画像生成 (txt2img)
 
@@ -424,11 +432,15 @@ xFormers を導入すると画像生成速度が向上しVRAMの使用量も削�
 
 導入方法は簡単で、「webui-user.bat」をテキストエディタで開き
 
-    set COMMANDLINE_ARGS=
+```bat
+set COMMANDLINE_ARGS=
+```
 
 となっている部分を以下のように変更し保存する。
 
-    set COMMANDLINE_ARGS=--xformers
+```bat
+set COMMANDLINE_ARGS=--xformers
+```
 
 保存後の初回起動時に xFormers がインストールされる。
 
@@ -440,8 +452,12 @@ VAE を変更して画像を生成しているとまれにエラーが発生し�
 
 `--no-half-vae` だけを指定するなら
 
-    set COMMANDLINE_ARGS=--no-half-vae
+```bat
+set COMMANDLINE_ARGS=--no-half-vae
+```
 
 xFormers と併用するなら
 
-    set COMMANDLINE_ARGS=--xformers --no-half-vae
+```bat
+set COMMANDLINE_ARGS=--xformers --no-half-vae
+```

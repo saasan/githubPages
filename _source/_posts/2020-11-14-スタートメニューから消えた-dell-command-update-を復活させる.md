@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: スタートメニューから消えた Dell Command | Update を復活させる
 date: 2020-11-14 00:46:11 +0900
 category: blog
@@ -16,11 +16,13 @@ Dell Command \| Update を実行したあとにスタートメニューから De
 
 そう思ってスタートメニューだけ復活させる方法がないか調べたら以下の方法で復活できた。
 
- 1. 管理者権限で PowerShell を起動する。
- 1. 以下のコマンドを実行する。
+1.  管理者権限で PowerShell を起動する。
+1.  以下のコマンドを実行する。
 
-        $ManifestPath = (Get-AppxPackage -AllUsers -Name "DellInc.DellCommandUpdate").InstallLocation + "\Appxmanifest.xml"
-        Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
+    ```powershell
+    $ManifestPath = (Get-AppxPackage -AllUsers -Name "DellInc.DellCommandUpdate").InstallLocation + "\Appxmanifest.xml"
+    Add-AppxPackage -Path $ManifestPath -Register -DisableDevelopmentMode
+    ```
 
 ※Get-AppxPackage に -AllUsers オプションを付けて実行するのに管理者権限が必要。
 

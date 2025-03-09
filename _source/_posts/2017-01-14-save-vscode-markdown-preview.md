@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Visual Studio Code で Markdown のプレビューを保存する
 date: 2017-01-14 22:15:58 +0900
 category: blog

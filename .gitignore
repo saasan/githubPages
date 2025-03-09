@@ -1,6 +1,8 @@
 .jekyll-cache/
+.jekyll-metadata/
 .sass-cache/
 /_site/
 /_source/_drafts/
-/_source/software/*/*.md
+/_source/_posts/*-README.md
+/_source/_posts/*-CHANGELOG.md
 /vendor/bundle/

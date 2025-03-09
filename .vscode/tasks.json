@@ -6,33 +6,30 @@
         {
             "label": "new-post",
             "type": "shell",
-            "command": "python new-post.py",
+            "command": "python3 .vscode/task-new-post.py",
             "problemMatcher": []
         },
         {
             "label": "serve",
             "type": "shell",
-            "command": "bash task-serve.sh",
-            "problemMatcher": []
+            "command": "bash .vscode/task-serve.sh",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "build",
             "type": "shell",
-            "command": "bash task-build.sh",
+            "command": "bash .vscode/task-build.sh",
             "problemMatcher": []
         },
         {
             "label": "sync",
             "type": "shell",
-            "command": "bash task-sync.sh",
-            "problemMatcher": [],
-            "dependsOn": [
-                "build"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "command": "bash .vscode/task-sync.sh",
+            "problemMatcher": []
         }
     ]
 }

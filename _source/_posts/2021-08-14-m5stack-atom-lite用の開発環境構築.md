@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: M5Stack ATOM Lite 用の開発環境構築
 date: 2021-08-14 16:33:22 +0900
 category: blog
