@@ -17,7 +17,11 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
         "ghcr.io/hwaien/devcontainer-features/match-host-time-zone:0.0.13": {}
-    }
+    },
+
+    "mounts": [
+        "source=${localWorkspaceFolder}/../saasan.github.io,target=/workspaces/saasan.github.io,type=bind,consistency=cached"
+    ]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

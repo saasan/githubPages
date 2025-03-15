@@ -29,7 +29,14 @@
             "label": "sync",
             "type": "shell",
             "command": "bash .vscode/task-sync.sh",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "dependsOn": [
+                "build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
