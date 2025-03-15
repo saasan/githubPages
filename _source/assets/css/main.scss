@@ -55,3 +55,18 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 }
 
 @import "yat";
+
+.page-banner-default {
+  letter-spacing: 0.5em;
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #FFFFFFC0, transparent) 1;
+  padding-bottom: 0.5em;
+}
+.page-banner .page-banner-inner > :first-child > :nth-child(1) {
+  letter-spacing: 0.2em;
+  margin-bottom: 0;
+}
