@@ -6,7 +6,7 @@ import os
 
 
 # レイアウト
-LAYOUT = "page"
+LAYOUT = "post"
 # 新しいポストを作成するパス
 OUTPUT_PATH = ["..", "_source", "_posts"]
 #  拡張子
