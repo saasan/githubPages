@@ -75,7 +75,7 @@ USB CABLE CHECKER 2 の表示は以下の通り。
 eMarker が内蔵されているため 3A を超える電流が流せます。
 connection のランプも全点灯しており、PD 3.0 / USB 3.1 Gen2 対応を謳うケーブルとして特に問題なさそうです。
 
-##  RAVPower 製充電器 RP-PC128 付属ケーブル
+## RAVPower 製充電器 RP-PC128 付属ケーブル
 
 購入時に気付いてなかったのですが、
 RP-PC128 にも 1.5m の Type-C ケーブルが付属していたためこれも確認してみます。
@@ -93,7 +93,7 @@ USB 2.0 対応の PD ケーブルとして使えるようです。
 電源ケーブルとして使うならこれで十分ですね。
 <del>RAMPOW のケーブルいらなかったのでは？</del>
 
-##  Lenovo Yoga Book C930 付属ケーブル
+## Lenovo Yoga Book C930 付属ケーブル
 
 手元にあったほかの USB Type-C ケーブルも確認してみます。
 
@@ -113,7 +113,7 @@ DisplayPort 出力や Thunderbolt などの Alternate Mode に使われる信号
 
 USB 3.1 対応の PD ケーブルとしては使えそう。
 
-##  One-Netbook OneMix3S 付属ケーブル
+## One-Netbook OneMix3S 付属ケーブル
 
 <a href="/assets/images/blog/2020-07-19/onemix3s.jpg"><img src="/assets/images/blog/2020-07-19/onemix3s.jpg"  alt="One-Netbook OneMix3S 付属ケーブル"></a>
 
