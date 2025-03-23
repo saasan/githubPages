@@ -8,13 +8,18 @@ description: VMware ESXi 上に Flatcar Container Linux のサーバを立てた
 ---
 
 ChatGPT に Docker コンテナの実行・運用に最適な OS を聞いたところ、
-選択肢の一つとして「Flatcar Container Linux (CoreOS の後継)」があった。
+その中のひとつに「Flatcar Container Linux」があった。
 気になったのでとりあえず VMware ESXi 上にサーバを立ててみた。
 
 ## Flatcar Container Linux とは？
 
 Flatcar Container Linux は、コンテナの運用に特化した軽量 Linux ディストリビューションである。
 自動更新機能を備え、シンプルな構成でセキュリティと安定性を重視している。
+
+### 特徴
+
+- **自動アップデート**: システムのアップデートが自動で適用され、セキュリティと安定性を確保する。
+- **イミュータブルな設計**: ルートファイルシステムが書き換え不可のため、一貫性が保たれ、運用時のトラブルを低減できる。
 
 本記事では、VMware ESXi 上に Flatcar Container Linux を導入する手順を解説する。
 
@@ -24,9 +29,9 @@ Flatcar Container Linux は、コンテナの運用に特化した軽量 Linux �
 
 ### VMware 用 OVA ファイルのダウンロード
 
-OVA ファイルのダウンロード元は
-[Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/)
-に書かれている。
+OVA ファイルのダウンロード元は、以下の公式ドキュメントに書かれている。
+
+- [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/)
 
 ### ovftool のインストール
 
@@ -101,11 +106,87 @@ ovftool --name=testvm \
   --X:guest:ignition.config.data=$(cat ignition_config.json | base64 --wrap=0) \
   --X:guest:ignition.config.data.encoding=base64 \
   ./flatcar_production_vmware_ova.ova \
-  'vi:///<YOUR_USER>:<ESXI_PASSWORD>@<ESXI_HOST_IP>'
+  'vi:///<YOUR_USER>@<ESXI_HOST_IP>'
 ```
 
 コンソール上に設定した IP アドレスが表示されていれば OK。
-SSH で接続し Docker コマンドも実行できた。
+SSH で接続し `docker` コマンドも実行できた。
+
+## Docker Compose を含めたサーバの構築
+
+標準状態では Docker Compose が含まれていなかった。
+
+Flatcar では `systemd-sysext` を利用して機能を拡張する仕組みになっている。
+Docker Compose を利用するには、以下の公式ドキュメントを参考に Butane 設定ファイルを変更する。
+
+- [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/)
+
+また、利用可能な Docker Compose のバージョンは以下で確認できる。
+
+- [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose)
+
+```yaml
+variant: flatcar
+version: 1.0.0
+storage:
+  files:
+    - path: /etc/systemd/network/00-static.network
+      mode: 0644
+      contents:
+        inline: |
+          [Match]
+          Name=ens192
+          [Network]
+          Address=192.168.xxx.xxx/24
+          Gateway=192.168.xxx.xxx
+          DNS=192.168.xxx.xxx
+          LinkLocalAddressing=no
+          IPv6AcceptRA=no
+
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: ホスト名
+
+    - path: /opt/extensions/docker-compose/docker-compose-2.34.0-x86-64.raw
+      mode: 0644
+      contents:
+        source: https://extensions.flatcar.org/extensions/docker-compose-2.34.0-x86-64.raw
+    - path: /etc/sysupdate.docker-compose.d/docker-compose.conf
+      contents:
+        source: https://extensions.flatcar.org/extensions/docker-compose.conf
+    - path: /etc/sysupdate.d/noop.conf
+      contents:
+        source: https://extensions.flatcar.org/extensions/noop.conf
+
+  links:
+    - target: /opt/extensions/docker-compose/docker-compose-2.34.0-x86-64.raw
+      path: /etc/extensions/docker-compose.raw
+      hard: false
+
+systemd:
+  units:
+    - name: systemd-sysupdate.timer
+      enabled: true
+    - name: systemd-sysupdate.service
+      dropins:
+        - name: docker-compose.conf
+          contents: |
+            [Service]
+            ExecStartPre=/usr/bin/sh -c "readlink --canonicalize /etc/extensions/docker-compose.raw > /tmp/docker-compose"
+            ExecStartPre=/usr/lib/systemd/systemd-sysupdate -C docker-compose update
+            ExecStartPost=/usr/bin/sh -c "readlink --canonicalize /etc/extensions/docker-compose.raw > /tmp/docker-compose-new"
+            ExecStartPost=/usr/bin/sh -c "if ! cmp --silent /tmp/docker-compose /tmp/docker-compose-new; then touch /run/reboot-required; fi"
+
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - SSH公開鍵
+```
+
+先ほど作成した仮想マシンを削除し再構築したところ、
+無事 Docker Compose が利用できる環境ができあがった。
 
 ## 参考サイト
 
@@ -114,4 +195,6 @@ SSH で接続し Docker コマンドも実行できた。
 - [Getting started \| Butane](https://coreos.github.io/butane/getting-started/)
 - [Network configuration with networkd](https://www.flatcar.org/docs/latest/setup/customization/network-config-with-networkd/)
 - [Butane Config Transpiler](https://www.flatcar.org/docs/latest/provisioning/config-transpiler/)
+- [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/)
+- [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose)
 
