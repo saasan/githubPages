@@ -71,3 +71,9 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
   letter-spacing: 0.2em;
   margin-bottom: 0;
 }
+
+.post-badge.badge-new,
+.pagination .post-title a::after,
+.page-segments li a::after {
+  display: none;
+}
