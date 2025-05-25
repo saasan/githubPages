@@ -18,6 +18,7 @@ yat:
 sitemap: true
 lang: "ja"
 translate_langs: []
+brand_color: "#6633ff"
 night_mode: "manual"
 code_badge:
   enabled: "false"
