@@ -76,7 +76,7 @@ ovftool で OVA ファイルを ESXi サーバにデプロイする。
 `guestinfo.metadata` 等は `--extraConfig` を使用して指定する。
 AI に聞くと `--prop` で指定する方法を提案されるがそれは誤り。
 
-```
+```shell
 ovftool \
   --name=al2023-server \
   --datastore=datastore1 \
