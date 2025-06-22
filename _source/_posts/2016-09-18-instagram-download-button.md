@@ -8,13 +8,13 @@ image: /assets/images/instagram-download-button.jpg
 
 ## 概要
 
-[Greasemonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/)
+[Greasemonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/){:target="_blank"}
 用スクリプト。
 Instagram にダウンロードボタンを追加します。
 
 ## ダウンロード
 
-[instagram-download-button.user.js](https://github.com/saasan/Scripts/raw/master/instagram-download-button.user.js)
+[instagram-download-button.user.js](https://github.com/saasan/Scripts/raw/master/instagram-download-button.user.js){:target="_blank"}
 
 ## 詳細
 

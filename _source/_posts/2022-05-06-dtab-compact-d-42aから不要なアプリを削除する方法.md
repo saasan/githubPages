@@ -8,7 +8,7 @@ description: Android 端末の不要なアプリを削除する方法
 ---
 
 昨年踏んで割ってしまった Xperia Z3 Tablet Compact の後継として
-[dtab Compact d-42A](https://www.docomo.ne.jp/product/d42a/) を買った。
+[dtab Compact d-42A](https://www.docomo.ne.jp/product/d42a/){:target="_blank"} を買った。
 
 スペック的にはミドルレンジの Snapdragon 665 なので最新のゲームは動かないけど、
 Z3 Tablet Compact と同じ8インチサイズだし電子書籍を読むにはいいんじゃないかと。
@@ -32,7 +32,7 @@ d-42A はドコモ製なのでキャリア製端末の例に漏れず
 1. 設定 > システム > 詳細設定 > 開発者向けオプション を開く
 1. USBデバッグをオンにする
 1. PC で
-   [Android SDK Platform-Tools](https://developer.android.com/studio/releases/platform-tools)
+   [Android SDK Platform-Tools](https://developer.android.com/studio/releases/platform-tools){:target="_blank"}
    をダウンロードし展開する
 1. Platform-Tools を展開したフォルダをコマンドプロンプトで開く
 1. `adb devices` を実行し接続している端末を確認する

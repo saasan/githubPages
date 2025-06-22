@@ -12,20 +12,20 @@ AWS の公式ドキュメントが分かりづらい上に面倒な手順とな�
 
 ## Amazon Linux 2023 OVA ファイルのダウンロード
 
-[KVM、VMware、Hyper-V で使用する Amazon Linux 2023 イメージをダウンロードする - Amazon Linux 2023](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/outside-ec2-download.html)
+[KVM、VMware、Hyper-V で使用する Amazon Linux 2023 イメージをダウンロードする - Amazon Linux 2023](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/outside-ec2-download.html){:target="_blank"}
 に書かれている
-[cdn.amazonlinux.com](https://cdn.amazonlinux.com/al2023/os-images/latest/)
+[cdn.amazonlinux.com](https://cdn.amazonlinux.com/al2023/os-images/latest/){:target="_blank"}
 から VMware 用の OVA ファイルをダウンロードする。
 
 ## ovftool のダウンロードとインストール
 
-[ovftool](https://developer.broadcom.com/tools/open-virtualization-format-ovf-tool/latest)
+[ovftool](https://developer.broadcom.com/tools/open-virtualization-format-ovf-tool/latest){:target="_blank"}
 をダウンロード・展開しパスを通しておく。
 base64 コマンドを使用するため、Windows 環境の場合は WSL に Linux 版を入れいると楽。
 
 ## cloud-config ファイルの準備
 
-[公式の手順](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/seed-iso.html)
+[公式の手順](https://docs.aws.amazon.com/ja_jp/linux/al2023/ug/seed-iso.html){:target="_blank"}
 だと `meta-data`, `user-data`, `network-config` の3ファイルを用意し
 `seed.iso` ディスクイメージを作成するが、
 `network-config` と `seed.iso` は不要。

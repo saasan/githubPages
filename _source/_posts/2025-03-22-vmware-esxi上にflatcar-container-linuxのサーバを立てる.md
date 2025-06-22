@@ -31,7 +31,7 @@ Flatcar Container Linux は、コンテナの運用に特化した軽量 Linux �
 
 OVA ファイルのダウンロード元は、以下の公式ドキュメントに書かれている。
 
-- [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/)
+- [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/){:target="_blank"}
 
 ### ovftool のインストール
 
@@ -119,11 +119,11 @@ SSH で接続し `docker` コマンドも実行できた。
 Flatcar では `systemd-sysext` を利用して機能を拡張する仕組みになっている。
 Docker Compose を利用するには、以下の公式ドキュメントを参考に Butane 設定ファイルを変更する。
 
-- [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/)
+- [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/){:target="_blank"}
 
 また、利用可能な Docker Compose のバージョンは以下で確認できる。
 
-- [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose)
+- [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose){:target="_blank"}
 
 ```yaml
 variant: flatcar
@@ -190,11 +190,11 @@ passwd:
 
 ## 参考サイト
 
-- [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/)
-- [Getting Started \| Ignition](https://coreos.github.io/ignition/getting-started/#config-validation)
-- [Getting started \| Butane](https://coreos.github.io/butane/getting-started/)
-- [Network configuration with networkd](https://www.flatcar.org/docs/latest/setup/customization/network-config-with-networkd/)
-- [Butane Config Transpiler](https://www.flatcar.org/docs/latest/provisioning/config-transpiler/)
-- [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/)
-- [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose)
+- [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/){:target="_blank"}
+- [Getting Started \| Ignition](https://coreos.github.io/ignition/getting-started/#config-validation){:target="_blank"}
+- [Getting started \| Butane](https://coreos.github.io/butane/getting-started/){:target="_blank"}
+- [Network configuration with networkd](https://www.flatcar.org/docs/latest/setup/customization/network-config-with-networkd/){:target="_blank"}
+- [Butane Config Transpiler](https://www.flatcar.org/docs/latest/provisioning/config-transpiler/){:target="_blank"}
+- [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/){:target="_blank"}
+- [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose){:target="_blank"}
 

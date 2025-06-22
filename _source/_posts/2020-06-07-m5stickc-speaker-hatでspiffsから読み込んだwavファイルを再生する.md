@@ -30,7 +30,7 @@ M5StickC (というか ESP32) の DAC が 8 ビットなので WAV ファイル�
 というエラーメッセージが表示されファイルが読み込まれません。
 
 以下は
-[FFmpeg](https://ffmpeg.org/)
+[FFmpeg](https://ffmpeg.org/){:target="_blank"}
 で変換する場合のコマンド例です。
 FFmpeg で変換すると「Lavf58.29.100」(数字部分はバージョンによる)
 というメタデータが標準で追加されるので、
@@ -42,9 +42,9 @@ ffmpeg -i input.wav -ac 1 -ar 8000 -acodec pcm_u8 -fflags +bitexact output.wav
 
 ## WAV ファイルを SPIFFS へ保存する
 
-[ESP32-WROOM-32 SPIFFS アップローダープラグインの使い方 \| mgo-tec電子工作](https://www.mgo-tec.com/blog-entry-spiffs-uploader-plugin-arduino-esp32.html)
+[ESP32-WROOM-32 SPIFFS アップローダープラグインの使い方 \| mgo-tec電子工作](https://www.mgo-tec.com/blog-entry-spiffs-uploader-plugin-arduino-esp32.html){:target="_blank"}
 に書かれている手順に従い、
-[Arduino ESP32 filesystem uploader](https://github.com/me-no-dev/arduino-esp32fs-plugin)
+[Arduino ESP32 filesystem uploader](https://github.com/me-no-dev/arduino-esp32fs-plugin){:target="_blank"}
 を使用して事前に  WAV ファイルを SPIFFS へ保存しておきます。
 
 ## スケッチの書き込み
@@ -247,7 +247,7 @@ void loop() {
 
 ## 参考サイト
 
-- [ESP32-WROOM-32 SPIFFS アップローダープラグインの使い方 \| mgo-tec電子工作](https://www.mgo-tec.com/blog-entry-spiffs-uploader-plugin-arduino-esp32.html)
-- [arduino-esp32/SPIFFS_Test.ino at master · espressif/arduino-esp32](https://github.com/espressif/arduino-esp32/blob/master/libraries/SPIFFS/examples/SPIFFS_Test/SPIFFS_Test.ino)
-- [音ファイル（拡張子：WAVファイル）のデータ構造について](https://www.youfit.co.jp/archives/1418)
-- [リニアPCMのWAVファイルを読み込む - yattのブログ](https://yatt.hatenablog.jp/entry/20090904/1252078381)
+- [ESP32-WROOM-32 SPIFFS アップローダープラグインの使い方 \| mgo-tec電子工作](https://www.mgo-tec.com/blog-entry-spiffs-uploader-plugin-arduino-esp32.html){:target="_blank"}
+- [arduino-esp32/SPIFFS_Test.ino at master · espressif/arduino-esp32](https://github.com/espressif/arduino-esp32/blob/master/libraries/SPIFFS/examples/SPIFFS_Test/SPIFFS_Test.ino){:target="_blank"}
+- [音ファイル（拡張子：WAVファイル）のデータ構造について](https://www.youfit.co.jp/archives/1418){:target="_blank"}
+- [リニアPCMのWAVファイルを読み込む - yattのブログ](https://yatt.hatenablog.jp/entry/20090904/1252078381){:target="_blank"}

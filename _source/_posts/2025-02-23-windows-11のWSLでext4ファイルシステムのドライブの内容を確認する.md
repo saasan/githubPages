@@ -7,7 +7,7 @@ tags: [ Windows, WSL ]
 description:
 ---
 
-[WSL 2 で Linux ディスクのマウントを開始する](https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk)
+[WSL 2 で Linux ディスクのマウントを開始する](https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk){:target="_blank"}
 の内容を自分用にまとめたやつ
 
 1.  PowerShell でドライブを確認

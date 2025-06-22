@@ -16,13 +16,13 @@ Windows 10 起動後も電力不足の通知が表示されるという状態で
 eMarker 付きのケーブルを持っていなかったので
 RAMPOW という謎のメーカーの PD 3.0 / USB 3.1 Gen2 対応を謳う USB Type-C ケーブルと
 Bit Trade One の
-[USB CABLE CHECKER 2 (ADUSBCIM)](https://bit-trade-one.co.jp/adusbcim/)
+[USB CABLE CHECKER 2 (ADUSBCIM)](https://bit-trade-one.co.jp/adusbcim/){:target="_blank"}
 もついでに購入しました。
 
-RAMPOW は [Web サイト](https://rampow.com/) を見ても本社所在地や電話番号等が一切書かれておらず怪しげなメーカーという印象だったため、
+RAMPOW は [Web サイト](https://rampow.com/){:target="_blank"} を見ても本社所在地や電話番号等が一切書かれておらず怪しげなメーカーという印象だったため、
 ケーブルを使用する前に念の為 USB CABLE CHECKER 2 で確認しようという寸法です。
 (※購入後に気付いたのですが、RAMPOW の
-[Amazon出品者プロフィール](https://www.amazon.co.jp/sp?_encoding=UTF8&seller=A2RPIWYAIJTBUL)
+[Amazon出品者プロフィール](https://www.amazon.co.jp/sp?_encoding=UTF8&seller=A2RPIWYAIJTBUL){:target="_blank"}
 に住所と電話番号が書かれていました。中国深センの会社のようです。)
 
 <div class="affiliate-product-list">
@@ -43,7 +43,7 @@ RAMPOW は [Web サイト](https://rampow.com/) を見ても本社所在地や�
 
 さっそく RAMPOW 製ケーブルを確認してみます。
 
-<a href="/assets/images/blog/2020-07-19/rampow.jpg"><img src="/assets/images/blog/2020-07-19/rampow.jpg"  alt="RAMPOW 製ケーブル RAD03"></a>
+![RAMPOW 製ケーブル RAD03](/assets/images/blog/2020-07-19/rampow.jpg)
 
 USB CABLE CHECKER 2 の表示は以下の通り。
 
@@ -52,7 +52,7 @@ USB CABLE CHECKER 2 の表示は以下の通り。
     SHELL-GND SHORT(A&B)
 
 表示の意味については
-[取扱説明書](https://github.com/bit-trade-one/USBCableChecker2/blob/master/README.md)
+[取扱説明書](https://github.com/bit-trade-one/USBCableChecker2/blob/master/README.md){:target="_blank"}
 に記載されています。
 
 > [DOWN1K/E-MARKED]
@@ -80,7 +80,7 @@ connection のランプも全点灯しており、PD 3.0 / USB 3.1 Gen2 対応�
 購入時に気付いてなかったのですが、
 RP-PC128 にも 1.5m の Type-C ケーブルが付属していたためこれも確認してみます。
 
-<a href="/assets/images/blog/2020-07-19/ravpower.jpg"><img src="/assets/images/blog/2020-07-19/ravpower.jpg"  alt="RAVPower 製 90W USB PD 充電器 RP-PC128 付属ケーブル"></a>
+![RAVPower 製 90W USB PD 充電器 RP-PC128 付属ケーブル](/assets/images/blog/2020-07-19/ravpower.jpg)
 
     GND+VBUS=170mΩ
     CC:DOWN1K/E-MARKED
@@ -97,7 +97,7 @@ USB 2.0 対応の PD ケーブルとして使えるようです。
 
 手元にあったほかの USB Type-C ケーブルも確認してみます。
 
-<a href="/assets/images/blog/2020-07-19/lenovo.jpg"><img src="/assets/images/blog/2020-07-19/lenovo.jpg"  alt="Lenovo Yoga Book C930 付属ケーブル"></a>
+![Lenovo Yoga Book C930 付属ケーブル](/assets/images/blog/2020-07-19/lenovo.jpg)
 
     GND+VBUS=212mΩ
     SHELL-GND SHORT(A&B)
@@ -115,7 +115,7 @@ USB 3.1 対応の PD ケーブルとしては使えそう。
 
 ## One-Netbook OneMix3S 付属ケーブル
 
-<a href="/assets/images/blog/2020-07-19/onemix3s.jpg"><img src="/assets/images/blog/2020-07-19/onemix3s.jpg"  alt="One-Netbook OneMix3S 付属ケーブル"></a>
+![One-Netbook OneMix3S 付属ケーブル](/assets/images/blog/2020-07-19/onemix3s.jpg)
 
     GND+VBUS=225mΩ
 
@@ -152,7 +152,7 @@ USB Power Delivery では高電圧、大電流が流れるため、
 
 ## 参考サイト
 
-- [USBCableChecker2/README.md at master · bit-trade-one/USBCableChecker2](https://github.com/bit-trade-one/USBCableChecker2/blob/master/README.md)
-- [ASCII.jp：USB 4の発表で、USB 3.2はどうなった？ (1/5)](https://ascii.jp/elem/000/001/848/1848727/)
-- [USB 3.2とUSB4は従来のUSB規格から何が変わるのか？ 混乱しがちなUSBの最新事情を説明しよう - 4Gamer.net](https://www.4gamer.net/games/999/G999902/20190403022/)
-- [USB Type-Cに置き換える方法 第1話 Type-Cの原理を知る \| 組込み技術ラボ](https://lab.fujiele.co.jp/articles/8968/)
+- [USBCableChecker2/README.md at master · bit-trade-one/USBCableChecker2](https://github.com/bit-trade-one/USBCableChecker2/blob/master/README.md){:target="_blank"}
+- [ASCII.jp：USB 4の発表で、USB 3.2はどうなった？ (1/5)](https://ascii.jp/elem/000/001/848/1848727/){:target="_blank"}
+- [USB 3.2とUSB4は従来のUSB規格から何が変わるのか？ 混乱しがちなUSBの最新事情を説明しよう - 4Gamer.net](https://www.4gamer.net/games/999/G999902/20190403022/){:target="_blank"}
+- [USB Type-Cに置き換える方法 第1話 Type-Cの原理を知る \| 組込み技術ラボ](https://lab.fujiele.co.jp/articles/8968/){:target="_blank"}

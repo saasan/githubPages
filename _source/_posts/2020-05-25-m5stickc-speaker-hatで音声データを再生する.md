@@ -12,7 +12,7 @@ M5StickC + Speaker Hat で音声や音楽を再生しようと思ったら
 ## 音声データの変換
 
 まずは WAV や MP3 など再生したい音声データを
-[【Arduino】WAVまたはMP3ファイルを再生する - おもちゃラボ](https://nn-hokuson.hatenablog.com/entry/2017/09/01/092945)
+[【Arduino】WAVまたはMP3ファイルを再生する - おもちゃラボ](https://nn-hokuson.hatenablog.com/entry/2017/09/01/092945){:target="_blank"}
 に書かれている方法で以下の形式へ変換します。
 
 - モノラル
@@ -24,7 +24,7 @@ M5StickC + Speaker Hat で音声や音楽を再生しようと思ったら
 
 その後C言語の配列に変換する必要がありますが、
 Windows 環境では xxd コマンドがないため
-[バイナリファイルをC言語のデータ配列に変換する：放課後マイコンクラブ：SSブログ](https://hello-world.blog.ss-blog.jp/2016-10-16)
+[バイナリファイルをC言語のデータ配列に変換する：放課後マイコンクラブ：SSブログ](https://hello-world.blog.ss-blog.jp/2016-10-16){:target="_blank"}
 の「PROGMEM作蔵さん」を使用して変換しました。
 
 ## スケッチへ貼り付けて書き込み
@@ -108,7 +108,7 @@ void loop() {
 ```
 
 playMusic 関数は公式の
-[サンプルスケッチ](https://github.com/m5stack/M5StickC/blob/master/examples/Hat/SPEAKER/SPEAKER.ino)
+[サンプルスケッチ](https://github.com/m5stack/M5StickC/blob/master/examples/Hat/SPEAKER/SPEAKER.ino){:target="_blank"}
 のものですが、
 そのままでは音声が正常に再生されなかったため
 ledcWriteTone から ledcWrite へ変更しています。
@@ -117,13 +117,13 @@ ledcWriteTone から ledcWrite へ変更しています。
 今回は短い音声の再生だったためスケッチにそのまま配列として書きましたが、
 音声データ部分だけで500行を超えましたし、
 配列への変換も面倒なのでファイルから読み込むようにしたいですね。
-[SPIFFS](https://lang-ship.com/reference/unofficial/M5StickC/Storage/SPIFFS/)
+[SPIFFS](https://lang-ship.com/reference/unofficial/M5StickC/Storage/SPIFFS/){:target="_blank"}
 を使えば実現できそう。
 
 ## 参考サイト
 
-- [M5StickC/SPEAKER.ino at master · m5stack/M5StickC](https://github.com/m5stack/M5StickC/blob/master/examples/Hat/SPEAKER/SPEAKER.ino)
-- [【Arduino】WAVまたはMP3ファイルを再生する - おもちゃラボ](https://nn-hokuson.hatenablog.com/entry/2017/09/01/092945)
-- [バイナリファイルをC言語のデータ配列に変換する：放課後マイコンクラブ：SSブログ](https://hello-world.blog.ss-blog.jp/2016-10-16)
-- [ESP32のPWM出力は255が最大じゃなかった – Lang-ship](https://lang-ship.com/blog/work/esp32-pwm-max/)
-- [PCM の基本](https://wisdom.sakura.ne.jp/system/winapi/media/mm5.html)
+- [M5StickC/SPEAKER.ino at master · m5stack/M5StickC](https://github.com/m5stack/M5StickC/blob/master/examples/Hat/SPEAKER/SPEAKER.ino){:target="_blank"}
+- [【Arduino】WAVまたはMP3ファイルを再生する - おもちゃラボ](https://nn-hokuson.hatenablog.com/entry/2017/09/01/092945){:target="_blank"}
+- [バイナリファイルをC言語のデータ配列に変換する：放課後マイコンクラブ：SSブログ](https://hello-world.blog.ss-blog.jp/2016-10-16){:target="_blank"}
+- [ESP32のPWM出力は255が最大じゃなかった – Lang-ship](https://lang-ship.com/blog/work/esp32-pwm-max/){:target="_blank"}
+- [PCM の基本](https://wisdom.sakura.ne.jp/system/winapi/media/mm5.html){:target="_blank"}

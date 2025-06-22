@@ -19,12 +19,12 @@ Markdown エンジンの違いにより VSCode と出力結果が異なる
 (リスト内のテーブルなど)
 ものばかりだった。
 このスクリプトは VSCode と同じ
-[markdown-it](https://github.com/markdown-it/markdown-it)
+[markdown-it](https://github.com/markdown-it/markdown-it){:target="_blank"}
 を使用し、出力結果が同じになるようにしている。
 
 ## 動作に必要なもの
 
-[Node.js](https://nodejs.org/ja/) が必要
+[Node.js](https://nodejs.org/ja/){:target="_blank"} が必要
 
 ## 使い方
 
@@ -43,5 +43,5 @@ Markdown エンジンの違いにより VSCode と出力結果が異なる
 
 ## ダウンロード
 
-[GitHub](https://github.com/saasan/save-vscode-markdown-preview)
+[GitHub](https://github.com/saasan/save-vscode-markdown-preview){:target="_blank"}
 からダウンロードできます。

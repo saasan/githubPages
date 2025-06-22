@@ -10,7 +10,7 @@ Dell Command \| Update を実行したあとにスタートメニューから De
 
 しばらく待っていれば自動で復活することもあれば復活しないこともある。
 復活しないときは一度アンインストールして
-[Dell のサイトからダウンロード](https://www.dell.com/support/article/ja-jp/sln311129/dell-command-update?lang=ja)
+[Dell のサイトからダウンロード](https://www.dell.com/support/article/ja-jp/sln311129/dell-command-update?lang=ja){:target="_blank"}
 したものを入れ直していたが、けっこう手間がかかって面倒だった。
 そもそもアプリの一覧に残ってるならもっと簡単に復活できるんじゃないか？
 
@@ -26,4 +26,4 @@ Dell Command \| Update を実行したあとにスタートメニューから De
 
 ※Get-AppxPackage に -AllUsers オプションを付けて実行するのに管理者権限が必要。
 
-参考 : [Add-AppxPackage (AppX) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/appx/add-appxpackage?view=winserver2012r2-ps#example-2)
+参考 : [Add-AppxPackage (AppX) \| Microsoft Docs](https://docs.microsoft.com/ja-jp/powershell/module/appx/add-appxpackage?view=winserver2012r2-ps#example-2){:target="_blank"}

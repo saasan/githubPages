@@ -28,7 +28,7 @@ Lenovo ThinkCentre M600 Tiny
 
 これは容積1リットルを謳う超小型デスクトップ PC で、
 CPU は
-[Intel Celeron J3060](https://ark.intel.com/content/www/jp/ja/ark/products/91534/intel-celeron-processor-j3060-2m-cache-up-to-2-48-ghz.html)
+[Intel Celeron J3060](https://ark.intel.com/content/www/jp/ja/ark/products/91534/intel-celeron-processor-j3060-2m-cache-up-to-2-48-ghz.html){:target="_blank"}
 1.6GHz 2コア、TDP 6 W となっています。
 
 ## USB 接続の TV チューナーを購入したが…
@@ -60,7 +60,7 @@ M.2 → PCI-E x1 変換アダプタを見つけました。
     </a>
 </div>
 
-[M.2](https://ja.wikipedia.org/wiki/M.2)
+[M.2](https://ja.wikipedia.org/wiki/M.2){:target="_blank"}
 は物理的な接続方法が異なるだけで
 PCI-E の信号をそのまま送ることができます。
 M600 Tiny には Wi-Fi の増設用と思われる
@@ -89,19 +89,19 @@ SATA が使えなくなるため、ストレージはもともと付属してい
 変換アダプタを購入して実際に接続してみました。
 内部は以下のようになっています。
 
-[![PC 内部](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg){:target="_blank"}
+![PC 内部](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express1.jpg)
 
 背面の VGA (D-Sub 15 ピン) 端子が増設できる場所の板をはずして
 ケーブルを外に出しています。
 
-[![ケーブルの外出し1](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg){:target="_blank"}
+![ケーブルの外出し1](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express2.jpg)
 
-[![ケーブルの外出し2](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg){:target="_blank"}
+![ケーブルの外出し2](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express3.jpg)
 
 最後に TV チューナーボードを取り付けて以下のようになりました。
 PC を起動して確認しましたが問題なく認識され使用できました！
 
-[![TV チューナーボードの取り付け](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg)](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg){:target="_blank"}
+![TV チューナーボードの取り付け](/assets/images/blog/2021-09-18/thinkcentre-tiny-pci-express4.jpg)
 
 ## まとめ
 

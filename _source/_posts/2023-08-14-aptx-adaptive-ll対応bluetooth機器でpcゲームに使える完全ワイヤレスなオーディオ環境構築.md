@@ -28,7 +28,7 @@ aptX LL 対応の機器が少なくいいものが見つからなかった。
 ## Creative BT-W5 と EarFun Air Pro 3 を購入 
 
 結局 aptX Adaptive 対応の USB アダプタ
-[Creative BT-W5](https://jp.creative.com/p/accessories/creative-bt-w5) と
+[Creative BT-W5](https://jp.creative.com/p/accessories/creative-bt-w5){:target="_blank"} と
 完全ワイヤレスイヤホン EarFun Air Pro 3 を購入した。
 
 <div class="affiliate-product-list">
@@ -55,7 +55,7 @@ EarFun Air Pro 3 を選んだ理由は、1万円以下の完全ワイヤレス�
 ## 遅延時間の確認
 
 遅延時間の確認には
-[Latency Tester](https://nullvoxpopuli.github.io/latency-tester/)
+[Latency Tester](https://nullvoxpopuli.github.io/latency-tester/){:target="_blank"}
 を使用した。
 Web サイト上で音に合わせてマウスをクリックするかスペースキーを押すことで簡易的に遅延時間を確認できる。
 
@@ -111,5 +111,5 @@ Web サイト上で音に合わせてマウスをクリックするかスペー�
 
 ## 参考サイト
 
-- [aptX LL / Adaptive でやる音ゲー - う！](https://uzuky.hatenablog.com/entry/20201215/1608005651)
-- [Creative BT-W5レビュー。aptX Adaptiveで24bit/96kHzや低遅延にできるトランスミッター - AndroPlus](https://androplus.org/entry/creative-bt-w5-review/)
+- [aptX LL / Adaptive でやる音ゲー - う！](https://uzuky.hatenablog.com/entry/20201215/1608005651){:target="_blank"}
+- [Creative BT-W5レビュー。aptX Adaptiveで24bit/96kHzや低遅延にできるトランスミッター - AndroPlus](https://androplus.org/entry/creative-bt-w5-review/){:target="_blank"}

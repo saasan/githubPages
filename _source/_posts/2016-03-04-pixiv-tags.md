@@ -8,13 +8,13 @@ image: /assets/images/pixivtags/normal.png
 
 ## 概要
 
-[Greasemonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/)
+[Greasemonkey](https://addons.mozilla.org/ja/firefox/addon/greasemonkey/){:target="_blank"}
 用スクリプト。
-設定したタグを [pixiv](https://www.pixiv.net/) 内に常時表示し、タグ巡回を快適にします。
+設定したタグを [pixiv](https://www.pixiv.net/){:target="_blank"} 内に常時表示し、タグ巡回を快適にします。
 
 ## ダウンロード
 
-[pixiv-tags.user.js](https://github.com/saasan/Scripts/raw/master/pixiv-tags.user.js)
+[pixiv-tags.user.js](https://github.com/saasan/Scripts/raw/master/pixiv-tags.user.js){:target="_blank"}
 
 ## 詳細
 
@@ -58,7 +58,7 @@ AND/OR検索もできます。
 
 ### 2015/04/21 ver.1.05
 
-[短縮表示、常に展開表示できるように by monsier-oui · Pull Request #1 · saasan/Greasemonkey](https://github.com/saasan/Greasemonkey/pull/1)
+[短縮表示、常に展開表示できるように by monsier-oui · Pull Request #1 · saasan/Greasemonkey](https://github.com/saasan/Greasemonkey/pull/1){:target="_blank"}
 
 * 字数を設定して短縮表示できるように
 * 常に展開して表示する選択肢を追加

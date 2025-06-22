@@ -9,7 +9,7 @@ tags: [ M5Stack, M5StickC, ESP32, ESP8266Audio ]
 前回の
 [M5StickC + Speaker Hat で SPIFFS から読み込んだ WAV ファイルを再生する](/blog/2020/06/07/m5stickc-speaker-hat%E3%81%A7spiffs%E3%81%8B%E3%82%89%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%93%E3%81%A0wav%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E5%86%8D%E7%94%9F%E3%81%99%E3%82%8B.html)
 では自力で WAV ファイルを読み込んでいましたが、
-[ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio)
+[ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio){:target="_blank"}
 というライブラリを用いることで ESP32-PICO 搭載の M5StickC でも MP3 が再生できることを教えて頂きました。
 ということで、今回は事前に SPIFFS へ保存した MP3 ファイルを ESP8266Audio で読み込んで再生します。
 
@@ -244,6 +244,6 @@ void loop() {
 
 ## 参考サイト
 
-- [earlephilhower/ESP8266Audio: Arduino library to play MOD, WAV, FLAC, MIDI, RTTTL, MP3, and AAC files on I2S DACs or with a software emulated delta-sigma DAC on the ESP8266 and ESP32](https://github.com/earlephilhower/ESP8266Audio)
-- [ESP32でGoogle Play Musicを再生する - Qiita](https://qiita.com/odetarou/items/0f37ed2eeeb9bd051c0c)
-- [ESP32でサウンド出力時のクリックノイズ対策（I2S+内蔵DAC） \| N.Yamazaki's blog](http://blog-yama.a-quest.com/?eid=970190)
+- [earlephilhower/ESP8266Audio: Arduino library to play MOD, WAV, FLAC, MIDI, RTTTL, MP3, and AAC files on I2S DACs or with a software emulated delta-sigma DAC on the ESP8266 and ESP32](https://github.com/earlephilhower/ESP8266Audio){:target="_blank"}
+- [ESP32でGoogle Play Musicを再生する - Qiita](https://qiita.com/odetarou/items/0f37ed2eeeb9bd051c0c){:target="_blank"}
+- [ESP32でサウンド出力時のクリックノイズ対策（I2S+内蔵DAC） \| N.Yamazaki's blog](http://blog-yama.a-quest.com/?eid=970190){:target="_blank"}

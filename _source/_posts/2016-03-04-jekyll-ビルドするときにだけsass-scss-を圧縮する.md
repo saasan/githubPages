@@ -23,7 +23,7 @@ sass:
 ```
 
 参考: 
-<a href="https://jekyllrb.com/docs/assets/#sassscss" target="_blank">Assets - Jekyll • Simple, blog-aware, static sites</a>
+[Assets - Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/assets/#sassscss){:target="_blank"}
 
 ### 2. 製作時のコマンド
 
@@ -44,4 +44,4 @@ jekyll build --config _config.yml,_config-production.yml
 ```
 
 参考: 
-<a href="https://jekyllrb.com/docs/configuration/#build-command-options" target="_blank">Configuration - Jekyll • Simple, blog-aware, static sites</a>
+[Configuration - Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/configuration/#build-command-options){:target="_blank"}

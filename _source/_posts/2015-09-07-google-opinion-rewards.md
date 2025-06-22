@@ -5,7 +5,7 @@ date: 2015-09-07 05:57:48
 category: blog
 ---
 
-<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.paidtasks&amp;hl=ja" target="_blank">Google アンケート モニター - Google Play の Android アプリ</a>
+[Google アンケート モニター - Google Play の Android アプリ](https://play.google.com/store/apps/details?id=com.google.android.apps.paidtasks&amp;hl=ja){:target="_blank"}
 
 > 「Google アンケート モニター」は Google 消費者アンケート チームが作成したアプリです。
 > 簡単なアンケートに答えるだけで Google Play で使えるクレジットがもらえます。

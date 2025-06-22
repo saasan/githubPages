@@ -13,8 +13,8 @@ Stable Diffusion を Windows 10 のローカル環境へインストールする
 ## 実行環境
 
 - Windows 10 Pro 22H2
-- GPU: [MSI GeForce RTX 3060 GAMING X 12G](https://www.amazon.co.jp/dp/B08WPJ5P4R/?tag=saasan-22) (VRAM 12 GB 版 NVIDIA GeForce RTX 3060)
-- CPU: [AMD Ryzen 5 5600X](https://www.amazon.co.jp/dp/B08166SLDF/?tag=saasan-22)
+- GPU: [MSI GeForce RTX 3060 GAMING X 12G](https://www.amazon.co.jp/dp/B08WPJ5P4R/?tag=saasan-22){:target="_blank"} (VRAM 12 GB 版 NVIDIA GeForce RTX 3060)
+- CPU: [AMD Ryzen 5 5600X](https://www.amazon.co.jp/dp/B08166SLDF/?tag=saasan-22){:target="_blank"}
 - メモリ: 32 GB
 
 <div class="affiliate-product-list">
@@ -42,7 +42,7 @@ AMD や Intel 製 GPU に対応させたものもあるようだが以下の手�
 Stable Diffusion に限らず、NVIDIA の GPU で機械学習やディープラーニングを行うには
 CUDA という並列計算のライブラリが必要。
 
-[NVIDIA の公式サイト](https://developer.nvidia.com/cuda-downloads)
+[NVIDIA の公式サイト](https://developer.nvidia.com/cuda-downloads){:target="_blank"}
 から CUDA Toolkit をダウンロードしインストールする。
 
 ## Python, Git のインストール
@@ -54,7 +54,7 @@ Stable Diffusion web UI (以下 web UI と略す) を利用するのが楽なの
 
 **3.11 系では web UI が動作しないため必ず 3.10 系をインストールすること。**
 
-1.  [Python の公式サイト](https://www.python.org/downloads/windows/) から Python 3.10.x をダウンロードする。  
+1.  [Python の公式サイト](https://www.python.org/downloads/windows/){:target="_blank"} から Python 3.10.x をダウンロードする。  
     現在は 3.10.10 が最新のため「Stable Releases」の「Python 3.10.10 - Feb. 8, 2023」にある
     「Windows installer (64-bit)」をクリックしてダウンロードすればよい。
 2.  ダウンロードしたファイルをダブルクリックしてインストーラーを起動する。
@@ -63,14 +63,14 @@ Stable Diffusion web UI (以下 web UI と略す) を利用するのが楽なの
 
 ### Git のインストール
 
-1.  [Git の公式サイト](https://git-scm.com/download/win) から 64-bit Git for Windows Setup をダウンロードする。
+1.  [Git の公式サイト](https://git-scm.com/download/win){:target="_blank"} から 64-bit Git for Windows Setup をダウンロードする。
 2.  ダウンロードしたファイルをダブルクリックしてインストーラーを起動する。
 3.  英語で色々聞かれるが全部「Next」をクリックして進める。
 4.  最後に「Install」すればとりあえず使える状態になる。
 
 ## Stable Diffusion web UI のインストール
 
-1.  [Stable Diffusion web UI のページ](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+1.  [Stable Diffusion web UI のページ](https://github.com/AUTOMATIC1111/stable-diffusion-webui){:target="_blank"}
     から「Code > Download ZIP」でファイルをダウンロードする。  
     Git を使える人は `git clone` してもよい。
 2.  ダウンロードした ZIP ファイルを展開する。  
@@ -141,7 +141,7 @@ Prompt へ描かせたいもの、Negative prompt へ描かせたくないもの
 - `[言葉]`: 1.1倍抑制
 - `(言葉:1.5)`: 1.5倍強調
 
-参考: [Attention/emphasis](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#attentionemphasis)
+参考: [Attention/emphasis](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#attentionemphasis){:target="_blank"}
 
 ### Generate / Interrupt / Skip
 
@@ -211,7 +211,7 @@ Sampling method の違いはよくわからない。
 
 デフォルトの 7 のままでよさそう。
 
-参考: [画像生成AI「Stable Diffusion」でどれぐらいプロンプト・呪文の指示に従うかを決める「CFG(classifier-free guidance)」とは一体何なのか？ - GIGAZINE](https://gigazine.net/news/20220928-stable-diffusion-classifier-free-guidance/)
+参考: [画像生成AI「Stable Diffusion」でどれぐらいプロンプト・呪文の指示に従うかを決める「CFG(classifier-free guidance)」とは一体何なのか？ - GIGAZINE](https://gigazine.net/news/20220928-stable-diffusion-classifier-free-guidance/){:target="_blank"}
 
 ### Restore faces, Tiling
 
@@ -248,20 +248,20 @@ web UI の初期状態でもモデルがインストールされるが、
 
 ### モデルのダウンロード
 
-モデルは [Hugging Face](https://huggingface.co/spaces/huggingface-projects/diffusers-gallery) や
-[Civitai](https://civitai.com/) などで探してダウンロードする。
+モデルは [Hugging Face](https://huggingface.co/spaces/huggingface-projects/diffusers-gallery){:target="_blank"} や
+[Civitai](https://civitai.com/){:target="_blank"} などで探してダウンロードする。
 
 拡張子が .ckpt または .safetensor のものをダウンロードすればよい。
 両方用意されている場合は .safetensor のほうが安全性が高いためそちらをダウンロードする。
 
-参考: [AIモデルのsafetensors形式とは何者か？ckptと比較しつつ解説する \| 経済的生活日誌](https://economylife.net/safetensors-ckpt-difference/)
+参考: [AIモデルのsafetensors形式とは何者か？ckptと比較しつつ解説する \| 経済的生活日誌](https://economylife.net/safetensors-ckpt-difference/){:target="_blank"}
 
 #### モデルのファイル名に付いてる pruned や fp16 って何？
 
 画像生成に影響の少ない部分を削って軽量化したもの。
 pruned や fp16 が用意されている場合はそちらをダウンロードするとよい。
 
-[TensorFlow のサイト](https://www.tensorflow.org/guide/mixed_precision?hl=ja)
+[TensorFlow のサイト](https://www.tensorflow.org/guide/mixed_precision?hl=ja){:target="_blank"}
 によると「NVIDIA GPU は float32 よりも float16 で速く演算を実行でき」るらしい。 (float16 = fp16)
 
 ### モデルの追加方法
@@ -275,8 +275,8 @@ pruned や fp16 が用意されている場合はそちらをダウンロード�
 
 以下の2つのモデルはどちらも美しいイラストが生成できるためオススメ。
 
-- [AbyssOrangeMix3 (AOM3)](https://huggingface.co/WarriorMama777/OrangeMixs)
-- [Anything v4.5](https://huggingface.co/andite/anything-v4.0)
+- [AbyssOrangeMix3 (AOM3)](https://huggingface.co/WarriorMama777/OrangeMixs){:target="_blank"}
+- [Anything v4.5](https://huggingface.co/andite/anything-v4.0){:target="_blank"}
 
 AbyssOrangeMix3 は A1 から A3 と A1B がある。
 A1 がアニメ調、A2が絵画調、A1B と A3 が中間。

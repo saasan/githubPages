@@ -13,7 +13,7 @@ GitHub Actions で自作の Python スクリプトを動かして代用するこ
 
 コードは以下のリポジトリにある。
 
-<a href="https://github.com/saasan/feed2tweet"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/saasan/feed2tweet.png" width="460px"></a>
+<a href="https://github.com/saasan/feed2tweet" target="_blank"><img src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/saasan/feed2tweet.png" width="460px"></a>
 
 ## なぜ GitHub Actions なのか？
 
@@ -27,13 +27,13 @@ IFTTT を利用する前に調べた際は
 無料で利用可能でデータの永続化が可能なサービスが見つからなかった記憶がある。
 
 今回いくつかの候補の中から GitHub Actions について調べていたところ、
-[Github Actionsのcacheをデータの永続化(?)に使う - MJHD](https://mjhd.hatenablog.com/entry/2022/06/04/104711)
+[Github Actionsのcacheをデータの永続化(?)に使う - MJHD](https://mjhd.hatenablog.com/entry/2022/06/04/104711){:target="_blank"}
 を見て cache が永続化に利用できると知り GitHub Actions を利用することとした。
 
 ## Github Actions の cache
 
 公式のドキュメント: 
-[依存関係をキャッシュしてワークフローのスピードを上げる - GitHub Docs](https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows)
+[依存関係をキャッシュしてワークフローのスピードを上げる - GitHub Docs](https://docs.github.com/ja/actions/using-workflows/caching-dependencies-to-speed-up-workflows){:target="_blank"}
 
 ファイルをキャッシュとして保存し、次回以降のワークフロー実行時に利用できる。
 
@@ -67,11 +67,11 @@ restore-keys に接頭辞のみ指定すると最新のものが取得できる�
 ## 古いキャッシュの削除
 
 前述の通り放置していても古いキャッシュは7日で消えるが、
-[GitHub Actions の Cache 管理(2023 年 1 月の場合)](https://zenn.dev/hankei6km/articles/manage-cache-in-github-actions-2023-01)
+[GitHub Actions の Cache 管理(2023 年 1 月の場合)](https://zenn.dev/hankei6km/articles/manage-cache-in-github-actions-2023-01){:target="_blank"}
 を参考に、1日経ったキャッシュはワークフロー内で削除することとした。
 
 GitHub CLI の
-extension ([gh-actions-cache](https://github.com/actions/gh-actions-cache))
+extension ([gh-actions-cache](https://github.com/actions/gh-actions-cache){:target="_blank"})
 を使用している。
 
 ```yaml
@@ -97,7 +97,7 @@ extension ([gh-actions-cache](https://github.com/actions/gh-actions-cache))
 ## GitHub Actions での定期実行に関する注意点
 
 以下のように schedule で10分毎に実行する設定としたが、
-[公式のドキュメント](https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#schedule)
+[公式のドキュメント](https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#schedule){:target="_blank"}
 にも書かれている通り、負荷が高い場合は遅延したりそもそも実行されない場合がある。
 
 ```yaml

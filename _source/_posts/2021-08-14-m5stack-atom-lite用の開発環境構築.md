@@ -14,7 +14,7 @@ ATOM Lite を購入してみた。
 手順を備忘録として残しておく。
 
 内容は基本的に
-[m5-docs](https://docs.m5stack.com/en/arduino/arduino_development)
+[m5-docs](https://docs.m5stack.com/en/arduino/arduino_development){:target="_blank"}
 と同じ。
 PC は Windows 10。
 
@@ -24,12 +24,12 @@ PC は Windows 10。
 "M5Stack" という名前のデバイスに黄色い "！" が付いていたらドライバーがインストールされていない。
 
 1. ドライバーが自動でインストールされない場合は
-[VCP Drivers - FTDI](https://ftdichip.com/drivers/vcp-drivers/)
+[VCP Drivers - FTDI](https://ftdichip.com/drivers/vcp-drivers/){:target="_blank"}
 からダウンロードしてインストール。
 
 1. "USB Serial Port" が表示されたら COM の番号を覚えておく。
 
-1. [Arduino IDE](https://www.arduino.cc/en/software) をダウンロードしてインストール。
+1. [Arduino IDE](https://www.arduino.cc/en/software){:target="_blank"} をダウンロードしてインストール。
 
 ## ボードの設定
 
@@ -87,4 +87,4 @@ PC は Windows 10。
 
 同じスケッチで2回目以降のビルドが遅い場合は、以下のサイトを参考に設定すると良い。
 
-[Arduino IDEのビルドを速くする｜オブジェクトファイルの出力先を固定する \| ハングスタック](https://hangstuck.com/arduino-buildpath-fix/)
+[Arduino IDEのビルドを速くする｜オブジェクトファイルの出力先を固定する \| ハングスタック](https://hangstuck.com/arduino-buildpath-fix/){:target="_blank"}
