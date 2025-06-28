@@ -52,6 +52,7 @@ IFTTT を利用する前に調べた際は
 以下のように key に新しいキーを指定することで新しいキャッシュを作成、
 restore-keys に接頭辞のみ指定すると最新のものが取得できる。
 
+{% raw %}
 ```yaml
 - name: actions/cache用keyの生成
   run: echo "CACHE_TIMESTAMP=$(date +%s)" >> "$GITHUB_ENV"
@@ -63,6 +64,7 @@ restore-keys に接頭辞のみ指定すると最新のものが取得できる�
     key: tweeted-${{ env.CACHE_TIMESTAMP }}
     restore-keys: tweeted-
 ```
+{% endraw %}
 
 ## 古いキャッシュの削除
 
@@ -71,6 +73,7 @@ restore-keys に接頭辞のみ指定すると最新のものが取得できる�
 
 GitHub CLI の `gh cache` を使用している。
 
+{% raw %}
 ```yaml
 - name: Cleanup cache
   run: |
@@ -81,6 +84,7 @@ GitHub CLI の `gh cache` を使用している。
   env:
     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+{% endraw %}
 
 ## GitHub Actions での定期実行に関する注意点
 
