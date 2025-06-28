@@ -67,31 +67,17 @@ restore-keys に接頭辞のみ指定すると最新のものが取得できる�
 ## 古いキャッシュの削除
 
 前述の通り放置していても古いキャッシュは7日で消えるが、
-[GitHub Actions の Cache 管理(2023 年 1 月の場合)](https://zenn.dev/hankei6km/articles/manage-cache-in-github-actions-2023-01){:target="_blank"}
-を参考に、1日経ったキャッシュはワークフロー内で削除することとした。
+新しいものから5個を残して削除することとした。
 
-GitHub CLI の
-extension ([gh-actions-cache](https://github.com/actions/gh-actions-cache){:target="_blank"})
-を使用している。
+GitHub CLI の `gh cache` を使用している。
 
 ```yaml
 - name: Cleanup cache
   run: |
-    gh extension install actions/gh-actions-cache
-
-    # キャッシュがない場合にエラーとなって停止するのを防ぐ
-    set +e
-
-    # 作成から1日以上経っているキャッシュを削除
-    for KEY in $(gh actions-cache list -R "${REPO}" -B "${BRANCH}" --key ${{ env.CACHE_KEY }} --order asc --sort created-at | grep -P 'days? ago' | cut -f 1)
-    do
-        echo "Deleting ${KEY}"
-        gh actions-cache delete "${KEY}" -R "${REPO}" -B "${BRANCH}" --confirm
-    done
-  env:
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    REPO: ${{ github.repository }}
-    BRANCH: ${{ github.ref }}
+    # 新しいものから5個を残してキャッシュ削除
+    gh cache list --key tweeted- --order asc --sort created_at --json id | \
+      jq -r '.[0:-5][].id' | \
+      xargs -r -I ID gh cache delete ID
 ```
 
 ## GitHub Actions での定期実行に関する注意点
