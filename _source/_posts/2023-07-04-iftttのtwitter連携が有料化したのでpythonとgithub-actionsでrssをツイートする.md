@@ -78,6 +78,8 @@ GitHub CLI の `gh cache` を使用している。
     gh cache list --key tweeted- --order asc --sort created_at --json id | \
       jq -r '.[0:-5][].id' | \
       xargs -r -I ID gh cache delete ID
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## GitHub Actions での定期実行に関する注意点
