@@ -3,7 +3,7 @@ layout: post
 title: cloud-config で固定 IP アドレスを設定し Amazon Linux 2023 をオンプレミスの VMware ESXi サーバ上にデプロイする
 date: 2025-06-22 09:55:00 +0900
 category: blog
-tags: [VMware, ESXi, Amazon Linux 2023, cloud-config ]
+tags: [ VMware, ESXi, Amazon Linux 2023, cloud-config ]
 description:
 ---
 
