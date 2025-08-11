@@ -1,0 +1,51 @@
+---
+layout: page
+hidden:
+  - navigator
+  - related_posts
+title: 存在しない漫画の1コマbot検索
+custom_css: noreal-koma.css
+---
+
+<div>
+    <a href="https://x.com/noreal_koma" target="_blank">存在しない漫画の1コマbot</a>
+    の漫画をセリフ、キャラクター名などで検索できます。
+</div>
+<div>
+    誤字、脱字などを見つけた場合は
+    <a href="https://github.com/saasan/noreal-koma-json/issues" target="_blank"
+        >GitHub の Issue</a
+    >
+    でご連絡ください。
+</div>
+<div id="search-container">
+    <input
+        type="text"
+        id="search-box"
+        placeholder="セリフ、キャラクター名などを入力..."
+        oninput="updateSearchQuery()"
+    />
+    <button id="clear-button" type="button">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+</div>
+
+<div id="keyword-container"></div>
+
+<div id="result-container"></div>
+
+<script async src="main.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
