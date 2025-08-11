@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: モバマス道場リスト(スマホ用)
 date: 2023-03-30 21:20:00 +0900
 category: imas
