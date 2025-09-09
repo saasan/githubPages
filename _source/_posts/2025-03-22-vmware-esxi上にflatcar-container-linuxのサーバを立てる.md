@@ -33,10 +33,12 @@ OVA ファイルのダウンロード元は、以下の公式ドキュメント�
 
 - [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/){:target="_blank"}
 
-### ovftool のインストール
+### OVF Tool のインストール
 
 仮想マシン作成時に Base64 エンコードした設定ファイルを指定する必要がある。
-GUI でも構築可能だが、CLI で ovftool を使用したほうが楽。
+GUI でも構築可能だが、CLI で
+[OVF Tool](https://developer.broadcom.com/tools/open-virtualization-format-ovf-tool/latest){:target="_blank"}
+を使用したほうが楽。
 
 ## Butane 設定ファイルを作成
 
@@ -46,6 +48,13 @@ Butane 設定ファイル (`butane_config.yaml`) を作成する。
 ```yaml
 variant: flatcar
 version: 1.0.0
+
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - SSH公開鍵
+
 storage:
   files:
     - path: /etc/systemd/network/00-static.network
@@ -60,17 +69,10 @@ storage:
           DNS=192.168.xxx.xxx
           LinkLocalAddressing=no
           IPv6AcceptRA=no
-
     - path: /etc/hostname
       mode: 0644
       contents:
         inline: ホスト名
-
-passwd:
-  users:
-    - name: core
-      ssh_authorized_keys:
-        - SSH公開鍵
 ```
 
 ## Ignition 設定ファイルへトランスパイル
@@ -89,32 +91,54 @@ docker run --interactive --rm quay.io/coreos/butane:release --pretty --strict < 
 docker run --pull=always --rm -i quay.io/coreos/ignition-validate:release - < ignition_config.json
 ```
 
-## ovftool で Ignition 設定ファイルを指定して起動
+エラーメッセージが表示されなければ問題なし。
+
+## OVF Tool で Ignition 設定ファイルを指定して起動
 
 作業 PC にて ovftool を実行する。
 オプションとして Ignition 設定ファイルを指定し
 ESXi サーバ上で仮想マシンを作成・起動する。
 
-`vi:///～` は デプロイ先の ESXi サーバの情報。
+`vi://～` は デプロイ先の ESXi サーバの情報。
 
 ```shell
-ovftool --name=testvm \
-  --skipManifestCheck --noSSLVerify \
-  --datastore=datastore1 --powerOn=True \
-  --net:"VM Network=VM Network" --X:waitForIp \
+ovftool \
+  --name=testvm \
+  --datastore=datastore1 \
+  --diskMode=thin \
+  --network="VM Network" \
+  --allowExtraConfig \
+  --extraConfig:guestinfo.ignition.config.data="$(base64 -w0 ignition_config.json)" \
+  --extraConfig:guestinfo.ignition.config.data.encoding="base64" \
+  --powerOn \
   --overwrite --powerOffTarget \
-  --X:guest:ignition.config.data=$(cat ignition_config.json | base64 --wrap=0) \
-  --X:guest:ignition.config.data.encoding=base64 \
-  ./flatcar_production_vmware_ova.ova \
-  'vi:///<YOUR_USER>@<ESXI_HOST_IP>'
+  --X:waitForIp \
+  flatcar_production_vmware_ova.ova \
+  'vi://<YOUR_USER>@<ESXI_HOST_IP>'
 ```
 
-コンソール上に設定した IP アドレスが表示されていれば OK。
+実行後、コンソール上に設定した IP アドレスが表示されれば OK。
 SSH で接続し `docker` コマンドも実行できた。
 
-## Docker Compose を含めたサーバの構築
+## Docker サービスの自動起動設定
 
-標準状態では Docker Compose が含まれていなかった。
+標準状態では Docker サービスが無効となっている。
+
+Flatcar は自動アップデート機能があり、システムが自動的に再起動することがある。
+この時、Docker サービスが無効のままだと、再起動後にコンテナが自動で立ち上がらない。
+
+### 必要な設定
+
+#### Docker サービスの有効化
+
+[Permanently running a container](https://www.flatcar.org/docs/latest/container-runtimes/getting-started-with-docker/#permanently-running-a-container){:target="_blank"}
+に書かれている設定を追加し Docker サービスを有効化する。
+
+#### コンテナの再起動ポリシー設定
+
+コンテナ作成時に `--restart=always` または `--restart=unless-stopped` オプションを指定する。
+
+## Docker Compose の追加
 
 Flatcar では `systemd-sysext` を利用して機能を拡張する仕組みになっている。
 Docker Compose を利用するには、以下の公式ドキュメントを参考に Butane 設定ファイルを変更する。
@@ -125,9 +149,18 @@ Docker Compose を利用するには、以下の公式ドキュメントを参�
 
 - [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose){:target="_blank"}
 
+## 最終的な Butane 設定ファイル
+
 ```yaml
 variant: flatcar
 version: 1.0.0
+
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - SSH公開鍵
+
 storage:
   files:
     - path: /etc/systemd/network/00-static.network
@@ -142,16 +175,16 @@ storage:
           DNS=192.168.xxx.xxx
           LinkLocalAddressing=no
           IPv6AcceptRA=no
-
     - path: /etc/hostname
       mode: 0644
       contents:
         inline: ホスト名
 
-    - path: /opt/extensions/docker-compose/docker-compose-2.34.0-x86-64.raw
+    # Docker-compose sysext
+    - path: /opt/extensions/docker-compose/docker-compose-2.39.2-x86-64.raw
       mode: 0644
       contents:
-        source: https://extensions.flatcar.org/extensions/docker-compose-2.34.0-x86-64.raw
+        source: https://extensions.flatcar.org/extensions/docker-compose-2.39.2-x86-64.raw
     - path: /etc/sysupdate.docker-compose.d/docker-compose.conf
       contents:
         source: https://extensions.flatcar.org/extensions/docker-compose.conf
@@ -159,13 +192,39 @@ storage:
       contents:
         source: https://extensions.flatcar.org/extensions/noop.conf
 
+    # Dockerのアドレスプール設定
+    - path: /etc/docker/daemon.json
+      mode: 0644
+      contents:
+        inline: |
+          {
+            "default-address-pools": [
+              {
+                "base": "172.17.0.0/12",
+                "size": 24
+              }
+            ]
+          }
+
   links:
-    - target: /opt/extensions/docker-compose/docker-compose-2.34.0-x86-64.raw
+    # Dockerサービスの有効化
+    - path: /etc/systemd/system/multi-user.target.wants/docker.service
+      target: /usr/lib/systemd/system/docker.service
+      hard: false
+      overwrite: true
+
+    # Docker-compose sysext
+    - target: /opt/extensions/docker-compose/docker-compose-2.39.2-x86-64.raw
       path: /etc/extensions/docker-compose.raw
       hard: false
 
 systemd:
   units:
+    # Dockerサービスの有効化
+    - name: docker.service
+      enabled: true
+
+    # Docker-compose sysext
     - name: systemd-sysupdate.timer
       enabled: true
     - name: systemd-sysupdate.service
@@ -177,24 +236,21 @@ systemd:
             ExecStartPre=/usr/lib/systemd/systemd-sysupdate -C docker-compose update
             ExecStartPost=/usr/bin/sh -c "readlink --canonicalize /etc/extensions/docker-compose.raw > /tmp/docker-compose-new"
             ExecStartPost=/usr/bin/sh -c "if ! cmp --silent /tmp/docker-compose /tmp/docker-compose-new; then touch /run/reboot-required; fi"
-
-passwd:
-  users:
-    - name: core
-      ssh_authorized_keys:
-        - SSH公開鍵
 ```
+
+Ignition の仕様的には `ignition.config.merge` で他のファイルを取り込むことができるようだが、
+これを使用したところ OS が起動しなかったためベタ書きしている。
 
 先ほど作成した仮想マシンを削除し再構築したところ、
 無事 Docker Compose が利用できる環境ができあがった。
 
 ## 参考サイト
 
-- [Running Flatcar Container Linux on VMware](https://www.flatcar.org/docs/latest/installing/cloud/vmware/){:target="_blank"}
+- [Running Flatcar Container Linux on VMware \| Flatcar Container Linux](https://www.flatcar.org/docs/latest/installing/cloud/vmware/){:target="_blank"}
+- [Getting started with Docker \| Flatcar Container Linux](https://www.flatcar.org/docs/latest/container-runtimes/getting-started-with-docker/){:target="_blank"}
 - [Getting Started \| Ignition](https://coreos.github.io/ignition/getting-started/#config-validation){:target="_blank"}
 - [Getting started \| Butane](https://coreos.github.io/butane/getting-started/){:target="_blank"}
 - [Network configuration with networkd](https://www.flatcar.org/docs/latest/setup/customization/network-config-with-networkd/){:target="_blank"}
 - [Butane Config Transpiler](https://www.flatcar.org/docs/latest/provisioning/config-transpiler/){:target="_blank"}
 - [Docker-compose sysext \| sysext-bakery](https://flatcar.github.io/sysext-bakery/docker_compose/){:target="_blank"}
 - [Release docker-compose · flatcar/sysext-bakery](https://github.com/flatcar/sysext-bakery/releases/tag/docker-compose){:target="_blank"}
-
