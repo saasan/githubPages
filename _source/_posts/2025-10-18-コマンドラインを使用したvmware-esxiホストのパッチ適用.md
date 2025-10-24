@@ -3,7 +3,7 @@ layout: post
 title: コマンドラインを使用した VMware ESXi ホストのパッチ適用
 date: 2025-10-18 12:36:47 +0900
 category: blog
-tags: []
+tags: [ VMware, ESXi ]
 description:
 ---
 
