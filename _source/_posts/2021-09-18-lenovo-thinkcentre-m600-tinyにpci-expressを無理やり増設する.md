@@ -54,7 +54,7 @@ M.2 の A & E キーに対応した以下の
 M.2 → PCI-E x1 変換アダプタを見つけました。
 
 <div class="affiliate-product-list">
-    <a href="https://www.amazon.co.jp/dp/B07L9RFVBZ?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B07L9RFVBZ?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/51N8ZHiY7vL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="NGFF PCI 変換アダプタ M.2キーA / E → PCI-E Express X1 + USBライザカード 高速FPCケーブル2本付き">
         <span class="affiliate-product-name">NGFF PCI 変換アダプタ M.2キーA / E → PCI-E Express X1 + USBライザカード 高速FPCケーブル2本付き</span>
     </a>
@@ -75,7 +75,7 @@ M600 Tiny にはどちらもありません。
 そこで以下の変換ケーブルを購入し SATA から電源を取ることにしました。
 
 <div class="affiliate-product-list">
-    <a href="https://www.amazon.co.jp/dp/B0028WIES8?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B0028WIES8?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/51yi6NatXRL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="オウルテック 電源変換ケーブル12cm OWL-CBPU005">
         <span class="affiliate-product-name">オウルテック 電源変換ケーブル12cm OWL-CBPU005</span>
     </a>

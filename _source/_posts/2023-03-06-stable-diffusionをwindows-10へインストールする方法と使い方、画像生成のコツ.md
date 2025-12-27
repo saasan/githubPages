@@ -18,11 +18,11 @@ Stable Diffusion を Windows 10 のローカル環境へインストールする
 - メモリ: 32 GB
 
 <div class="affiliate-product-list">
-    <a href="https://www.amazon.co.jp/dp/B08WPJ5P4R/?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B08WPJ5P4R/?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/811sBakp3+L._AC_SX355_.jpg" alt="MSI GeForce RTX 3060 GAMING X 12G グラフィックスボード VD7552">
         <span class="affiliate-product-name">MSI GeForce RTX 3060 GAMING X 12G グラフィックスボード VD7552</span>
     </a>
-    <a href="https://www.amazon.co.jp/dp/B08166SLDF/?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B08166SLDF/?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/51ld6RR8IrL._AC_SY450_.jpg" alt="AMD Ryzen 5 5600X with Wraith Stealth cooler 3.7GHz 6コア / 12スレッド 35MB 65W【国内正規代理店品】 100-100000065BOX">
         <span class="affiliate-product-name">AMD Ryzen 5 5600X with Wraith Stealth cooler 3.7GHz 6コア / 12スレッド 35MB 65W【国内正規代理店品】 100-100000065BOX</span>
     </a>

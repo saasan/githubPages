@@ -32,11 +32,11 @@ aptX LL 対応の機器が少なくいいものが見つからなかった。
 完全ワイヤレスイヤホン EarFun Air Pro 3 を購入した。
 
 <div class="affiliate-product-list">
-    <a href="https://www.amazon.co.jp/dp/B0B1J2WTB2?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B0B1J2WTB2?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/41V33CRpvGL._AC_SY355_.jpg" alt="Creative BT-W4 Bluetooth トランスミッター USB オーディオ/チャット用アナログマイク付 aptX Adaptiveモデル HP-BTW4">
         <span class="affiliate-product-name">Creative BT-W4 Bluetooth トランスミッター USB オーディオ/チャット用アナログマイク付 aptX Adaptiveモデル HP-BTW4</span>
     </a>
-    <a href="https://www.amazon.co.jp/dp/B0BNQ611R2?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B0BNQ611R2?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/51mtle79kTL._AC_SX522_.jpg" alt="【VGP金賞】EarFun Air Pro 3 ANC搭載完全ワイヤレスイヤホン【Bluetooth 5.3 + 43dBまでノイズキャンセリング】QCC3071チップ搭載/aptX adaptive対応/超低遅延55ms/マルチポイント接続/専用アプリ/cVc8.0通話ノイズリダクション/最大45時間再生/ワイヤレス充電/IPX5防水(ブラック)">
         <span class="affiliate-product-name">【VGP金賞】EarFun Air Pro 3 ANC搭載完全ワイヤレスイヤホン【Bluetooth 5.3 + 43dBまでノイズキャンセリング】QCC3071チップ搭載/aptX adaptive対応/超低遅延55ms/マルチポイント接続/専用アプリ/cVc8.0通話ノイズリダクション/最大45時間再生/ワイヤレス充電/IPX5防水(ブラック)</span>
     </a>

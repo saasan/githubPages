@@ -17,7 +17,7 @@ Kindle Paperwhite を買ってから1ヶ月で売り払ってしまったので
 第11世代の Kindle Paperwhite シグニチャー エディション。
 
 <div class="affiliate-product-list">
-    <a href="https://www.amazon.co.jp/dp/B08N2ZL7PS?tag=saasan-22" class="affiliate-product">
+    <a href="https://www.amazon.co.jp/dp/B08N2ZL7PS?tag=saasan-22" target="_blank" class="affiliate-product">
         <img src="https://m.media-amazon.com/images/I/71Lp7niNMAL._AC_SX466_.jpg" alt="Kindle Paperwhite シグニチャー エディション (32GB) 6.8インチディスプレイ ワイヤレス充電対応 明るさ自動調節機能つき 広告なし ブラック">
         <span class="affiliate-product-name">Kindle Paperwhite シグニチャー エディション (32GB) 6.8インチディスプレイ ワイヤレス充電対応 明るさ自動調節機能つき 広告なし ブラック</span>
     </a>
