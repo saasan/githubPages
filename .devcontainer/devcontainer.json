@@ -20,7 +20,11 @@
     },
 
     "mounts": [
-        "source=${localWorkspaceFolder}/../saasan.github.io,target=/workspaces/saasan.github.io,type=bind,consistency=cached"
+        {
+            "source": "${localWorkspaceFolder}/../saasan.github.io",
+            "target": "/workspaces/saasan.github.io",
+            "type": "bind"
+        }
     ]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
